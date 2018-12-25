@@ -1,7 +1,7 @@
 # `Work-in-progress: jsugen`
 
 > Generate common Javascript utils like selectors and flat setters for
-object structures defined in a JSON schema.
+> object structures defined in a JSON schema.
 
 ## CLI
 

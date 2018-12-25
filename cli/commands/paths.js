@@ -1,21 +1,22 @@
 /* eslint-disable global-require,import/no-dynamic-require */
-const { generateObjectPathsModule } = require('../../lib');
-const { outOption, schemaOption } = require('../commonOptions');
+import { generateObjectPathsModule } from '../../lib';
+import { outOption, schemaOption } from '../commonOptions';
 
 // ---
 // Handler.
 // ---
-module.exports.handler = argv => {
+export function handler(argv) {
   const { schema: schemaPath, out } = argv;
   const schema = require(schemaPath);
   generateObjectPathsModule({ schema, out });
-};
+}
 
 // ---
 // Builder.
 // ---
-module.exports.builder = yargs =>
-  yargs.options({
+export function builder(yargs) {
+  return yargs.options({
     schema: schemaOption,
     out: outOption,
   });
+}

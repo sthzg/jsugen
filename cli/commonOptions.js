@@ -1,6 +1,6 @@
-const { resolve } = require('path');
+import { resolve } from 'path';
 
-module.exports.schemaOption = {
+export const schemaOption = {
   type: 'string',
   describe: 'path to json schema file to generate utils from',
   coerce: resolve,
@@ -8,7 +8,7 @@ module.exports.schemaOption = {
   required: true,
 };
 
-module.exports.outOption = {
+export const outOption = {
   type: 'string',
   coerce: resolve,
   normalize: true,

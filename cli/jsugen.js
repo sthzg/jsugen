@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
-const yargs = require('yargs');
-const {
-  enums: enumsCmd,
-  paths: pathsCmd,
-  selectors: selectorsCmd,
-} = require('./commands');
+import yargs from 'yargs';
+import {
+  enums as enumsCmd,
+  paths as pathsCmd,
+  selectors as selectorsCmd,
+} from './commands';
 
-module.exports = yargs
+export default yargs
   .usage('$0 <cmd> [args]')
   .command(
     ['generate-object-paths [schema]', 'paths'],
