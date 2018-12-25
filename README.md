@@ -1,5 +1,7 @@
 # `Work-in-progress: jsugen`
 
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
+
 > Generate common Javascript utils like selectors and flat setters for
 > object structures defined in a JSON schema.
 

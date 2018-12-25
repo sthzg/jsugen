@@ -1,0 +1,30 @@
+{
+  "name": "@sthzg/jsugen-generate-enums",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Stephan Herzog <sthzgvie@gmail.com>",
+  "homepage": "https://github.com/sthzg/jsugen#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sthzg/jsugen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sthzg/jsugen/issues"
+  },
+  "dependencies": {
+    "@sthzg/jsugen-core": "^0.0.0",
+    "lodash.camelcase": "^4.3.0",
+    "lodash.upperfirst": "^4.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}

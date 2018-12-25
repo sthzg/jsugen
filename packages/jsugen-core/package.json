@@ -1,0 +1,33 @@
+{
+  "name": "@sthzg/jsugen-core",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Stephan Herzog <sthzgvie@gmail.com>",
+  "homepage": "https://github.com/sthzg/jsugen#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sthzg/jsugen.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/sthzg/jsugen/issues"
+  },
+  "dependencies": {
+    "@cloudflare/json-schema-walker": "^0.1.1",
+    "lodash.castarray": "^4.4.0",
+    "lodash.isempty": "^4.4.0",
+    "lodash.merge": "^4.6.1",
+    "lodash.snakecase": "^4.1.1",
+    "prettier": "^1.15.3"
+  }
+}

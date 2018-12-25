@@ -1,24 +1,13 @@
 {
-  "name": "jsugen",
+  "private": true,
+  "name": "@sthzg/jsugen",
+  "description": "Json Schema to JS-Code Utils",
   "version": "0.0.0",
-  "bin": {
-    "jsugen": "cli/esm.js"
-  },
-  "main": "lib/index.js",
-  "repository": "git@github.com:sthzg/json-schema-to-js-utils.git",
   "author": "Stephan Herzog <sthzgvie@gmail.com>",
   "license": "MIT",
-  "files": [
-    "README.md",
-    "cli",
-    "lib"
-  ],
   "dependencies": {
-    "@cloudflare/json-schema-walker": "^0.1.1",
-    "esm": "^3.0.84",
-    "lodash": "^4.17.11",
-    "prettier": "^1.14.3",
-    "yargs": "^12.0.2"
+    "lodash.snakecase": "^4.1.1",
+    "prettier": "^1.14.3"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
@@ -29,7 +18,7 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-promise": "^3.7.0",
     "husky": "^1.0.0-rc.1",
-    "lerna": "^3.4.0",
+    "lerna": "^3.8.0",
     "lint-staged": "^7.3.0",
     "pretty-quick": "^1.7.0"
   },
@@ -38,9 +27,10 @@
   },
   "scripts": {
     "lint": "eslint .",
+    "lerna": "lerna",
     "format": "prettier --write \"{cli,lib}/**/*.js\"",
     "pretty-quick": "pretty-quick",
     "test": "jest",
-    "jsugen": "node cli/esm.js"
+    "jsugen": "node packages/jsugen-cli/bin/esm.js"
   }
 }
