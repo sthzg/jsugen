@@ -13,13 +13,6 @@
     "cli",
     "lib"
   ],
-  "scripts": {
-    "lint": "eslint .",
-    "format": "prettier --write \"{cli,lib}/**/*.js\"",
-    "pretty-quick": "pretty-quick",
-    "test": "jest",
-    "jsugen": "node cli/esm.js"
-  },
   "dependencies": {
     "@cloudflare/json-schema-walker": "^0.1.1",
     "esm": "^3.0.84",
@@ -42,5 +35,12 @@
   },
   "lint-staged": {
     "*.{js}": "eslint"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "format": "prettier --write \"{cli,lib}/**/*.js\"",
+    "pretty-quick": "pretty-quick",
+    "test": "jest",
+    "jsugen": "node cli/esm.js"
   }
 }
