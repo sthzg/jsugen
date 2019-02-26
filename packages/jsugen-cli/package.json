@@ -1,6 +1,6 @@
 {
   "name": "@sthzg/jsugen-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "> TODO: description",
   "author": "Stephan Herzog <sthzgvie@gmail.com>",
   "homepage": "https://github.com/sthzg/jsugen#readme",
@@ -24,10 +24,10 @@
     "url": "https://github.com/sthzg/jsugen/issues"
   },
   "dependencies": {
-    "@sthzg/jsugen-core": "^0.0.1",
-    "@sthzg/jsugen-generate-enums": "^0.0.1",
-    "@sthzg/jsugen-generate-lodash-object-paths": "^0.0.1",
-    "@sthzg/jsugen-generate-selector-functions": "^0.0.1",
+    "@sthzg/jsugen-core": "^0.0.2",
+    "@sthzg/jsugen-generate-enums": "^0.0.2",
+    "@sthzg/jsugen-generate-lodash-object-paths": "^0.0.2",
+    "@sthzg/jsugen-generate-selector-functions": "^0.0.2",
     "esm": "^3.0.84",
     "yargs": "^12.0.5"
   }
