@@ -1,8 +1,6 @@
 {
   "private": true,
-  "name": "@sthzg/jsugen",
-  "description": "Json Schema to JS-Code Utils",
-  "version": "0.0.0",
+  "name": "jsugen",
   "author": "Stephan Herzog <sthzgvie@gmail.com>",
   "license": "MIT",
   "dependencies": {
