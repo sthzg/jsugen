@@ -30,7 +30,7 @@
     "lerna": "lerna",
     "format": "prettier --write \"{cli,lib}/**/*.js\"",
     "pretty-quick": "pretty-quick",
-    "test": "jest",
+    "test": "echo 'TODO: Setup Jest'",
     "jsugen": "node packages/jsugen-cli/bin/esm.js"
   }
 }
