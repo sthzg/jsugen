@@ -1,8 +1,9 @@
+import first from 'lodash.first';
 import isEmpty from 'lodash.isempty';
 import HistoryTransform from './HistoryTransform';
-import { buildObjectPathFromTokens, removeSchemaProperties } from '../utils';
+import { buildObjectPathFromTokens, removeSchemaKeywords } from '../utils';
 
-class FilterPropertiesTransform extends HistoryTransform {
+class FilterSchemaKeywordsTransform extends HistoryTransform {
   constructor(options = {}) {
     super({ objectMode: true, ...options });
   }
@@ -10,7 +11,13 @@ class FilterPropertiesTransform extends HistoryTransform {
   _transform(chunk, encoding, callback) {
     const { schema, pathToParent, path } = chunk;
 
-    const tokens = removeSchemaProperties([...pathToParent, ...path]);
+    const pathTokens = [...pathToParent, ...path];
+
+    if (first(pathTokens) !== 'properties') {
+      return callback();
+    }
+
+    const tokens = removeSchemaKeywords(pathTokens);
     const id = buildObjectPathFromTokens(tokens);
 
     if (!isEmpty(tokens) && !isEmpty(schema) && this.isUnique(id)) {
@@ -18,8 +25,8 @@ class FilterPropertiesTransform extends HistoryTransform {
       this.history.push(id);
     }
 
-    callback();
+    return callback();
   }
 }
 
-export default FilterPropertiesTransform;
+export default FilterSchemaKeywordsTransform;

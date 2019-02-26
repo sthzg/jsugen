@@ -1,6 +1,6 @@
 import CompileToTemplateTransform from './CompileToTemplateTransform';
 import FilterEnumsTransform from './FilterEnumsTransform';
-import FilterPropertiesTransform from './FilterPropertiesTransform';
+import FilterSchemaKeywordsTransform from './FilterSchemaKeywordsTransform';
 import jsonSchemaReadable from './jsonSchemaReadable';
 import MemorySinkTransform from './MemorySinkTransform';
 import PrependToFileTransform from './PrependToFileTransform';
@@ -13,7 +13,7 @@ export {
   BuildObjectPathsTransform,
   CompileToTemplateTransform,
   FilterEnumsTransform,
-  FilterPropertiesTransform,
+  FilterSchemaKeywordsTransform,
   MemorySinkTransform,
   PrependToFileTransform,
   PrettierTransform,

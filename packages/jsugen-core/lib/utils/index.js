@@ -1,5 +1,5 @@
 import arrayToEnum from './arrayToEnum';
 import buildObjectPathFromTokens from './buildObjectPathFromTokens';
-import removeSchemaProperties from './removeSchemaProperties';
+import removeSchemaKeywords from './removeSchemaKeywords';
 
-export { arrayToEnum, buildObjectPathFromTokens, removeSchemaProperties };
+export { arrayToEnum, buildObjectPathFromTokens, removeSchemaKeywords };

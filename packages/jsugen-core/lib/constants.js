@@ -3,7 +3,7 @@ import { vocabularies } from '@cloudflare/json-schema-walker';
 /**
  * Array of all Json schema V4 object attribute keywords.
  */
-export const JSON_SCHEMA_V4_TOKENS = Object.keys(vocabularies.DRAFT_04);
+export const JSON_SCHEMA_V4_KEYWORDS = Object.keys(vocabularies.DRAFT_04);
 
 /**
  * Enum of all the specified types in the Json schema V4 specification:

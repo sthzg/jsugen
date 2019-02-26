@@ -9,7 +9,7 @@ import {
   BuildObjectPathsTransform,
   CompileToTemplateTransform,
   FilterEnumsTransform,
-  FilterPropertiesTransform,
+  FilterSchemaKeywordsTransform,
   jsonSchemaReadable,
   MemorySinkTransform,
   PrependToFileTransform,
@@ -20,12 +20,12 @@ import enumModuleTemplate from './enum.tpl';
 
 const pipeline = promisify(pipelineFn);
 
-function generateEnumsModule ({ schema, out }) {
+function generateEnumsModule({ schema, out }) {
   const write = out ? createWriteStream(out) : new StdoutWritable();
 
   return pipeline(
     jsonSchemaReadable(schema),
-    new FilterPropertiesTransform(),
+    new FilterSchemaKeywordsTransform(),
     new FilterEnumsTransform(),
     new BuildObjectPathsTransform(),
     new CompileToTemplateTransform(enumModuleTemplate),

@@ -8,7 +8,7 @@ import {
 import {
   BuildObjectPathsTransform,
   CompileToTemplateTransform,
-  FilterPropertiesTransform,
+  FilterSchemaKeywordsTransform,
   jsonSchemaReadable,
   MemorySinkTransform,
   PrependToFileTransform,
@@ -24,7 +24,7 @@ function generateObjectPathsModule({ schema, out }) {
 
   return pipeline(
     jsonSchemaReadable(schema),
-    new FilterPropertiesTransform(),
+    new FilterSchemaKeywordsTransform(),
     new BuildObjectPathsTransform(),
     new CompileToTemplateTransform(objectPathConstant),
     new MemorySinkTransform(),

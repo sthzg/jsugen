@@ -4,7 +4,7 @@ import { promisify } from 'util';
 import {
   BuildObjectPathsTransform,
   CompileToTemplateTransform,
-  FilterPropertiesTransform,
+  FilterSchemaKeywordsTransform,
   jsonSchemaReadable,
   MemorySinkTransform,
   PrependToFileTransform,
@@ -35,7 +35,7 @@ function generateSelectorsModule({ schema, out }) {
 
   return pipeline(
     jsonSchemaReadable(schema),
-    new FilterPropertiesTransform(),
+    new FilterSchemaKeywordsTransform(),
     new BuildObjectPathsTransform(),
     new CompileToTemplateTransform(selectorFunctionModule),
     new MemorySinkTransform(),
