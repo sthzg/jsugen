@@ -30,5 +30,6 @@
     "lodash.merge": "^4.6.1",
     "lodash.snakecase": "^4.1.1",
     "prettier": "^1.15.3"
-  }
+  },
+  "gitHead": "f7909d029766e0d408f1d5cb9e8411c673d4c4bd"
 }
