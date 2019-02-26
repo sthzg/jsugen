@@ -31,6 +31,7 @@
     "format": "prettier --write \"{cli,lib}/**/*.js\"",
     "pretty-quick": "pretty-quick",
     "test": "echo 'TODO: Setup Jest'",
-    "jsugen": "node packages/jsugen-cli/bin/esm.js"
+    "jsugen": "node packages/jsugen-cli/bin/esm.js",
+    "publish:beta": "lerna publish --canary --preid beta --dist-tag next --yes"
   }
 }
