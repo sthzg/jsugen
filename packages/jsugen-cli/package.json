@@ -1,11 +1,14 @@
 {
   "name": "@sthzg/jsugen-cli",
-  "version": "0.0.3-beta.1",
+  "version": "0.0.3-NEXT.0",
   "description": "> TODO: description",
   "author": "Stephan Herzog <sthzgvie@gmail.com>",
   "homepage": "https://github.com/sthzg/jsugen#readme",
   "license": "MIT",
   "main": "bin/esm.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
     "jsugen": "bin/esm.js"
   },
@@ -24,10 +27,10 @@
     "url": "https://github.com/sthzg/jsugen/issues"
   },
   "dependencies": {
-    "@sthzg/jsugen-core": "^0.0.3-beta.1",
-    "@sthzg/jsugen-generate-enums": "^0.0.3-beta.1",
-    "@sthzg/jsugen-generate-lodash-object-paths": "^0.0.3-beta.1",
-    "@sthzg/jsugen-generate-selector-functions": "^0.0.3-beta.1",
+    "@sthzg/jsugen-core": "^0.0.3-NEXT.0",
+    "@sthzg/jsugen-generate-enums": "^0.0.3-NEXT.0",
+    "@sthzg/jsugen-generate-lodash-object-paths": "^0.0.3-NEXT.0",
+    "@sthzg/jsugen-generate-selector-functions": "^0.0.3-NEXT.0",
     "esm": "^3.0.84",
     "yargs": "^12.0.5"
   },

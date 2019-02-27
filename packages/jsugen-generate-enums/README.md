@@ -1,7 +1,5 @@
 # `jsugen-generate-enums`
 
-> TODO: description
-
 ## Usage
 
 ```

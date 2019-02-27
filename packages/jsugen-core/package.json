@@ -1,11 +1,14 @@
 {
   "name": "@sthzg/jsugen-core",
-  "version": "0.0.3-beta.1",
+  "version": "0.0.3-NEXT.0",
   "description": "> TODO: description",
   "author": "Stephan Herzog <sthzgvie@gmail.com>",
   "homepage": "https://github.com/sthzg/jsugen#readme",
   "license": "MIT",
   "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "directories": {
     "lib": "lib"
   },

@@ -26,11 +26,11 @@
   "scripts": {
     "lint": "eslint .",
     "lerna": "lerna",
+    "lerna:restrap": "lerna clean --yes && rm -Rfv ./node_modules && yarn && lerna bootstrap",
     "format": "prettier --write \"{cli,lib}/**/*.js\"",
     "pretty-quick": "pretty-quick",
     "test": "echo 'TODO: Setup Jest'",
     "jsugen": "node packages/jsugen-cli/bin/esm.js",
-    "prerelease": "lerna version prerelease --preid beta",
-    "release": "lerna version --conventional-commits"
+    "release": "lerna publish --conventional-commits --yes"
   }
 }

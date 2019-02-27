@@ -25,5 +25,8 @@ action "Release" {
   needs = "Develop"
   uses = "actions/npm@master"
   args = "run release"
-  secrets = ["NPM_AUTH_TOKEN"]
+  secrets = [
+    "NPM_AUTH_TOKEN",
+    "GITHUB_TOKEN"
+  ]
 }
