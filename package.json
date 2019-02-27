@@ -1,8 +1,6 @@
 {
   "private": true,
-  "name": "@sthzg/jsugen",
-  "description": "Json Schema to JS-Code Utils",
-  "version": "0.0.0",
+  "name": "jsugen",
   "author": "Stephan Herzog <sthzgvie@gmail.com>",
   "license": "MIT",
   "dependencies": {
@@ -18,7 +16,7 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-promise": "^3.7.0",
     "husky": "^1.0.0-rc.1",
-    "lerna": "^3.8.0",
+    "lerna": "^3.13.0",
     "lint-staged": "^7.3.0",
     "pretty-quick": "^1.7.0"
   },
@@ -30,7 +28,9 @@
     "lerna": "lerna",
     "format": "prettier --write \"{cli,lib}/**/*.js\"",
     "pretty-quick": "pretty-quick",
-    "test": "jest",
-    "jsugen": "node packages/jsugen-cli/bin/esm.js"
+    "test": "echo 'TODO: Setup Jest'",
+    "jsugen": "node packages/jsugen-cli/bin/esm.js",
+    "prerelease": "lerna version prerelease --preid beta",
+    "release": "lerna version --conventional-commits"
   }
 }
