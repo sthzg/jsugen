@@ -30,7 +30,7 @@
     "pretty-quick": "pretty-quick",
     "test": "echo 'TODO: Setup Jest'",
     "jsugen": "node packages/jsugen-cli/bin/esm.js",
-    "publish:beta": "lerna version prerelease --preid beta",
-    "publish:master": "lerna version --conventional-commits"
+    "prerelease": "lerna version prerelease --preid beta",
+    "release": "lerna version --conventional-commits"
   }
 }
