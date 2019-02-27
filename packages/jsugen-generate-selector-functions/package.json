@@ -1,6 +1,6 @@
 {
   "name": "@sthzg/jsugen-generate-selector-functions",
-  "version": "0.0.2",
+  "version": "0.0.3-beta.0",
   "description": "> TODO: description",
   "author": "Stephan Herzog <sthzgvie@gmail.com>",
   "homepage": "https://github.com/sthzg/jsugen#readme",
@@ -23,7 +23,7 @@
     "url": "https://github.com/sthzg/jsugen/issues"
   },
   "dependencies": {
-    "@sthzg/jsugen-core": "^0.0.2",
+    "@sthzg/jsugen-core": "^0.0.3-beta.0",
     "lodash.camelcase": "^4.3.0"
   },
   "gitHead": "f7909d029766e0d408f1d5cb9e8411c673d4c4bd"
