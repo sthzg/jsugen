@@ -1,7 +1,5 @@
 # `jsugen-core`
 
-> TODO: description
-
 ## Usage
 
 ```

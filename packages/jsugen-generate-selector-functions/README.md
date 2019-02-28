@@ -1,7 +1,5 @@
 # `jsugen-generate-selector-functions`
 
-> TODO: description
-
 ## Usage
 
 ```

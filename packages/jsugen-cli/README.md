@@ -1,7 +1,5 @@
 # `jsugen-cli`
 
-> TODO: description
-
 ## Usage
 
 ```

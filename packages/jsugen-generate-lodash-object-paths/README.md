@@ -1,7 +1,5 @@
 # `jsugen-generate-lodash-object-paths`
 
-> TODO: description
-
 ## Usage
 
 ```
