@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/sthzg/jsugen/compare/v0.0.4...v0.1.0) (2019-02-28)
+
+
+### Features
+
+* support passing default return values to selectors ([bff3629](https://github.com/sthzg/jsugen/commit/bff3629))
+
+
+
+
+
 ## [0.0.4](https://github.com/sthzg/jsugen/compare/v0.0.3...v0.0.4) (2019-02-28)
 
 **Note:** Version bump only for package @sthzg/jsugen-generate-selector-functions
