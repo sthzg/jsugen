@@ -1,6 +1,6 @@
 {
   "name": "@sthzg/jsugen-generate-enums",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "> TODO: description",
   "author": "Stephan Herzog <sthzgvie@gmail.com>",
   "homepage": "https://github.com/sthzg/jsugen#readme",
@@ -23,7 +23,7 @@
     "url": "https://github.com/sthzg/jsugen/issues"
   },
   "dependencies": {
-    "@sthzg/jsugen-core": "^0.0.3",
+    "@sthzg/jsugen-core": "^0.0.4",
     "lodash.camelcase": "^4.3.0",
     "lodash.upperfirst": "^4.3.1"
   },
