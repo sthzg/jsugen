@@ -31,7 +31,7 @@ export const JSON_SCHEMA_V4_TYPES = Object.values(JSON_SCHEMA_V4_TYPES_ENUM);
  * TODO: allow users to pass path to their .prettierrc as cli option
  */
 export const DEFAULT_PRETTIER_OPTIONS = {
-  parser: 'babylon',
+  parser: 'babel',
   singleQuote: true,
   printWidth: 80,
   semi: true,
