@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/sthzg/jsugen/compare/v0.1.0...v0.1.1) (2019-02-28)
+
+
+### Bug Fixes
+
+* update parser setting to fix deprecation message ([11a3f5e](https://github.com/sthzg/jsugen/commit/11a3f5e))
+
+
+
+
+
 # [0.1.0](https://github.com/sthzg/jsugen/compare/v0.0.4...v0.1.0) (2019-02-28)
 
 
