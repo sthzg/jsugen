@@ -26,7 +26,7 @@
   "scripts": {
     "lint": "eslint .",
     "lerna": "lerna",
-    "lerna:restrap": "lerna clean --yes && rm -Rfv ./node_modules && yarn && lerna bootstrap",
+    "lerna:restrap": "lerna clean --yes && rm -Rfv ./node_modules && npm i && lerna bootstrap",
     "format": "prettier --write \"{cli,lib}/**/*.js\"",
     "pretty-quick": "pretty-quick",
     "test": "echo 'TODO: Setup Jest'",
