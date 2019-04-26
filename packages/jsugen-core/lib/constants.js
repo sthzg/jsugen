@@ -54,3 +54,5 @@ export const DEFAULT_FILE_DOCSTRING = `
  * @file This file is auto-generated. Do not modify its contents manually.
  */
 `;
+
+export const EMPTY_STRING = '';

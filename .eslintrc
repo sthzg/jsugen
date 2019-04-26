@@ -8,5 +8,10 @@
   "rules": {
     "comma-dangle": ["error", "always-multiline"],
     "function-paren-newline": "off"
+  },
+  "globals": {
+    "expect": false,
+    "jest": false,
+    "test": false
   }
 }
