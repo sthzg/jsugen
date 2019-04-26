@@ -32,7 +32,7 @@
     }
   },
   "scripts": {
-    "ci": "npm i && lerna bootstrap",
+    "bootstrap": "lerna bootstrap --hoist",
     "lint": "eslint .",
     "lerna": "lerna",
     "lerna:restrap": "lerna clean --yes && rm -Rfv ./node_modules && npm i && lerna bootstrap",
