@@ -27,7 +27,7 @@
     "lint": "eslint .",
     "lerna": "lerna",
     "lerna:restrap": "lerna clean --yes && rm -Rfv ./node_modules && npm i && lerna bootstrap",
-    "format": "prettier --write \"{cli,lib}/**/*.js\"",
+    "format": "prettier --write \"packages/**/*.js\"",
     "pretty-quick": "pretty-quick",
     "test": "echo 'TODO: Setup Jest'",
     "jsugen": "node packages/jsugen-cli/bin/esm.js",
