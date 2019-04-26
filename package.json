@@ -8,6 +8,8 @@
     "prettier": "^1.14.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^4.2.0",
@@ -16,20 +18,28 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-promise": "^4.1.1",
     "husky": "^2.1.0",
-    "lerna": "^3.13.0",
+    "jest": "^24.7.1",
+    "lerna": "^3.13.4",
     "lint-staged": "^8.1.5",
     "pretty-quick": "^1.7.0"
   },
   "lint-staged": {
     "*.{js}": "eslint"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && lint-staged && npm run test"
+    }
+  },
   "scripts": {
+    "ci": "npm i && lerna bootstrap",
     "lint": "eslint .",
     "lerna": "lerna",
     "lerna:restrap": "lerna clean --yes && rm -Rfv ./node_modules && npm i && lerna bootstrap",
     "format": "prettier --write \"packages/**/*.js\"",
     "pretty-quick": "pretty-quick",
-    "test": "echo 'TODO: Setup Jest'",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "jsugen": "node packages/jsugen-cli/bin/esm.js",
     "release": "lerna publish --conventional-commits --yes",
     "update": "npx npm-check -y && lerna exec -- npx npm-check -y"

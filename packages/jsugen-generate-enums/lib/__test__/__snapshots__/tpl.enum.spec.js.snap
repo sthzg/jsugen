@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should generate the expected template output 1`] = `
+"
+export const AnyNameValues = [
+  \\"any string\\",
+  99
+];
+export const AnyNameEnum = {
+  \\"99\\": 99,
+  \\"any string\\": \\"any string\\"
+};
+"
+`;
