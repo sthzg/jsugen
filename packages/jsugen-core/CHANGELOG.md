@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/sthzg/jsugen/compare/v0.1.1...v0.1.2) (2019-04-27)
+
+
+### Bug Fixes
+
+* Fix prettier script in root package.json ([0e1af61](https://github.com/sthzg/jsugen/commit/0e1af61))
+
+
+
+
+
 ## [0.1.1](https://github.com/sthzg/jsugen/compare/v0.1.0...v0.1.1) (2019-02-28)
 
 
