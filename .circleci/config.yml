@@ -22,7 +22,7 @@ jobs:
             - v1-dependencies-
 
       - run: npm install
-      - run: npm run bootstrap
+      - run: npm run ci:bootstrap
       - run:
           name: Run tests
           command: npm test
