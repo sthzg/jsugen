@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generate-enums integration test 1`] = `
+"/**
+ * @file This file is auto-generated. Do not modify its contents manually.
+ */
+
+export const RootLevelEnumArrayValues = ['FOO', 'BAR'];
+export const RootLevelEnumArrayEnum = {
+  FOO: 'FOO',
+  BAR: 'BAR',
+};
+
+export const LevelOneAnyEnumArrayValues = ['ONE.BAM', 'ONE.BAZ'];
+export const LevelOneAnyEnumArrayEnum = {
+  'ONE.BAM': 'ONE.BAM',
+  'ONE.BAZ': 'ONE.BAZ',
+};
+"
+`;

@@ -1,2 +1,4 @@
-export default ({ name, path }) => `export const ${name} = '${path}';
+export default ({
+  data: { pathName: name, pathInDotNotation: path },
+}) => `export const ${name} = '${path}';
 `;

@@ -1,0 +1,59 @@
+{
+  "title": "Example JSON schema used in integration tests",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "rootLevelString": {
+      "type": "string"
+    },
+    "rootLevelBool": {
+      "type": "boolean"
+    },
+    "rootLevelNumber": {
+      "type": "number"
+    },
+    "rootLevelEnumArray": {
+      "type": "array",
+      "items": {
+        "enum": ["FOO", "BAR"]
+      }
+    },
+    "rootLevelArray": {
+      "type": "array"
+    },
+    "levelOne": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "anyString": {
+          "type": "string"
+        },
+        "anyEnumArray": {
+          "type": "array",
+          "items": {
+            "enum": ["ONE.BAM", "ONE.BAZ"]
+          }
+        },
+        "anyArray": {
+          "type": "array"
+        },
+        "anyBool": {
+          "type": "boolean"
+        },
+        "anyNumber": {
+          "type": "number"
+        },
+        "levelTwo": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "foo": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

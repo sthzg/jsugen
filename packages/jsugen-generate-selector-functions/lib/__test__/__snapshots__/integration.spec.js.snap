@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generate-selector-functions integration test 1`] = `
+"/**
+ * @file This file is auto-generated. Do not modify its contents manually.
+ */
+
+import get from 'lodash-es/get';
+
+export function byRootLevelString(property, defaultReturn) {
+  return get(property, 'rootLevelString', defaultReturn);
+}
+
+export function byRootLevelBool(property, defaultReturn) {
+  return get(property, 'rootLevelBool', defaultReturn);
+}
+
+export function byRootLevelNumber(property, defaultReturn) {
+  return get(property, 'rootLevelNumber', defaultReturn);
+}
+
+export function byRootLevelEnumArray(property, defaultReturn) {
+  return get(property, 'rootLevelEnumArray', defaultReturn);
+}
+
+export function byRootLevelArray(property, defaultReturn) {
+  return get(property, 'rootLevelArray', defaultReturn);
+}
+
+export function byLevelOneAnyString(property, defaultReturn) {
+  return get(property, 'levelOne.anyString', defaultReturn);
+}
+
+export function byLevelOneAnyEnumArray(property, defaultReturn) {
+  return get(property, 'levelOne.anyEnumArray', defaultReturn);
+}
+
+export function byLevelOneAnyArray(property, defaultReturn) {
+  return get(property, 'levelOne.anyArray', defaultReturn);
+}
+
+export function byLevelOneAnyBool(property, defaultReturn) {
+  return get(property, 'levelOne.anyBool', defaultReturn);
+}
+
+export function byLevelOneAnyNumber(property, defaultReturn) {
+  return get(property, 'levelOne.anyNumber', defaultReturn);
+}
+
+export function byLevelOneLevelTwoFoo(property, defaultReturn) {
+  return get(property, 'levelOne.levelTwo.foo', defaultReturn);
+}
+
+export function byLevelOneLevelTwo(property, defaultReturn) {
+  return get(property, 'levelOne.levelTwo', defaultReturn);
+}
+
+export function byLevelOne(property, defaultReturn) {
+  return get(property, 'levelOne', defaultReturn);
+}
+"
+`;

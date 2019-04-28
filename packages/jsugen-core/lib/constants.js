@@ -55,4 +55,11 @@ export const DEFAULT_FILE_DOCSTRING = `
  */
 `;
 
+// ---
+// Semantic Constants.
+// ---
+export const DOT = '.';
 export const EMPTY_STRING = '';
+export const NEWLINE = '\n';
+export const SPACE = ' ';
+export const UNDERSCORE = '_';
