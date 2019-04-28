@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generate-lodash-object-paths integration test 1`] = `
+"/**
+ * @file This file is auto-generated. Do not modify its contents manually.
+ */
+
+export const ROOT_LEVEL_STRING = 'rootLevelString';
+
+export const ROOT_LEVEL_BOOL = 'rootLevelBool';
+
+export const ROOT_LEVEL_NUMBER = 'rootLevelNumber';
+
+export const ROOT_LEVEL_ENUM_ARRAY = 'rootLevelEnumArray';
+
+export const ROOT_LEVEL_ARRAY_ARRAY = 'rootLevelArray';
+
+export const LEVEL_ONE_ANY_STRING = 'levelOne.anyString';
+
+export const LEVEL_ONE_ANY_ENUM_ARRAY = 'levelOne.anyEnumArray';
+
+export const LEVEL_ONE_ANY_ARRAY_ARRAY = 'levelOne.anyArray';
+
+export const LEVEL_ONE_ANY_BOOL = 'levelOne.anyBool';
+
+export const LEVEL_ONE_ANY_NUMBER = 'levelOne.anyNumber';
+
+export const LEVEL_ONE_LEVEL_TWO_FOO = 'levelOne.levelTwo.foo';
+
+export const LEVEL_ONE_LEVEL_TWO_OBJECT = 'levelOne.levelTwo';
+
+export const LEVEL_ONE_OBJECT = 'levelOne';
+"
+`;

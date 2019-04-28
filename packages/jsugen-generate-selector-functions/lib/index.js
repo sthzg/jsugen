@@ -1,24 +1,23 @@
-import { createWriteStream } from 'fs';
-import { pipeline as pipelineFn } from 'stream';
-import { promisify } from 'util';
+import { distinct, filter, map, reduce, tap } from 'rxjs/operators';
 import {
-  BuildObjectPathsTransform,
-  CompileToTemplateTransform,
-  FilterSchemaKeywordsTransform,
-  jsonSchemaReadable,
-  MemorySinkTransform,
-  PrependToFileTransform,
-  PrettierTransform,
-  StdoutWritable,
-} from '@sthzg/jsugen-core/lib/streams';
-import {
-  DEFAULT_FILE_DOCSTRING,
   DEFAULT_GET_IMPORT,
+  DEFAULT_FILE_DOCSTRING,
   DEFAULT_PRETTIER_OPTIONS,
+  EMPTY_STRING,
 } from '@sthzg/jsugen-core/lib/constants';
+import {
+  enrichWithObjectPathData,
+  hasJsonSchemaDefinition,
+  jsonSchemaObservable,
+  startsWithPropertiesKeyword,
+  toTemplateRawStringReducer,
+  withCompileToTemplate,
+  withPrependToString,
+  withPrettier,
+  withWrite,
+} from '@sthzg/jsugen-core/lib';
+import { byPathInDotNotation } from '@sthzg/jsugen-core/lib/selectors';
 import selectorFunctionModule from './selector.tpl';
-
-const pipeline = promisify(pipelineFn);
 
 /**
  * Generates selector functions for all values inside the JSON schema.
@@ -31,17 +30,30 @@ const pipeline = promisify(pipelineFn);
  *     }
  */
 function generateSelectorsModule({ schema, out }) {
-  const write = out ? createWriteStream(out) : new StdoutWritable();
+  // ---
+  // Configure Transformer Factories.
+  // ---
+  const compileToTemplate = withCompileToTemplate(selectorFunctionModule);
+  const prependHeaders = withPrependToString(
+    DEFAULT_FILE_DOCSTRING,
+    DEFAULT_GET_IMPORT,
+  );
+  const prettify = withPrettier(DEFAULT_PRETTIER_OPTIONS);
+  const write = withWrite(out);
 
-  return pipeline(
-    jsonSchemaReadable(schema),
-    new FilterSchemaKeywordsTransform(),
-    new BuildObjectPathsTransform(),
-    new CompileToTemplateTransform(selectorFunctionModule),
-    new MemorySinkTransform(),
-    new PrependToFileTransform([DEFAULT_FILE_DOCSTRING, DEFAULT_GET_IMPORT]),
-    new PrettierTransform(DEFAULT_PRETTIER_OPTIONS),
-    write
+  // ---
+  // Observable.
+  // ---
+  return jsonSchemaObservable(schema).pipe(
+    filter(hasJsonSchemaDefinition),
+    filter(startsWithPropertiesKeyword),
+    map(enrichWithObjectPathData),
+    distinct(byPathInDotNotation),
+    map(compileToTemplate),
+    reduce(toTemplateRawStringReducer, EMPTY_STRING),
+    map(prependHeaders),
+    map(prettify),
+    tap(write),
   );
 }
 
