@@ -45,14 +45,23 @@ function generateSelectorsModule({ schema, out }) {
   // Observable.
   // ---
   return fromJsonSchema(schema).pipe(
+    /* Filtering */
     filter(hasJsonSchemaDefinition),
     filter(startsWithPropertiesKeyword),
+
+    /* Enrichment */
     map(enrichWithObjectPathData),
     distinct(byPathInDotNotation),
+
+    /* Templating */
     map(compileToTemplate),
+
+    /* To String */
     reduce(toTemplateRawStringReducer, EMPTY_STRING),
     map(prependHeaders),
     map(prettify),
+
+    /* Output */
     tap(write),
   );
 }

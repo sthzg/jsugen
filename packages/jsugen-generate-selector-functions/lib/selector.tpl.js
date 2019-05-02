@@ -1,7 +1,9 @@
-import camelCase from 'lodash.camelcase';
+import { toCamelCase } from '@sthzg/jsugen-core/lib/utils';
+
+const PREFIX = 'by_';
 
 export default ({ data: { pathInDotNotation: path } }) => `
-export function ${camelCase(`by_${path}`)}(property, defaultReturn) {
+export function ${toCamelCase(PREFIX, path)}(property, defaultReturn) {
   return get(property, '${path}', defaultReturn);
 }
 `;

@@ -5,6 +5,7 @@ import {
   EMPTY_STRING,
 } from '@sthzg/jsugen-core/lib/constants';
 import {
+  enrichWithEnumValues,
   enrichWithObjectPathData,
   hasJsonSchemaDefinition,
   isEnumType,
@@ -15,6 +16,7 @@ import {
   withPrettier,
   withWrite,
 } from '@sthzg/jsugen-core/lib';
+import buildTemplateVars from './buildTemplateVars';
 import enumModuleTemplate from './enum.tpl';
 
 function generateEnumsModule({ schema, out }) {
@@ -30,13 +32,24 @@ function generateEnumsModule({ schema, out }) {
   // Observable.
   // ---
   return fromJsonSchema(schema).pipe(
+    /* Filtering */
     filter(hasJsonSchemaDefinition),
     filter(isEnumType),
+
+    /* Enrichment */
     map(enrichWithObjectPathData),
+    map(enrichWithEnumValues),
+
+    /* Templating */
+    map(buildTemplateVars),
     map(compileToTemplate),
+
+    /* To String */
     reduce(toTemplateRawStringReducer, EMPTY_STRING),
     map(prependHeaders),
     map(prettify),
+
+    /* Output */
     tap(write),
   );
 }

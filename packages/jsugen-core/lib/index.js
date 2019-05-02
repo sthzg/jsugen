@@ -1,5 +1,6 @@
 import * as utils from './utils';
 import * as constants from './constants';
+import enrichWithEnumValues from './enrichWithEnumValues';
 import enrichWithObjectPathData from './enrichWithObjectPathData';
 import hasJsonSchemaDefinition from './hasJsonSchemaDefinition';
 import isEnumType from './isEnumType';
@@ -12,6 +13,7 @@ import withPrettier from './withPrettier';
 import withWrite from './withWrite';
 
 export {
+  enrichWithEnumValues,
   enrichWithObjectPathData,
   hasJsonSchemaDefinition,
   isEnumType,
