@@ -1,5 +1,5 @@
 {
-  "title": "Example JSON schema used in integration tests",
+  "description": "Example JSON schema used in integration tests",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "additionalProperties": false,

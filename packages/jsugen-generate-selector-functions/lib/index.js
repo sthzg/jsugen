@@ -8,7 +8,7 @@ import {
 import {
   enrichWithObjectPathData,
   hasJsonSchemaDefinition,
-  jsonSchemaObservable,
+  fromJsonSchema,
   startsWithPropertiesKeyword,
   toTemplateRawStringReducer,
   withCompileToTemplate,
@@ -44,7 +44,7 @@ function generateSelectorsModule({ schema, out }) {
   // ---
   // Observable.
   // ---
-  return jsonSchemaObservable(schema).pipe(
+  return fromJsonSchema(schema).pipe(
     filter(hasJsonSchemaDefinition),
     filter(startsWithPropertiesKeyword),
     map(enrichWithObjectPathData),

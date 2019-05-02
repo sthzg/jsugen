@@ -8,7 +8,7 @@ import {
   enrichWithObjectPathData,
   hasJsonSchemaDefinition,
   isEnumType,
-  jsonSchemaObservable,
+  fromJsonSchema,
   toTemplateRawStringReducer,
   withCompileToTemplate,
   withPrependToString,
@@ -29,7 +29,7 @@ function generateEnumsModule({ schema, out }) {
   // ---
   // Observable.
   // ---
-  return jsonSchemaObservable(schema).pipe(
+  return fromJsonSchema(schema).pipe(
     filter(hasJsonSchemaDefinition),
     filter(isEnumType),
     map(enrichWithObjectPathData),

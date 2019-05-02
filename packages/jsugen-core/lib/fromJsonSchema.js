@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs';
 import { schemaWalk, vocabularies } from '@cloudflare/json-schema-walker';
 
-const jsonSchemaObservable = schema =>
+const fromJsonSchema = schema =>
   new Observable(subscriber => {
     try {
       schemaWalk(
@@ -23,4 +23,4 @@ const jsonSchemaObservable = schema =>
     subscriber.complete();
   });
 
-export default jsonSchemaObservable;
+export default fromJsonSchema;
