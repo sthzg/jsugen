@@ -42,6 +42,7 @@
     "test:watch": "jest --watch",
     "jsugen": "node packages/jsugen-cli/bin/esm.js",
     "release": "lerna publish --conventional-commits --yes",
-    "update": "npx npm-check -y && lerna exec -- npx npm-check -y"
+    "update": "npx npm-check -y && lerna exec -- npx npm-check -y",
+    "version": "lerna clean --yes && lerna bootstrap --ignore-scripts -- --package-lock-only --no-audit && git add packages/*/package-lock.json"
   }
 }
