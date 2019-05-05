@@ -1,6 +1,6 @@
-import camelCase from 'lodash.camelcase';
-import flow from 'lodash.flow';
-import upperFirst from 'lodash.upperfirst';
+import camelCase from 'lodash-es/camelCase';
+import flow from 'lodash-es/flow';
+import upperFirst from 'lodash-es/upperFirst';
 import { EMPTY_STRING } from '../constants';
 
 /**

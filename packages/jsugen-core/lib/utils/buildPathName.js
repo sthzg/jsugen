@@ -1,4 +1,4 @@
-import snakeCase from 'lodash.snakecase';
+import snakeCase from 'lodash-es/snakeCase';
 import { JSON_SCHEMA_V4_TYPES_ENUM } from '../constants';
 
 const POSTFIX_TYPES = [
