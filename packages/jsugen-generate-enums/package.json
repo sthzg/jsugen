@@ -9,9 +9,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "directories": {
-    "lib": "lib"
-  },
   "files": [
     "lib"
   ],
@@ -24,7 +21,6 @@
   },
   "dependencies": {
     "@sthzg/jsugen-core": "^0.1.5",
-    "lodash.set": "^4.3.2",
     "rxjs": "^6.5.1"
   },
   "scripts": {

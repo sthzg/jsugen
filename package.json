@@ -4,7 +4,7 @@
   "author": "Stephan Herzog <sthzgvie@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "lodash.snakecase": "^4.1.1",
+    "lodash-es": "^4.17.11",
     "prettier": "^1.17.0"
   },
   "devDependencies": {
@@ -19,6 +19,7 @@
     "eslint-plugin-promise": "^4.1.1",
     "husky": "^2.2.0",
     "jest": "^24.7.1",
+    "jest-watch-typeahead": "^0.3.1",
     "lerna": "^3.13.4",
     "lint-staged": "^8.1.5",
     "pretty-quick": "^1.10.0"

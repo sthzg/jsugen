@@ -1,6 +1,6 @@
-import cloneDeep from 'lodash.clonedeep';
-import merge from 'lodash.merge';
-import set from 'lodash.set';
+import cloneDeep from 'lodash-es/cloneDeep';
+import merge from 'lodash-es/merge';
+import set from 'lodash-es/set';
 import { DOT, EMPTY_STRING } from '../constants';
 
 export const enrichIn = (prefix = EMPTY_STRING, targetObject, keyValueObject) =>
