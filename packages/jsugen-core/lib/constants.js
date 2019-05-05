@@ -58,6 +58,7 @@ export const DEFAULT_FILE_DOCSTRING = `
 // ---
 // Semantic Constants.
 // ---
+export const COMMA = ',';
 export const DOT = '.';
 export const EMPTY_STRING = '';
 export const NEWLINE = '\n';

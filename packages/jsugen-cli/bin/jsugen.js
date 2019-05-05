@@ -2,6 +2,7 @@
 
 import yargs from 'yargs';
 import {
+  builder as builderCmd,
   enums as enumsCmd,
   paths as pathsCmd,
   selectors as selectorsCmd,
@@ -13,18 +14,24 @@ export default yargs
     ['generate-object-paths [schema]', 'paths'],
     'generate a module that exports all object selector path strings with dot notation',
     pathsCmd.builder,
-    pathsCmd.handler
+    pathsCmd.handler,
   )
   .command(
     ['generate-enums [schema]', 'enums'],
     'generate a module that exports all values defined as enums in the json schema',
     enumsCmd.builder,
-    enumsCmd.handler
+    enumsCmd.handler,
   )
   .command(
     ['generate-selectors [schema]', 'selectors'],
     'generate a module that exports selector functions for all values defined in the json schema',
     selectorsCmd.builder,
-    selectorsCmd.handler
+    selectorsCmd.handler,
+  )
+  .command(
+    ['generate-builder [schema]', 'builder'],
+    'generate a module that exports a builder function',
+    builderCmd.builder,
+    builderCmd.handler,
   )
   .help().argv;

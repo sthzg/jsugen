@@ -26,3 +26,15 @@ export const toCamelCase = (...tokens) =>
     concat,
     camelCase,
   )(tokens);
+
+/**
+ * Wraps input string with single quotes.
+ * - foo => 'foo'
+ */
+export const wrapInSingleQuote = x => `'${x}'`;
+
+/**
+ * Wraps input string with an opening and closing curly brace.
+ * - foo => { foo }
+ */
+export const wrapInCurlyBraces = x => `{ ${x} }`;

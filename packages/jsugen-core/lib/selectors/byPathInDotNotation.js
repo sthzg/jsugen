@@ -1,5 +1,5 @@
 import get from 'lodash-es/get';
 
-const byPathInDotNotation = chunk => get(chunk, 'data.pathInDotNotation');
+const byPathInDotNotation = context => get(context, 'data.pathInDotNotation');
 
 export default byPathInDotNotation;

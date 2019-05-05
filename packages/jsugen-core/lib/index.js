@@ -2,6 +2,7 @@ import * as utils from './utils';
 import * as constants from './constants';
 import enrichWithEnumValues from './enrichWithEnumValues';
 import enrichWithObjectPathData from './enrichWithObjectPathData';
+import enrichWithType from './enrichWithType';
 import hasJsonSchemaDefinition from './hasJsonSchemaDefinition';
 import isEnumType from './isEnumType';
 import fromJsonSchema from './fromJsonSchema';
@@ -13,17 +14,18 @@ import withPrettier from './withPrettier';
 import withWrite from './withWrite';
 
 export {
+  constants,
+  utils,
   enrichWithEnumValues,
   enrichWithObjectPathData,
+  enrichWithType,
+  fromJsonSchema,
   hasJsonSchemaDefinition,
   isEnumType,
-  fromJsonSchema,
   startsWithPropertiesKeyword,
   toTemplateRawStringReducer,
   withCompileToTemplate,
   withPrependToString,
   withPrettier,
   withWrite,
-  utils,
-  constants,
 };
