@@ -1,8 +1,15 @@
 import arrayToEnum from './arrayToEnum';
 import buildPathName from './buildPathName';
 import buildSelectorPathInDotNotation from './buildSelectorPathInDotNotation';
-import { enrichIn, enrichInData, enrichInTemplate } from './enrichInData';
-import { toCamelCase, toUpperFirstCamelCase } from './format';
+import mergeConcat from './mergeConcat';
+import mergeSet from './mergeSet';
+import { enrichIn, enrichInData, enrichInTemplate } from './enrichIn';
+import {
+  toCamelCase,
+  toUpperFirstCamelCase,
+  wrapInCurlyBraces,
+  wrapInSingleQuote,
+} from './format';
 import { log, logError } from './log';
 import removeSchemaKeywords from './removeSchemaKeywords';
 
@@ -15,7 +22,11 @@ export {
   enrichInTemplate,
   log,
   logError,
+  mergeConcat,
+  mergeSet,
   removeSchemaKeywords,
   toCamelCase,
   toUpperFirstCamelCase,
+  wrapInCurlyBraces,
+  wrapInSingleQuote,
 };

@@ -11,6 +11,7 @@
     "import/prefer-default-export": "off"
   },
   "globals": {
+    "describe": false,
     "expect": false,
     "jest": false,
     "test": false

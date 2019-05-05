@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@sthzg/jsugen-core": "^0.1.5",
+    "@sthzg/jsugen-generate-builder": "^0.1.5",
     "@sthzg/jsugen-generate-enums": "^0.1.5",
     "@sthzg/jsugen-generate-lodash-object-paths": "^0.1.5",
     "@sthzg/jsugen-generate-selector-functions": "^0.1.5",

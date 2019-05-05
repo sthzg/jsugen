@@ -1,0 +1,32 @@
+{
+  "name": "@sthzg/jsugen-generate-builder",
+  "version": "0.1.5",
+  "description": "Generate object setter utils",
+  "author": "Stephan Herzog <sthzgvie@gmail.com>",
+  "homepage": "https://github.com/sthzg/jsugen#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sthzg/jsugen.git"
+  },
+  "dependencies": {
+    "@sthzg/jsugen-core": "^0.1.5",
+    "rxjs": "^6.5.1"
+  },
+  "peerDependencies": {
+    "lodash-es": ">=4"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/sthzg/jsugen/issues"
+  }
+}

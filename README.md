@@ -9,19 +9,20 @@
 ## CLI
 
 ```
-jsugen.js <cmd> [args]
+jsugen <cmd> [args]
 
 Commands:
-  jsugen.js generate-object-paths [schema]  generate a module that exports all
-                                            object selector path strings with
-                                            dot notation        [aliases: paths]
-  jsugen.js generate-enums [schema]         generate a module that exports all
-                                            values defined as enums in the json
-                                            schema              [aliases: enums]
-  jsugen.js generate-selectors [schema]     generate a module that exports
-                                            selector functions for all values
-                                            defined in the json schema
-                                                            [aliases: selectors]
+  jsugen generate-object-paths [schema]  generate a module that exports all
+                                         object selector path strings with dot
+                                         notation               [aliases: paths]
+  jsugen generate-enums [schema]         generate a module that exports all
+                                         values defined as enums in the json
+                                         schema                 [aliases: enums]
+  jsugen generate-selectors [schema]     generate a module that exports selector
+                                         functions for all values defined in the
+                                         json schema        [aliases: selectors]
+  jsugen generate-builder [schema]       generate a module that exports a
+                                         builder function     [aliases: builder]
 
 Options:
   --version  Show version number                                       [boolean]
