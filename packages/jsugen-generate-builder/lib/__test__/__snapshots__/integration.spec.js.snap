@@ -18,39 +18,39 @@ const mergeSet = (targetObject, keyValueObject) =>
       .map(([path, value]) => (0, _set.default)({}, path, value)),
   );
 
-const builder = ({
-  ROOT_LEVEL_STRING,
-  ROOT_LEVEL_BOOL,
-  ROOT_LEVEL_NUMBER,
-  ROOT_LEVEL_ENUM_ARRAY,
-  ROOT_LEVEL_ARRAY_ARRAY,
-  LEVEL_ONE_ANY_STRING,
-  LEVEL_ONE_ANY_ENUM_ARRAY,
-  LEVEL_ONE_ANY_ARRAY_ARRAY,
-  LEVEL_ONE_ANY_BOOL,
-  LEVEL_ONE_ANY_NUMBER,
-  LEVEL_ONE_LEVEL_TWO_FOO,
-  LEVEL_ONE_LEVEL_TWO_OBJECT,
-  LEVEL_ONE_OBJECT,
-}) =>
-  mergeSet(
-    {},
-    {
-      rootLevelString: ROOT_LEVEL_STRING,
-      rootLevelBool: ROOT_LEVEL_BOOL,
-      rootLevelNumber: ROOT_LEVEL_NUMBER,
-      rootLevelEnumArray: ROOT_LEVEL_ENUM_ARRAY,
-      rootLevelArray: ROOT_LEVEL_ARRAY_ARRAY,
-      'levelOne.anyString': LEVEL_ONE_ANY_STRING,
-      'levelOne.anyEnumArray': LEVEL_ONE_ANY_ENUM_ARRAY,
-      'levelOne.anyArray': LEVEL_ONE_ANY_ARRAY_ARRAY,
-      'levelOne.anyBool': LEVEL_ONE_ANY_BOOL,
-      'levelOne.anyNumber': LEVEL_ONE_ANY_NUMBER,
-      'levelOne.levelTwo.foo': LEVEL_ONE_LEVEL_TWO_FOO,
-      'levelOne.levelTwo': LEVEL_ONE_LEVEL_TWO_OBJECT,
-      levelOne: LEVEL_ONE_OBJECT,
-    },
-  );
+const builder = (
+  {
+    ROOT_LEVEL_STRING,
+    ROOT_LEVEL_BOOL,
+    ROOT_LEVEL_NUMBER,
+    ROOT_LEVEL_ENUM_ARRAY,
+    ROOT_LEVEL_ARRAY_ARRAY,
+    LEVEL_ONE_ANY_STRING,
+    LEVEL_ONE_ANY_ENUM_ARRAY,
+    LEVEL_ONE_ANY_ARRAY_ARRAY,
+    LEVEL_ONE_ANY_BOOL,
+    LEVEL_ONE_ANY_NUMBER,
+    LEVEL_ONE_LEVEL_TWO_FOO,
+    LEVEL_ONE_LEVEL_TWO_OBJECT,
+    LEVEL_ONE_OBJECT,
+  },
+  initialData = {},
+) =>
+  mergeSet(initialData, {
+    rootLevelString: ROOT_LEVEL_STRING,
+    rootLevelBool: ROOT_LEVEL_BOOL,
+    rootLevelNumber: ROOT_LEVEL_NUMBER,
+    rootLevelEnumArray: ROOT_LEVEL_ENUM_ARRAY,
+    rootLevelArray: ROOT_LEVEL_ARRAY_ARRAY,
+    'levelOne.anyString': LEVEL_ONE_ANY_STRING,
+    'levelOne.anyEnumArray': LEVEL_ONE_ANY_ENUM_ARRAY,
+    'levelOne.anyArray': LEVEL_ONE_ANY_ARRAY_ARRAY,
+    'levelOne.anyBool': LEVEL_ONE_ANY_BOOL,
+    'levelOne.anyNumber': LEVEL_ONE_ANY_NUMBER,
+    'levelOne.levelTwo.foo': LEVEL_ONE_LEVEL_TWO_FOO,
+    'levelOne.levelTwo': LEVEL_ONE_LEVEL_TWO_OBJECT,
+    levelOne: LEVEL_ONE_OBJECT,
+  });
 
 export default builder;
 "
