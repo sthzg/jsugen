@@ -37,8 +37,8 @@ import set from 'lodash-es/set';
 
 const mergeSet = ${mergeSet.toString()};
 
-const builder = (${inputString}) => 
-  mergeSet({}, ${valueString});
+const builder = (${inputString}, initialData = {}) => 
+  mergeSet(initialData, ${valueString});
 
 export default builder;                
   `;
