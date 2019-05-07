@@ -42,7 +42,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "jsugen": "node packages/jsugen-cli/bin/esm.js",
-    "release": "lerna publish --conventional-commits --yes",
+    "release": "./scripts/publish.sh",
     "update": "npx npm-check -y && lerna exec -- npx npm-check -y"
   }
 }
