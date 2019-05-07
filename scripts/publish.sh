@@ -7,4 +7,4 @@ git add **/package-lock.json
 git commit --amend --no-edit
 VERSION=`node -pe "require('$PWD/lerna.json').version;"`
 git tag -f "v${VERSION}"
-git push --follow-tags -u origin master
+git push -u origin master && git push --tags
