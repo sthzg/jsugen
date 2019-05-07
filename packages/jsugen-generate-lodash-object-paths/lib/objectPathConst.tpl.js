@@ -1,4 +1,6 @@
 export default ({
-  data: { pathName: name, pathInDotNotation: path },
+  template: {
+    vars: { name, path },
+  },
 }) => `export const ${name} = '${path}';
 `;

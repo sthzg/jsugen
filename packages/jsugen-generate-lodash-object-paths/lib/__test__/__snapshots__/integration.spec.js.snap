@@ -5,30 +5,30 @@ exports[`generate-lodash-object-paths integration test 1`] = `
  * @file This file is auto-generated. Do not modify its contents manually.
  */
 
-export const ROOT_LEVEL_STRING = 'rootLevelString';
+export const ROOT_LEVEL_STRING_PATH = 'rootLevelString';
 
-export const ROOT_LEVEL_BOOL = 'rootLevelBool';
+export const ROOT_LEVEL_BOOL_PATH = 'rootLevelBool';
 
-export const ROOT_LEVEL_NUMBER = 'rootLevelNumber';
+export const ROOT_LEVEL_NUMBER_PATH = 'rootLevelNumber';
 
-export const ROOT_LEVEL_ENUM_ARRAY = 'rootLevelEnumArray';
+export const ROOT_LEVEL_ENUM_ARRAY_PATH = 'rootLevelEnumArray';
 
-export const ROOT_LEVEL_ARRAY_ARRAY = 'rootLevelArray';
+export const ROOT_LEVEL_ARRAY_ARRAY_PATH = 'rootLevelArray';
 
-export const LEVEL_ONE_ANY_STRING = 'levelOne.anyString';
+export const LEVEL_ONE_ANY_STRING_PATH = 'levelOne.anyString';
 
-export const LEVEL_ONE_ANY_ENUM_ARRAY = 'levelOne.anyEnumArray';
+export const LEVEL_ONE_ANY_ENUM_ARRAY_PATH = 'levelOne.anyEnumArray';
 
-export const LEVEL_ONE_ANY_ARRAY_ARRAY = 'levelOne.anyArray';
+export const LEVEL_ONE_ANY_ARRAY_ARRAY_PATH = 'levelOne.anyArray';
 
-export const LEVEL_ONE_ANY_BOOL = 'levelOne.anyBool';
+export const LEVEL_ONE_ANY_BOOL_PATH = 'levelOne.anyBool';
 
-export const LEVEL_ONE_ANY_NUMBER = 'levelOne.anyNumber';
+export const LEVEL_ONE_ANY_NUMBER_PATH = 'levelOne.anyNumber';
 
-export const LEVEL_ONE_LEVEL_TWO_FOO = 'levelOne.levelTwo.foo';
+export const LEVEL_ONE_LEVEL_TWO_FOO_PATH = 'levelOne.levelTwo.foo';
 
-export const LEVEL_ONE_LEVEL_TWO_OBJECT = 'levelOne.levelTwo';
+export const LEVEL_ONE_LEVEL_TWO_OBJECT_PATH = 'levelOne.levelTwo';
 
-export const LEVEL_ONE_OBJECT = 'levelOne';
+export const LEVEL_ONE_OBJECT_PATH = 'levelOne';
 "
 `;

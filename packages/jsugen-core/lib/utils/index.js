@@ -7,6 +7,7 @@ import { enrichIn, enrichInData, enrichInTemplate } from './enrichIn';
 import {
   toCamelCase,
   toUpperFirstCamelCase,
+  toUpperSnakeCase,
   wrapInCurlyBraces,
   wrapInSingleQuote,
 } from './format';
@@ -27,6 +28,7 @@ export {
   removeSchemaKeywords,
   toCamelCase,
   toUpperFirstCamelCase,
+  toUpperSnakeCase,
   wrapInCurlyBraces,
   wrapInSingleQuote,
 };

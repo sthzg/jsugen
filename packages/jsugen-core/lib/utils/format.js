@@ -1,10 +1,12 @@
 import camelCase from 'lodash-es/camelCase';
 import flow from 'lodash-es/flow';
 import upperFirst from 'lodash-es/upperFirst';
+import toUpper from 'lodash-es/toUpper';
+import snakeCase from 'lodash-es/snakeCase';
 import { EMPTY_STRING } from '../constants';
 
 /**
- * Join truthy tokens by EMPTY_STRING.
+ * Joins truthy tokens by EMPTY_STRING.
  */
 export const concat = tokens => tokens.filter(Boolean).join(EMPTY_STRING);
 
@@ -25,6 +27,17 @@ export const toCamelCase = (...tokens) =>
   flow(
     concat,
     camelCase,
+  )(tokens);
+
+/**
+ * Transforms input to upper snake case.
+ * - fooBar -> FOO_BAR
+ */
+export const toUpperSnakeCase = (...tokens) =>
+  flow(
+    concat,
+    snakeCase,
+    toUpper,
   )(tokens);
 
 /**

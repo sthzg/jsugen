@@ -17,6 +17,7 @@ import {
 } from '@sthzg/jsugen-core/lib';
 import { byPathInDotNotation } from '@sthzg/jsugen-core/lib/selectors';
 import objectPathConstant from './objectPathConst.tpl';
+import buildTemplateVars from './buildTemplateVars';
 
 function generateObjectPathsModule({ schema, out }) {
   // ---
@@ -40,6 +41,7 @@ function generateObjectPathsModule({ schema, out }) {
     distinct(byPathInDotNotation),
 
     /* Templating */
+    map(buildTemplateVars),
     map(compileToTemplate),
 
     /* To String */
