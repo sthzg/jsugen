@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/sthzg/jsugen/compare/v0.3.0...v0.8.0) (2019-05-07)
+
+
+### Features
+
+* Prepend PATH to dot notation constant names ([6ca56da](https://github.com/sthzg/jsugen/commit/6ca56da))
+
+
+
+
+
 # [0.7.0](https://github.com/sthzg/jsugen/compare/v0.3.0...v0.7.0) (2019-05-07)
 
 
