@@ -4,8 +4,12 @@
   "author": "Stephan Herzog <sthzgvie@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "lodash-es": "^4.17.11",
-    "prettier": "^1.17.0"
+    "@sthzg/jsugen-cli": "file:packages/jsugen-cli",
+    "@sthzg/jsugen-core": "file:packages/jsugen-core",
+    "@sthzg/jsugen-generate-builder": "file:packages/jsugen-generate-builder",
+    "@sthzg/jsugen-generate-enums": "file:packages/jsugen-generate-enums",
+    "@sthzg/jsugen-generate-lodash-object-paths": "file:packages/jsugen-generate-lodash-object-paths",
+    "@sthzg/jsugen-generate-selector-functions": "file:packages/jsugen-generate-selector-functions"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
@@ -22,6 +26,8 @@
     "jest-watch-typeahead": "^0.3.1",
     "lerna": "^3.13.4",
     "lint-staged": "^8.1.5",
+    "lodash-es": "^4.17.11",
+    "prettier": "^1.17.0",
     "pretty-quick": "^1.10.0"
   },
   "lint-staged": {
@@ -33,16 +39,15 @@
     }
   },
   "scripts": {
-    "ci:bootstrap": "lerna bootstrap --hoist",
     "lint": "eslint .",
     "lerna": "lerna",
-    "lerna:restrap": "lerna clean --yes && rm -Rfv ./node_modules && npm i && lerna bootstrap",
+    "lerna:clean": "lerna clean --yes && rm -Rfv ./node_modules && npm i",
     "format": "prettier --write \"packages/**/*.js\"",
     "pretty-quick": "pretty-quick",
     "test": "jest",
     "test:watch": "jest --watch",
     "jsugen": "node packages/jsugen-cli/bin/esm.js",
-    "release": "./scripts/publish.sh",
+    "release": "lerna version --conventional-commits --github-release --yes",
     "update": "npx npm-check -y && lerna exec -- npx npm-check -y"
   }
 }

@@ -22,7 +22,6 @@ jobs:
             - v1-dependencies-
 
       - run: npm install
-      - run: npm run ci:bootstrap
       - run:
           name: Run tests
           command: npm test
@@ -57,9 +56,9 @@ jobs:
           command: |
             git config user.email "shtzgvie@gmail.com"
             git config user.name "CircleCI"
-      - run:
-          name: Publish package
-          command: npm run release
+#      - run:
+#          name: Publish package
+#          command: npm run release
 
 workflows:
   version: 2

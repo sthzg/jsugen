@@ -3,5 +3,11 @@
     "packages/*"
   ],
   "npmClient": "npm",
-  "version": "0.9.2"
+  "version": "0.9.2",
+  "command": {
+    "version": {
+      "allowBranch": ["master"],
+      "ignoreChanges": ["**/__fixtures__/**", "**/__tests__/**", "**/*.md"]
+    }
+  }
 }
