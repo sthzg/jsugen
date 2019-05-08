@@ -41,13 +41,13 @@
   "scripts": {
     "lint": "eslint .",
     "lerna": "lerna",
-    "lerna:clean": "lerna clean --yes && rm -Rfv ./node_modules && npm i",
+    "lerna:clean": "lerna clean --yes && rm -Rf ./node_modules && npm i",
     "format": "prettier --write \"packages/**/*.js\"",
     "pretty-quick": "pretty-quick",
     "test": "jest",
     "test:watch": "jest --watch",
     "jsugen": "node packages/jsugen-cli/bin/esm.js",
-    "release": "lerna publish --conventional-commits --yes",
-    "update": "npx npm-check -y && lerna exec -- npx npm-check -y"
+    "release": "lerna publish --conventional-commits --github-release --yes",
+    "update": "npx npm-check -y"
   }
 }

@@ -1,9 +1,3 @@
 # `jsugen-core`
 
-## Usage
-
-```
-const jsugenCore = require('jsugen-core');
-
-// TODO: DEMONSTRATE API
-```
+> This package contains common logic reused in various sub projects.

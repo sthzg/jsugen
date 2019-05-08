@@ -2,7 +2,7 @@
   "packages": [
     "packages/*"
   ],
-  "npmClient": "npm",
+  "npmClient": "yarn",
   "version": "0.9.3",
   "publish": {
     "allowBranch": "master",
