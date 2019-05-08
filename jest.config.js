@@ -5,7 +5,7 @@ module.exports = {
   clearMocks: true,
   coverageDirectory: 'coverage',
   testEnvironment: 'node',
-  transformIgnorePatterns: ['/node_modules/(?!lodash-es).+\\.js$'],
+  transformIgnorePatterns: ['/node_modules/(?!lodash-es|@sthzg).+\\.js$'],
   watchPlugins: [
     'jest-watch-typeahead/filename',
     'jest-watch-typeahead/testname',
