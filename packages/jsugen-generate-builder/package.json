@@ -17,7 +17,7 @@
     "url": "git+https://github.com/sthzg/jsugen.git"
   },
   "dependencies": {
-    "@sthzg/jsugen-core": "file:../jsugen-core",
+    "@sthzg/jsugen-core": "^0.9.4",
     "rxjs": "^6.5.1"
   },
   "peerDependencies": {

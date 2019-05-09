@@ -1470,48 +1470,6 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@sthzg/jsugen-cli@file:packages/jsugen-cli":
-  version "0.9.3"
-  dependencies:
-    "@sthzg/jsugen-core" "file:../../Library/Caches/Yarn/v4/npm-@sthzg-jsugen-cli-0.9.3-3ab0b1e8-8ab5-413c-82b4-77faaace0741-1557420913330/node_modules/@sthzg/jsugen-core"
-    "@sthzg/jsugen-generate-builder" "file:../../Library/Caches/Yarn/v4/npm-@sthzg-jsugen-cli-0.9.3-3ab0b1e8-8ab5-413c-82b4-77faaace0741-1557420913330/node_modules/@sthzg/jsugen-generate-builder"
-    "@sthzg/jsugen-generate-enums" "file:../../Library/Caches/Yarn/v4/npm-@sthzg-jsugen-cli-0.9.3-3ab0b1e8-8ab5-413c-82b4-77faaace0741-1557420913330/node_modules/@sthzg/jsugen-generate-enums"
-    "@sthzg/jsugen-generate-lodash-object-paths" "file:../../Library/Caches/Yarn/v4/npm-@sthzg-jsugen-cli-0.9.3-3ab0b1e8-8ab5-413c-82b4-77faaace0741-1557420913330/node_modules/@sthzg/jsugen-generate-lodash-object-paths"
-    "@sthzg/jsugen-generate-selector-functions" "file:../../Library/Caches/Yarn/v4/npm-@sthzg-jsugen-cli-0.9.3-3ab0b1e8-8ab5-413c-82b4-77faaace0741-1557420913330/node_modules/@sthzg/jsugen-generate-selector-functions"
-    esm "^3.2.22"
-    yargs "^13.2.2"
-
-"@sthzg/jsugen-core@file:packages/jsugen-core":
-  version "0.9.3"
-  dependencies:
-    "@cloudflare/json-schema-walker" "^0.1.1"
-    prettier "^1.17.0"
-    rxjs "^6.5.1"
-
-"@sthzg/jsugen-generate-builder@file:packages/jsugen-generate-builder":
-  version "0.9.3"
-  dependencies:
-    "@sthzg/jsugen-core" "file:../../Library/Caches/Yarn/v4/npm-@sthzg-jsugen-generate-builder-0.9.3-f7bc9c59-9b47-45b4-947d-55a49b1e02d7-1557420913344/node_modules/@sthzg/jsugen-core"
-    rxjs "^6.5.1"
-
-"@sthzg/jsugen-generate-enums@file:packages/jsugen-generate-enums":
-  version "0.9.3"
-  dependencies:
-    "@sthzg/jsugen-core" "file:../../Library/Caches/Yarn/v4/npm-@sthzg-jsugen-generate-enums-0.9.3-4588fd99-5645-451e-85d0-3f28caea85a7-1557420913348/node_modules/@sthzg/jsugen-core"
-    rxjs "^6.5.1"
-
-"@sthzg/jsugen-generate-lodash-object-paths@file:packages/jsugen-generate-lodash-object-paths":
-  version "0.9.3"
-  dependencies:
-    "@sthzg/jsugen-core" "file:../../Library/Caches/Yarn/v4/npm-@sthzg-jsugen-generate-lodash-object-paths-0.9.3-ed840383-326c-4899-8b4f-92513c138c9e-1557420913351/node_modules/@sthzg/jsugen-core"
-    rxjs "^6.5.1"
-
-"@sthzg/jsugen-generate-selector-functions@file:packages/jsugen-generate-selector-functions":
-  version "0.9.3"
-  dependencies:
-    "@sthzg/jsugen-core" "file:../../Library/Caches/Yarn/v4/npm-@sthzg-jsugen-generate-selector-functions-0.9.3-13a72763-e0cf-4c19-8704-9d624baa403e-1557420913356/node_modules/@sthzg/jsugen-core"
-    rxjs "^6.5.1"
-
 "@types/babel__core@^7.1.0":
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.1.tgz#ce9a9e5d92b7031421e1d0d74ae59f572ba48be6"
@@ -7143,9 +7101,9 @@ synchronous-promise@^2.0.6:
   integrity sha512-16GbgwTmFMYFyQMLvtQjvNWh30dsFe1cAW5Fg1wm5+dg84L9Pe36mftsIRU95/W2YsISxsz/xq4VB23sqpgb/A==
 
 table@^5.2.3:
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/table/-/table-5.3.1.tgz#470078a3637a257d535f15a2a4ac547c84e1153a"
-  integrity sha512-akPZC6vB5F1OOZ8rtp5nl/ywDwyFi/lZ3ib+ZdPkbynZuyQo5JBKsGQ7w5NUTC3rndNPQtBV13ufH5vFB7nBZQ==
+  version "5.3.2"
+  resolved "https://registry.yarnpkg.com/table/-/table-5.3.2.tgz#3aab56a41b2905bf66a6a006bd716fa1e78d4702"
+  integrity sha512-gDBrfla2z1JiBio5BE7nudwkjTjPOTduCzJC94fc1JjnuzI+tUsMiDskxFQCskxAtMB2c/ZwD6R2lg65zCptdQ==
   dependencies:
     ajv "^6.9.1"
     lodash "^4.17.11"
