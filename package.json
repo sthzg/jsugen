@@ -3,14 +3,9 @@
   "name": "jsugen",
   "author": "Stephan Herzog <sthzgvie@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "@sthzg/jsugen-cli": "file:packages/jsugen-cli",
-    "@sthzg/jsugen-core": "file:packages/jsugen-core",
-    "@sthzg/jsugen-generate-builder": "file:packages/jsugen-generate-builder",
-    "@sthzg/jsugen-generate-enums": "file:packages/jsugen-generate-enums",
-    "@sthzg/jsugen-generate-lodash-object-paths": "file:packages/jsugen-generate-lodash-object-paths",
-    "@sthzg/jsugen-generate-selector-functions": "file:packages/jsugen-generate-selector-functions"
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
@@ -41,13 +36,13 @@
   "scripts": {
     "lint": "eslint .",
     "lerna": "lerna",
-    "lerna:clean": "lerna clean --yes && rm -Rf ./node_modules && npm i",
+    "lerna:restrap": "yarn && lerna clean --yes && lerna bootstrap",
     "format": "prettier --write \"packages/**/*.js\"",
     "pretty-quick": "pretty-quick",
     "test": "jest",
     "test:watch": "jest --watch",
     "jsugen": "node packages/jsugen-cli/bin/esm.js",
     "release": "lerna publish --conventional-commits --github-release --yes",
-    "update": "npx npm-check -y"
+    "upgrade": "yarn upgrade && lerna exec -- yarn upgrade"
   }
 }
