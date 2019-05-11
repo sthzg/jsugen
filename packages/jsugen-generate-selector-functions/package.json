@@ -1,6 +1,6 @@
 {
   "name": "@sthzg/jsugen-generate-selector-functions",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "> TODO: description",
   "author": "Stephan Herzog <sthzgvie@gmail.com>",
   "homepage": "https://github.com/sthzg/jsugen#readme",
@@ -26,7 +26,7 @@
     "url": "https://github.com/sthzg/jsugen/issues"
   },
   "dependencies": {
-    "@sthzg/jsugen-core": "^0.9.4",
+    "@sthzg/jsugen-core": "^0.9.5",
     "rxjs": "^6.5.1"
   },
   "gitHead": "f7909d029766e0d408f1d5cb9e8411c673d4c4bd"
