@@ -1,3 +1,4 @@
+import sortBy from 'lodash-es/sortBy';
 import {
   arrayToEnum,
   enrichInTemplate,
@@ -17,14 +18,16 @@ const buildTemplateVars = context => {
     data: { pathName, enumValues },
   } = context;
 
+  const sortedEnumValues = sortBy(enumValues);
+
   const vars = {
     valuesConstant: {
       name: toUpperFirstCamelCase(pathName, POSTFIX.VALUES),
-      values: enumValues,
+      values: sortedEnumValues,
     },
     enumConstant: {
       name: toUpperFirstCamelCase(pathName, POSTFIX.ENUM),
-      values: arrayToEnum(enumValues),
+      values: arrayToEnum(sortedEnumValues),
     },
   };
 
