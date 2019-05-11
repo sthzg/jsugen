@@ -16,7 +16,7 @@
     "rootLevelEnumArray": {
       "type": "array",
       "items": {
-        "enum": ["FOO", "BAR"]
+        "enum": ["Z_SHOULD_BE_SORTED_AS_LAST", "A_SHOULD_BE_SORTED_AS_FIRST"]
       }
     },
     "rootLevelArray": {
