@@ -5,10 +5,13 @@ exports[`generate-enums integration test 1`] = `
  * @file This file is auto-generated. Do not modify its contents manually.
  */
 
-export const RootLevelEnumArrayValues = ['FOO', 'BAR'];
+export const RootLevelEnumArrayValues = [
+  'A_SHOULD_BE_SORTED_AS_FIRST',
+  'Z_SHOULD_BE_SORTED_AS_LAST',
+];
 export const RootLevelEnumArrayEnum = {
-  FOO: 'FOO',
-  BAR: 'BAR',
+  A_SHOULD_BE_SORTED_AS_FIRST: 'A_SHOULD_BE_SORTED_AS_FIRST',
+  Z_SHOULD_BE_SORTED_AS_LAST: 'Z_SHOULD_BE_SORTED_AS_LAST',
 };
 
 export const LevelOneAnyEnumArrayValues = ['ONE.BAM', 'ONE.BAZ'];
