@@ -15,6 +15,11 @@ export const ROOT_LEVEL_ENUM_ARRAY_PATH = 'rootLevelEnumArray';
 
 export const ROOT_LEVEL_ARRAY_ARRAY_PATH = 'rootLevelArray';
 
+export const ROOT_LEVEL_FROM_DEFINITION_MEMBER_DEFINED_IN_DEFINITION_PATH =
+  'rootLevelFromDefinition.memberDefinedInDefinition';
+
+export const ROOT_LEVEL_FROM_DEFINITION_OBJECT_PATH = 'rootLevelFromDefinition';
+
 export const LEVEL_ONE_ANY_STRING_PATH = 'levelOne.anyString';
 
 export const LEVEL_ONE_ANY_ENUM_ARRAY_PATH = 'levelOne.anyEnumArray';

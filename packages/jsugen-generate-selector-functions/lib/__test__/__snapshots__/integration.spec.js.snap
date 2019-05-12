@@ -27,6 +27,21 @@ export function byRootLevelArray(property, defaultReturn) {
   return get(property, 'rootLevelArray', defaultReturn);
 }
 
+export function byRootLevelFromDefinitionMemberDefinedInDefinition(
+  property,
+  defaultReturn,
+) {
+  return get(
+    property,
+    'rootLevelFromDefinition.memberDefinedInDefinition',
+    defaultReturn,
+  );
+}
+
+export function byRootLevelFromDefinition(property, defaultReturn) {
+  return get(property, 'rootLevelFromDefinition', defaultReturn);
+}
+
 export function byLevelOneAnyString(property, defaultReturn) {
   return get(property, 'levelOne.anyString', defaultReturn);
 }
