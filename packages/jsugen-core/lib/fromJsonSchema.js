@@ -1,7 +1,9 @@
-import { Observable } from 'rxjs';
+import { from, Observable } from 'rxjs';
+import { flatMap } from 'rxjs/operators';
+import RefParser from 'json-schema-ref-parser';
 import { schemaWalk, vocabularies } from '@cloudflare/json-schema-walker';
 
-const fromJsonSchema = schema =>
+const fromJsonSchemaWalker = schema =>
   new Observable(subscriber => {
     try {
       schemaWalk(
@@ -22,5 +24,14 @@ const fromJsonSchema = schema =>
     }
     subscriber.complete();
   });
+
+/**
+ * Returns an observable that emits all nodes from a JSON schema.
+ */
+const fromJsonSchema = schema => {
+  const dereferencedSchemaPromise = RefParser.dereference(schema);
+
+  return from(dereferencedSchemaPromise).pipe(flatMap(fromJsonSchemaWalker));
+};
 
 export default fromJsonSchema;

@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@cloudflare/json-schema-walker": "^0.1.1",
+    "json-schema-ref-parser": "^6.1.0",
     "prettier": "^1.17.0",
     "rxjs": "^6.5.1"
   },
