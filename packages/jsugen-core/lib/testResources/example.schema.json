@@ -22,6 +22,9 @@
     "rootLevelArray": {
       "type": "array"
     },
+    "rootLevelFromDefinition": {
+      "$ref": "#/definitions/anyShape"
+    },
     "levelOne": {
       "type": "object",
       "additionalProperties": false,
@@ -52,6 +55,16 @@
               "type": "string"
             }
           }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "anyShape": {
+      "type": "object",
+      "properties": {
+        "memberDefinedInDefinition": {
+          "type": "string"
         }
       }
     }
