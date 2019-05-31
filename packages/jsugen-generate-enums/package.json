@@ -23,6 +23,9 @@
     "@sthzg/jsugen-core": "^0.9.5",
     "rxjs": "^6.5.1"
   },
+  "peerDependencies": {
+    "lodash-es": ">=4"
+  },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },

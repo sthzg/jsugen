@@ -1,4 +1,9 @@
 /* eslint-disable no-console */
 
-export const log = (...args) => console.log(...args);
-export const logError = (...args) => console.error(...args);
+export function log(...args) {
+  return console.log(...args);
+}
+
+export function logError(...args) {
+  return console.error(...args);
+}

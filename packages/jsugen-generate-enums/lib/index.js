@@ -1,25 +1,21 @@
-import { filter, map, reduce, tap } from 'rxjs/operators';
+import { filter, map, mergeMap, reduce, tap } from 'rxjs/operators';
 import {
   DEFAULT_FILE_DOCSTRING,
   DEFAULT_PRETTIER_OPTIONS,
   EMPTY_STRING,
-} from '@sthzg/jsugen-core/lib/constants';
-import {
-  enrichWithEnumValues,
-  enrichWithObjectPathData,
-  hasJsonSchemaDefinition,
-  isEnumType,
-  fromJsonSchema,
+  enrichWithPathNodeTemplateVarsStream,
+  byMemberDefinitionIsEnum,
   toTemplateRawStringReducer,
   withCompileToTemplate,
   withPrependToString,
   withPrettier,
   withWrite,
-} from '@sthzg/jsugen-core/lib';
-import buildTemplateVars from './buildTemplateVars';
-import enumModuleTemplate from './enum.tpl';
+} from '@sthzg/jsugen-core';
+import { fromJsonSchema } from '@sthzg/jsugen-core/lib/sources/jsonSchema';
+import { buildTemplateVars } from './buildTemplateVars';
+import { template as enumModuleTemplate } from './enum.tpl';
 
-function generateEnumsModule({ schema, out }) {
+export function generateEnumsModule({ schema, out }) {
   // ---
   // Configure Transformer Factories.
   // ---
@@ -33,14 +29,10 @@ function generateEnumsModule({ schema, out }) {
   // ---
   return fromJsonSchema(schema).pipe(
     /* Filtering */
-    filter(hasJsonSchemaDefinition),
-    filter(isEnumType),
-
-    /* Enrichment */
-    map(enrichWithObjectPathData),
-    map(enrichWithEnumValues),
+    filter(byMemberDefinitionIsEnum),
 
     /* Templating */
+    mergeMap(enrichWithPathNodeTemplateVarsStream),
     map(buildTemplateVars),
     map(compileToTemplate),
 
@@ -53,5 +45,3 @@ function generateEnumsModule({ schema, out }) {
     tap(write),
   );
 }
-
-export default generateEnumsModule;

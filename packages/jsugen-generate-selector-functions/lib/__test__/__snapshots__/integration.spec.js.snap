@@ -1,77 +1,158 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`generate-selector-functions integration test 1`] = `
+exports[`generate-selector-functions should pass example.contact.json integration test 1`] = `
 "/**
  * @file This file is auto-generated. Do not modify its contents manually.
  */
 
 import get from 'lodash-es/get';
 
-export function byRootLevelString(property, defaultReturn) {
-  return get(property, 'rootLevelString', defaultReturn);
+export function byId(property, defaultReturn) {
+  return get(property, ['id'], defaultReturn);
 }
 
-export function byRootLevelBool(property, defaultReturn) {
-  return get(property, 'rootLevelBool', defaultReturn);
+export function byFirstName(property, defaultReturn) {
+  return get(property, ['firstName'], defaultReturn);
 }
 
-export function byRootLevelNumber(property, defaultReturn) {
-  return get(property, 'rootLevelNumber', defaultReturn);
+export function byLastName(property, defaultReturn) {
+  return get(property, ['lastName'], defaultReturn);
 }
 
-export function byRootLevelEnumArray(property, defaultReturn) {
-  return get(property, 'rootLevelEnumArray', defaultReturn);
+export function byPhoneNthTypeEnum(property, phoneIndex = 0, defaultReturn) {
+  return get(property, ['phone', phoneIndex, 'type'], defaultReturn);
 }
 
-export function byRootLevelArray(property, defaultReturn) {
-  return get(property, 'rootLevelArray', defaultReturn);
+export function byPhoneNthNumber(property, phoneIndex = 0, defaultReturn) {
+  return get(property, ['phone', phoneIndex, 'number'], defaultReturn);
 }
 
-export function byRootLevelFromDefinitionMemberDefinedInDefinition(
+export function byPhone(property, defaultReturn) {
+  return get(property, ['phone'], defaultReturn);
+}
+
+export function byPhoneNth(property, phoneIndex = 0, defaultReturn) {
+  return get(property, ['phone', phoneIndex], defaultReturn);
+}
+"
+`;
+
+exports[`generate-selector-functions should pass full integration test 1`] = `
+"/**
+ * @file This file is auto-generated. Do not modify its contents manually.
+ */
+
+import get from 'lodash-es/get';
+
+export function byLevel1Member1(property, defaultReturn) {
+  return get(property, ['level1Member1'], defaultReturn);
+}
+
+export function byLevel1Member2(property, defaultReturn) {
+  return get(property, ['level1Member2'], defaultReturn);
+}
+
+export function byLevel1Member3(property, defaultReturn) {
+  return get(property, ['level1Member3'], defaultReturn);
+}
+
+export function byLevel1Member4Enum(property, defaultReturn) {
+  return get(property, ['level1Member4'], defaultReturn);
+}
+
+export function byLevel1Member5(property, defaultReturn) {
+  return get(property, ['level1Member5'], defaultReturn);
+}
+
+export function byLevel1Member5Nth(
+  property,
+  level1Member5Index = 0,
+  defaultReturn,
+) {
+  return get(property, ['level1Member5', level1Member5Index], defaultReturn);
+}
+
+export function byLevel1Member6NthLevel2Member1(
+  property,
+  level1Member6Index = 0,
+  defaultReturn,
+) {
+  return get(
+    property,
+    ['level1Member6', level1Member6Index, 'level2Member1'],
+    defaultReturn,
+  );
+}
+
+export function byLevel1Member6(property, defaultReturn) {
+  return get(property, ['level1Member6'], defaultReturn);
+}
+
+export function byLevel1Member6Nth(
+  property,
+  level1Member6Index = 0,
+  defaultReturn,
+) {
+  return get(property, ['level1Member6', level1Member6Index], defaultReturn);
+}
+
+export function byLevel1Member7DefinitionMember1(property, defaultReturn) {
+  return get(property, ['level1Member7', 'definitionMember1'], defaultReturn);
+}
+
+export function byLevel1Member7(property, defaultReturn) {
+  return get(property, ['level1Member7'], defaultReturn);
+}
+
+export function byLevel1Member8Level2Member1(property, defaultReturn) {
+  return get(property, ['level1Member8', 'level2Member1'], defaultReturn);
+}
+
+export function byLevel1Member8Level2Member2Enum(property, defaultReturn) {
+  return get(property, ['level1Member8', 'level2Member2'], defaultReturn);
+}
+
+export function byLevel1Member8Level2Member3(property, defaultReturn) {
+  return get(property, ['level1Member8', 'level2Member3'], defaultReturn);
+}
+
+export function byLevel1Member8Level2Member3Nth(
+  property,
+  level2Member3Index = 0,
+  defaultReturn,
+) {
+  return get(
+    property,
+    ['level1Member8', 'level2Member3', level2Member3Index],
+    defaultReturn,
+  );
+}
+
+export function byLevel1Member8Level2Member4(property, defaultReturn) {
+  return get(property, ['level1Member8', 'level2Member4'], defaultReturn);
+}
+
+export function byLevel1Member8Level2Member5(property, defaultReturn) {
+  return get(property, ['level1Member8', 'level2Member5'], defaultReturn);
+}
+
+export function byLevel1Member8Level2Member6Level3Member1(
   property,
   defaultReturn,
 ) {
   return get(
     property,
-    'rootLevelFromDefinition.memberDefinedInDefinition',
+    ['level1Member8', 'level2Member6', 'level3Member1'],
     defaultReturn,
   );
 }
 
-export function byRootLevelFromDefinition(property, defaultReturn) {
-  return get(property, 'rootLevelFromDefinition', defaultReturn);
+export function byLevel1Member8Level2Member6(property, defaultReturn) {
+  return get(property, ['level1Member8', 'level2Member6'], defaultReturn);
 }
 
-export function byLevelOneAnyString(property, defaultReturn) {
-  return get(property, 'levelOne.anyString', defaultReturn);
-}
-
-export function byLevelOneAnyEnumArray(property, defaultReturn) {
-  return get(property, 'levelOne.anyEnumArray', defaultReturn);
-}
-
-export function byLevelOneAnyArray(property, defaultReturn) {
-  return get(property, 'levelOne.anyArray', defaultReturn);
-}
-
-export function byLevelOneAnyBool(property, defaultReturn) {
-  return get(property, 'levelOne.anyBool', defaultReturn);
-}
-
-export function byLevelOneAnyNumber(property, defaultReturn) {
-  return get(property, 'levelOne.anyNumber', defaultReturn);
-}
-
-export function byLevelOneLevelTwoFoo(property, defaultReturn) {
-  return get(property, 'levelOne.levelTwo.foo', defaultReturn);
-}
-
-export function byLevelOneLevelTwo(property, defaultReturn) {
-  return get(property, 'levelOne.levelTwo', defaultReturn);
-}
-
-export function byLevelOne(property, defaultReturn) {
-  return get(property, 'levelOne', defaultReturn);
+export function byLevel1Member8(property, defaultReturn) {
+  return get(property, ['level1Member8'], defaultReturn);
 }
 "
 `;

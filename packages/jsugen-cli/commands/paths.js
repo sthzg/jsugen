@@ -1,6 +1,6 @@
 /* eslint-disable global-require,import/no-dynamic-require */
 import { log, logError } from '@sthzg/jsugen-core/lib/utils';
-import generateObjectPathsModule from '@sthzg/jsugen-generate-lodash-object-paths';
+import { generateObjectPathsModule } from '@sthzg/jsugen-generate-lodash-object-paths';
 import { outOption, schemaOption } from './commonOptions';
 
 // ---
