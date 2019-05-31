@@ -1,21 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`generate-enums integration test 1`] = `
+exports[`generate-enums should pass example.contact.json integration test 1`] = `
 "/**
  * @file This file is auto-generated. Do not modify its contents manually.
  */
 
-export const RootLevelEnumArrayValues = [
+export const PhoneNthTypeEnumValues = [
+  'PRIVATE_LANDLINE',
+  'PRIVATE_MOBILE',
+  'WORK_LANDLINE',
+  'WORK_MOBILE',
+];
+export const PhoneNthTypeEnum = {
+  PRIVATE_LANDLINE: 'PRIVATE_LANDLINE',
+  PRIVATE_MOBILE: 'PRIVATE_MOBILE',
+  WORK_LANDLINE: 'WORK_LANDLINE',
+  WORK_MOBILE: 'WORK_MOBILE',
+};
+"
+`;
+
+exports[`generate-enums should pass full integration test 1`] = `
+"/**
+ * @file This file is auto-generated. Do not modify its contents manually.
+ */
+
+export const Level1Member4EnumValues = [
   'A_SHOULD_BE_SORTED_AS_FIRST',
   'Z_SHOULD_BE_SORTED_AS_LAST',
 ];
-export const RootLevelEnumArrayEnum = {
+export const Level1Member4Enum = {
   A_SHOULD_BE_SORTED_AS_FIRST: 'A_SHOULD_BE_SORTED_AS_FIRST',
   Z_SHOULD_BE_SORTED_AS_LAST: 'Z_SHOULD_BE_SORTED_AS_LAST',
 };
 
-export const LevelOneAnyEnumArrayValues = ['ONE.BAM', 'ONE.BAZ'];
-export const LevelOneAnyEnumArrayEnum = {
+export const Level1Member8Level2Member2EnumValues = ['ONE.BAM', 'ONE.BAZ'];
+export const Level1Member8Level2Member2Enum = {
   'ONE.BAM': 'ONE.BAM',
   'ONE.BAZ': 'ONE.BAZ',
 };

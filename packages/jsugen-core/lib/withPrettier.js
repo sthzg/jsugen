@@ -1,7 +1,7 @@
 import prettier from 'prettier';
 
-const withPrettier = prettierConfig => content => {
-  return prettier.format(content, prettierConfig);
-};
-
-export default withPrettier;
+export function withPrettier(prettierConfig) {
+  return content => {
+    return prettier.format(content, prettierConfig);
+  };
+}

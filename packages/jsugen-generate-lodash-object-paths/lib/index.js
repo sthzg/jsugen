@@ -1,29 +1,23 @@
-import { distinct, filter, map, reduce, tap } from 'rxjs/operators';
+import { map, mergeMap, reduce, tap } from 'rxjs/operators';
 import {
   DEFAULT_FILE_DOCSTRING,
   DEFAULT_PRETTIER_OPTIONS,
   EMPTY_STRING,
-} from '@sthzg/jsugen-core/lib/constants';
-import {
-  enrichWithObjectPathData,
-  hasJsonSchemaDefinition,
-  fromJsonSchema,
-  startsWithPropertiesKeyword,
+  enrichWithPathNodeTemplateVarsStream,
   toTemplateRawStringReducer,
   withCompileToTemplate,
   withPrependToString,
   withPrettier,
   withWrite,
-} from '@sthzg/jsugen-core/lib';
-import { byPathInDotNotation } from '@sthzg/jsugen-core/lib/selectors';
-import objectPathConstant from './objectPathConst.tpl';
-import buildTemplateVars from './buildTemplateVars';
+} from '@sthzg/jsugen-core';
+import { fromJsonSchema } from '@sthzg/jsugen-core/lib/sources/jsonSchema';
+import { template as objectPathConstantTemplate } from './objectPathConst.tpl';
 
-function generateObjectPathsModule({ schema, out }) {
+export function generateObjectPathsModule({ schema, out }) {
   // ---
   // Configure Transformer Factories.
   // ---
-  const compileToTemplate = withCompileToTemplate(objectPathConstant);
+  const compileToTemplate = withCompileToTemplate(objectPathConstantTemplate);
   const prependHeaders = withPrependToString(DEFAULT_FILE_DOCSTRING);
   const prettify = withPrettier(DEFAULT_PRETTIER_OPTIONS);
   const write = withWrite(out);
@@ -32,16 +26,8 @@ function generateObjectPathsModule({ schema, out }) {
   // Observable.
   // ---
   return fromJsonSchema(schema).pipe(
-    /* Filtering */
-    filter(hasJsonSchemaDefinition),
-    filter(startsWithPropertiesKeyword),
-
-    /* Enrichment */
-    map(enrichWithObjectPathData),
-    distinct(byPathInDotNotation),
-
     /* Templating */
-    map(buildTemplateVars),
+    mergeMap(enrichWithPathNodeTemplateVarsStream),
     map(compileToTemplate),
 
     /* To String */
@@ -53,5 +39,3 @@ function generateObjectPathsModule({ schema, out }) {
     tap(write),
   );
 }
-
-export default generateObjectPathsModule;

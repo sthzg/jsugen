@@ -1,37 +1,34 @@
-import sortBy from 'lodash-es/sortBy';
+import { sortBy } from 'lodash-es';
 import {
   arrayToEnum,
   enrichInTemplate,
   toUpperFirstCamelCase,
-} from '@sthzg/jsugen-core/lib/utils';
+} from '@sthzg/jsugen-core';
 
 const POSTFIX = {
   VALUES: 'Values',
   ENUM: 'Enum',
 };
 
-/**
- * Transforms `context.data` to the template variables.
- */
-const buildTemplateVars = context => {
+export function buildTemplateVars(memberDefinition) {
   const {
-    data: { pathName, enumValues },
-  } = context;
+    template: {
+      vars: { enumValues, name },
+    },
+  } = memberDefinition;
 
   const sortedEnumValues = sortBy(enumValues);
 
   const vars = {
     valuesConstant: {
-      name: toUpperFirstCamelCase(pathName, POSTFIX.VALUES),
+      name: toUpperFirstCamelCase(name, POSTFIX.VALUES),
       values: sortedEnumValues,
     },
     enumConstant: {
-      name: toUpperFirstCamelCase(pathName, POSTFIX.ENUM),
+      name: toUpperFirstCamelCase(name),
       values: arrayToEnum(sortedEnumValues),
     },
   };
 
-  return enrichInTemplate(context, { vars });
-};
-
-export default buildTemplateVars;
+  return enrichInTemplate(memberDefinition, { vars });
+}

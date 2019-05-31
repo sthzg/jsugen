@@ -1,7 +1,7 @@
 import { NEWLINE } from './constants';
 
-const withPrependToString = (...headers) => content => {
-  return [...headers, content].join(NEWLINE);
-};
-
-export default withPrependToString;
+export function withPrependToString(...headers) {
+  return content => {
+    return [...headers, content].join(NEWLINE);
+  };
+}

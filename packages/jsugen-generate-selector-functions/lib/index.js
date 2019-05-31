@@ -1,39 +1,39 @@
-import { distinct, filter, map, reduce, tap } from 'rxjs/operators';
+import { map, mergeMap, reduce, tap } from 'rxjs/operators';
 import {
   DEFAULT_GET_IMPORT,
   DEFAULT_FILE_DOCSTRING,
   DEFAULT_PRETTIER_OPTIONS,
   EMPTY_STRING,
-} from '@sthzg/jsugen-core/lib/constants';
-import {
-  enrichWithObjectPathData,
-  hasJsonSchemaDefinition,
-  fromJsonSchema,
-  startsWithPropertiesKeyword,
+  enrichWithPathNodeTemplateVarsStream,
   toTemplateRawStringReducer,
   withCompileToTemplate,
   withPrependToString,
   withPrettier,
   withWrite,
-} from '@sthzg/jsugen-core/lib';
-import { byPathInDotNotation } from '@sthzg/jsugen-core/lib/selectors';
-import selectorFunctionModule from './selector.tpl';
+} from '@sthzg/jsugen-core';
+import { fromJsonSchema } from '@sthzg/jsugen-core/lib/sources/jsonSchema';
+import { template as selectorFunctionTemplate } from './selector.tpl';
 
 /**
- * Generates selector functions for all values inside the JSON schema.
+ * Generates selector functions for all values inside the source documents.
  *
- * Selectors are functions that pick a value from an object in a failsafe way or return undefined if
- * the property is not defined on the input object, e.g.
+ * Selectors are functions that pick a value from an object in a failsafe way or
+ * return `defaultReturn` if the property is not defined on the input object.
  *
- *     function byPersonAddressStreet(person) {
- *       return get(person, 'address.street');
+ *     function byPersonNthAddressNthStreet(
+ *       person,
+ *       personIndex = 0,
+ *       addressIndex = 0,
+ *       defaultReturn,
+ *     ) {
+ *       return get(person, [personIndex, 'address', addressIndex, 'street']);
  *     }
  */
-function generateSelectorsModule({ schema, out }) {
+export function generateSelectorsModule({ schema, out }) {
   // ---
   // Configure Transformer Factories.
   // ---
-  const compileToTemplate = withCompileToTemplate(selectorFunctionModule);
+  const compileToTemplate = withCompileToTemplate(selectorFunctionTemplate);
   const prependHeaders = withPrependToString(
     DEFAULT_FILE_DOCSTRING,
     DEFAULT_GET_IMPORT,
@@ -45,15 +45,8 @@ function generateSelectorsModule({ schema, out }) {
   // Observable.
   // ---
   return fromJsonSchema(schema).pipe(
-    /* Filtering */
-    filter(hasJsonSchemaDefinition),
-    filter(startsWithPropertiesKeyword),
-
-    /* Enrichment */
-    map(enrichWithObjectPathData),
-    distinct(byPathInDotNotation),
-
     /* Templating */
+    mergeMap(enrichWithPathNodeTemplateVarsStream),
     map(compileToTemplate),
 
     /* To String */
@@ -65,5 +58,3 @@ function generateSelectorsModule({ schema, out }) {
     tap(write),
   );
 }
-
-export default generateSelectorsModule;

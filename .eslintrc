@@ -7,8 +7,11 @@
   "plugins": ["prettier"],
   "rules": {
     "comma-dangle": ["error", "always-multiline"],
+    "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
     "function-paren-newline": "off",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "import/no-default-export": "error",
+    "no-use-before-define": "off"
   },
   "globals": {
     "describe": false,

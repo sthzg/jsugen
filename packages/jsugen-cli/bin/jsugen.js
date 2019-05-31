@@ -8,6 +8,7 @@ import {
   selectors as selectorsCmd,
 } from '../commands';
 
+// eslint-disable-next-line import/no-default-export
 export default yargs
   .usage('$0 <cmd> [args]')
   .command(

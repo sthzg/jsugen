@@ -1,6 +1,6 @@
 /* eslint-disable global-require,import/no-dynamic-require */
 import { log, logError } from '@sthzg/jsugen-core/lib/utils';
-import generateSelectorsModule from '@sthzg/jsugen-generate-selector-functions';
+import { generateSelectorsModule } from '@sthzg/jsugen-generate-selector-functions';
 import { outOption, schemaOption } from './commonOptions';
 
 // ---
