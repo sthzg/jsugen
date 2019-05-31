@@ -1,39 +1,167 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`generate-lodash-object-paths integration test 1`] = `
+exports[`generate-lodash-object-paths should generate expected paths for array-of-objects properties 1`] = `
 "/**
  * @file This file is auto-generated. Do not modify its contents manually.
  */
 
-export const ROOT_LEVEL_STRING_PATH = 'rootLevelString';
+export const byRootNthLevelOneNthFooPath = (
+  rootIndex = 0,
+  levelOneIndex = 0,
+) => ['root', rootIndex, 'levelOne', levelOneIndex, 'foo'];
 
-export const ROOT_LEVEL_BOOL_PATH = 'rootLevelBool';
+export const byRootNthLevelOnePath = (rootIndex = 0) => [
+  'root',
+  rootIndex,
+  'levelOne',
+];
 
-export const ROOT_LEVEL_NUMBER_PATH = 'rootLevelNumber';
+export const byRootNthLevelOneNthPath = (rootIndex = 0, levelOneIndex = 0) => [
+  'root',
+  rootIndex,
+  'levelOne',
+  levelOneIndex,
+];
 
-export const ROOT_LEVEL_ENUM_ARRAY_PATH = 'rootLevelEnumArray';
+export const byRootNthLevelOneWithoutItemsDefPath = (rootIndex = 0) => [
+  'root',
+  rootIndex,
+  'levelOneWithoutItemsDef',
+];
 
-export const ROOT_LEVEL_ARRAY_ARRAY_PATH = 'rootLevelArray';
+export const byRootNthLevelOneWithoutItemsDefNthPath = (
+  rootIndex = 0,
+  levelOneWithoutItemsDefIndex = 0,
+) => [
+  'root',
+  rootIndex,
+  'levelOneWithoutItemsDef',
+  levelOneWithoutItemsDefIndex,
+];
 
-export const ROOT_LEVEL_FROM_DEFINITION_MEMBER_DEFINED_IN_DEFINITION_PATH =
-  'rootLevelFromDefinition.memberDefinedInDefinition';
+export const byRootNthAnyMemberPath = (rootIndex = 0) => [
+  'root',
+  rootIndex,
+  'anyMember',
+];
 
-export const ROOT_LEVEL_FROM_DEFINITION_OBJECT_PATH = 'rootLevelFromDefinition';
+export const byRootPath = () => ['root'];
 
-export const LEVEL_ONE_ANY_STRING_PATH = 'levelOne.anyString';
+export const byRootNthPath = (rootIndex = 0) => ['root', rootIndex];
+"
+`;
 
-export const LEVEL_ONE_ANY_ENUM_ARRAY_PATH = 'levelOne.anyEnumArray';
+exports[`generate-lodash-object-paths should pass example.contact.json integration test 1`] = `
+"/**
+ * @file This file is auto-generated. Do not modify its contents manually.
+ */
 
-export const LEVEL_ONE_ANY_ARRAY_ARRAY_PATH = 'levelOne.anyArray';
+export const byIdPath = () => ['id'];
 
-export const LEVEL_ONE_ANY_BOOL_PATH = 'levelOne.anyBool';
+export const byFirstNamePath = () => ['firstName'];
 
-export const LEVEL_ONE_ANY_NUMBER_PATH = 'levelOne.anyNumber';
+export const byLastNamePath = () => ['lastName'];
 
-export const LEVEL_ONE_LEVEL_TWO_FOO_PATH = 'levelOne.levelTwo.foo';
+export const byPhoneNthTypeEnumPath = (phoneIndex = 0) => [
+  'phone',
+  phoneIndex,
+  'type',
+];
 
-export const LEVEL_ONE_LEVEL_TWO_OBJECT_PATH = 'levelOne.levelTwo';
+export const byPhoneNthNumberPath = (phoneIndex = 0) => [
+  'phone',
+  phoneIndex,
+  'number',
+];
 
-export const LEVEL_ONE_OBJECT_PATH = 'levelOne';
+export const byPhonePath = () => ['phone'];
+
+export const byPhoneNthPath = (phoneIndex = 0) => ['phone', phoneIndex];
+"
+`;
+
+exports[`generate-lodash-object-paths should pass full integration test 1`] = `
+"/**
+ * @file This file is auto-generated. Do not modify its contents manually.
+ */
+
+export const byLevel1Member1Path = () => ['level1Member1'];
+
+export const byLevel1Member2Path = () => ['level1Member2'];
+
+export const byLevel1Member3Path = () => ['level1Member3'];
+
+export const byLevel1Member4EnumPath = () => ['level1Member4'];
+
+export const byLevel1Member5Path = () => ['level1Member5'];
+
+export const byLevel1Member5NthPath = (level1Member5Index = 0) => [
+  'level1Member5',
+  level1Member5Index,
+];
+
+export const byLevel1Member6NthLevel2Member1Path = (level1Member6Index = 0) => [
+  'level1Member6',
+  level1Member6Index,
+  'level2Member1',
+];
+
+export const byLevel1Member6Path = () => ['level1Member6'];
+
+export const byLevel1Member6NthPath = (level1Member6Index = 0) => [
+  'level1Member6',
+  level1Member6Index,
+];
+
+export const byLevel1Member7DefinitionMember1Path = () => [
+  'level1Member7',
+  'definitionMember1',
+];
+
+export const byLevel1Member7Path = () => ['level1Member7'];
+
+export const byLevel1Member8Level2Member1Path = () => [
+  'level1Member8',
+  'level2Member1',
+];
+
+export const byLevel1Member8Level2Member2EnumPath = () => [
+  'level1Member8',
+  'level2Member2',
+];
+
+export const byLevel1Member8Level2Member3Path = () => [
+  'level1Member8',
+  'level2Member3',
+];
+
+export const byLevel1Member8Level2Member3NthPath = (level2Member3Index = 0) => [
+  'level1Member8',
+  'level2Member3',
+  level2Member3Index,
+];
+
+export const byLevel1Member8Level2Member4Path = () => [
+  'level1Member8',
+  'level2Member4',
+];
+
+export const byLevel1Member8Level2Member5Path = () => [
+  'level1Member8',
+  'level2Member5',
+];
+
+export const byLevel1Member8Level2Member6Level3Member1Path = () => [
+  'level1Member8',
+  'level2Member6',
+  'level3Member1',
+];
+
+export const byLevel1Member8Level2Member6Path = () => [
+  'level1Member8',
+  'level2Member6',
+];
+
+export const byLevel1Member8Path = () => ['level1Member8'];
 "
 `;

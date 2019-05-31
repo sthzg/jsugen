@@ -1,9 +1,21 @@
-import { toCamelCase } from '@sthzg/jsugen-core/lib/utils';
+import { COMMA, toCamelCase, wrapInSingleQuote } from '@sthzg/jsugen-core';
 
-const PREFIX = 'by_';
+export function template({
+  template: {
+    vars: { argNames, selectorName, path },
+  },
+}) {
+  const indexArgs = `${argNames.map(argName => `${argName} = 0`).join(COMMA)}`;
+  const signature = ['property', indexArgs, 'defaultReturn']
+    .filter(Boolean)
+    .join(COMMA);
+  const pathArray = path
+    .map(token => (argNames.includes(token) ? token : wrapInSingleQuote(token)))
+    .join(COMMA);
 
-export default ({ data: { pathInDotNotation: path } }) => `
-export function ${toCamelCase(PREFIX, path)}(property, defaultReturn) {
-  return get(property, '${path}', defaultReturn);
+  return `
+  export function ${toCamelCase(selectorName)}(${signature}) {
+    return get(property, [${pathArray}], defaultReturn);
+  }
+  `;
 }
-`;

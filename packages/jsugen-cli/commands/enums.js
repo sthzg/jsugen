@@ -1,6 +1,6 @@
 /* eslint-disable import/no-dynamic-require,global-require */
 import { log, logError } from '@sthzg/jsugen-core/lib/utils';
-import generateEnumsModule from '@sthzg/jsugen-generate-enums';
+import { generateEnumsModule } from '@sthzg/jsugen-generate-enums';
 import { outOption, schemaOption } from './commonOptions';
 
 // ---
