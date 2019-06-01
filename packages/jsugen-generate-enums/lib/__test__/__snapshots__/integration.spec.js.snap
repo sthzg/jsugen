@@ -5,13 +5,13 @@ exports[`generate-enums should pass example.contact.json integration test 1`] = 
  * @file This file is auto-generated. Do not modify its contents manually.
  */
 
-export const PhoneNthTypeEnumValues = [
+export const PhoneTypeEnumValues = [
   'PRIVATE_LANDLINE',
   'PRIVATE_MOBILE',
   'WORK_LANDLINE',
   'WORK_MOBILE',
 ];
-export const PhoneNthTypeEnum = {
+export const PhoneTypeEnum = {
   PRIVATE_LANDLINE: 'PRIVATE_LANDLINE',
   PRIVATE_MOBILE: 'PRIVATE_MOBILE',
   WORK_LANDLINE: 'WORK_LANDLINE',

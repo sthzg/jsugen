@@ -3,13 +3,13 @@ import flow from 'lodash-es/flow';
 import upperFirst from 'lodash-es/upperFirst';
 import toUpper from 'lodash-es/toUpper';
 import snakeCase from 'lodash-es/snakeCase';
-import { EMPTY_STRING } from '../constants';
+import { UNDERSCORE } from '../constants';
 
 /**
  * Joins truthy tokens by EMPTY_STRING.
  */
 export function concat(tokens) {
-  return tokens.filter(Boolean).join(EMPTY_STRING);
+  return tokens.filter(Boolean).join(UNDERSCORE);
 }
 
 /**

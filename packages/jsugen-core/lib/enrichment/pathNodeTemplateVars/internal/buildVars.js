@@ -2,7 +2,7 @@ import { byPathNodesEnumValues } from '../../../selectors';
 import { buildName } from './buildName';
 import { buildObjectPathArray } from './buildObjectPathArray';
 import { buildArgNames } from './buildArgNames';
-import { PREFIX } from '../constants';
+import { PREFIX } from '../../../constants';
 
 export function buildVars(pathNodes, options) {
   return {
