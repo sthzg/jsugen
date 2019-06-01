@@ -4,6 +4,8 @@ export {
   DEFAULT_FILE_DOCSTRING,
   DEFAULT_PRETTIER_OPTIONS,
   EMPTY_STRING,
+  POSTFIX,
+  PREFIX,
 } from './constants';
 export { toTemplateRawStringReducer } from './toTemplateRawStringReducer';
 export { withCompileToTemplate } from './withCompileToTemplate';

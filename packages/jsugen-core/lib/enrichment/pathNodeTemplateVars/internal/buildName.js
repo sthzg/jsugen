@@ -1,7 +1,11 @@
 import { toCamelCase } from '../../../utils';
-import { JSON_SCHEMA_V4_TYPES_ENUM, UNDERSCORE } from '../../../constants';
+import {
+  JSON_SCHEMA_V4_TYPES_ENUM,
+  POSTFIX,
+  PREFIX,
+  UNDERSCORE,
+} from '../../../constants';
 import { byIsLeaf } from '../../../selectors';
-import { POSTFIX, PREFIX } from '../constants';
 
 /**
  * Returns a string with a member name that is accumulated from all path nodes.
