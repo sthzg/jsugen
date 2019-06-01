@@ -1,14 +1,11 @@
-import { sortBy } from 'lodash-es';
+import { replace, sortBy } from 'lodash-es';
 import {
+  EMPTY_STRING,
+  POSTFIX,
   arrayToEnum,
   enrichInTemplate,
   toUpperFirstCamelCase,
 } from '@sthzg/jsugen-core';
-
-const POSTFIX = {
-  VALUES: 'Values',
-  ENUM: 'Enum',
-};
 
 export function buildTemplateVars(memberDefinition) {
   const {
@@ -17,15 +14,19 @@ export function buildTemplateVars(memberDefinition) {
     },
   } = memberDefinition;
 
+  const removeNth = input => replace(input, POSTFIX.NTH, EMPTY_STRING);
+
   const sortedEnumValues = sortBy(enumValues);
+  const valueName = removeNth(toUpperFirstCamelCase(name, POSTFIX.VALUES));
+  const enumName = removeNth(toUpperFirstCamelCase(name));
 
   const vars = {
     valuesConstant: {
-      name: toUpperFirstCamelCase(name, POSTFIX.VALUES),
+      name: valueName,
       values: sortedEnumValues,
     },
     enumConstant: {
-      name: toUpperFirstCamelCase(name),
+      name: enumName,
       values: arrayToEnum(sortedEnumValues),
     },
   };

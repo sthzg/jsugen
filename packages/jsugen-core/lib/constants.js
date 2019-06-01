@@ -64,3 +64,22 @@ export const EMPTY_STRING = '';
 export const NEWLINE = '\n';
 export const SPACE = ' ';
 export const UNDERSCORE = '_';
+
+// ---
+// Default Naming.
+// ---
+export const PREFIX = {
+  NONE: EMPTY_STRING,
+  BY: 'by',
+  DATA: 'data',
+  TEMPLATE: 'template',
+};
+
+export const POSTFIX = {
+  NONE: EMPTY_STRING,
+  ENUM: 'Enum',
+  INDEX: 'Index',
+  NTH: 'Nth',
+  PATH: 'Path',
+  VALUES: 'Values',
+};

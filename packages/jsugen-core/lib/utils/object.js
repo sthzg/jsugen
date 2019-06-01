@@ -7,12 +7,7 @@ import {
   mergeWith,
   set,
 } from 'lodash-es';
-import { DOT } from '../constants';
-
-const PREFIX = {
-  DATA: 'data',
-  TEMPLATE: 'template',
-};
+import { DOT, PREFIX } from '../constants';
 
 // ---
 // Enrichment Utils.
