@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/sthzg/jsugen/compare/v0.9.5...v0.10.0) (2019-06-01)
+
+
+### Bug Fixes
+
+* Remove `Nth` from ENUM constant names ([c3a30a6](https://github.com/sthzg/jsugen/commit/c3a30a6))
+
+
+### Features
+
+* Support resolving JSON schema `definitions` ([f34b759](https://github.com/sthzg/jsugen/commit/f34b759))
+* various features and fixes (see commit message) ([14c94f9](https://github.com/sthzg/jsugen/commit/14c94f9)), closes [#38](https://github.com/sthzg/jsugen/issues/38) [#41](https://github.com/sthzg/jsugen/issues/41) [#42](https://github.com/sthzg/jsugen/issues/42)
+
+
+
+
+
 ## [0.9.5](https://github.com/sthzg/jsugen/compare/v0.9.4...v0.9.5) (2019-05-11)
 
 **Note:** Version bump only for package @sthzg/jsugen-generate-enums
