@@ -1,9 +1,9 @@
-import { filter, map, mergeMap, reduce, tap } from 'rxjs/operators';
+import { concatMap, filter, map, reduce, tap } from 'rxjs/operators';
 import {
   DEFAULT_FILE_DOCSTRING,
   DEFAULT_PRETTIER_OPTIONS,
   EMPTY_STRING,
-  enrichWithPathNodeTemplateVarsStream,
+  enrichWithPathNodeTemplateVars,
   byMemberDefinitionIsEnum,
   toTemplateRawStringReducer,
   withCompileToTemplate,
@@ -32,7 +32,7 @@ export function generateEnumsModule({ schema, out }) {
     filter(byMemberDefinitionIsEnum),
 
     /* Templating */
-    mergeMap(enrichWithPathNodeTemplateVarsStream),
+    concatMap(enrichWithPathNodeTemplateVars),
     map(buildTemplateVars),
     map(compileToTemplate),
 

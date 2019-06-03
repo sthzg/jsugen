@@ -1,1 +1,1 @@
-export { enrichWithTemplateVars } from './enrichWithTemplatVars';
+export { buildVars, buildArrayNthVars } from './buildVars';

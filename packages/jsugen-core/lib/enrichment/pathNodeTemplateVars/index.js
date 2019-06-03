@@ -1,1 +1,3 @@
-export { enrichWithTemplateVarsStream } from './enrichWithTemplateVarsStream';
+export {
+  enrichWithTemplateVars as enrichWithPathNodeTemplateVars,
+} from './enrichWithTemplatVars';

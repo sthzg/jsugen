@@ -1,9 +1,9 @@
-import { map, mergeMap, reduce, tap } from 'rxjs/operators';
+import { concatMap, map, reduce, tap } from 'rxjs/operators';
 import {
   DEFAULT_FILE_DOCSTRING,
   DEFAULT_PRETTIER_OPTIONS,
   EMPTY_STRING,
-  enrichWithPathNodeTemplateVarsStream,
+  enrichWithPathNodeTemplateVars,
   toTemplateRawStringReducer,
   withCompileToTemplate,
   withPrependToString,
@@ -27,7 +27,7 @@ export function generateObjectPathsModule({ schema, out }) {
   // ---
   return fromJsonSchema(schema).pipe(
     /* Templating */
-    mergeMap(enrichWithPathNodeTemplateVarsStream),
+    concatMap(enrichWithPathNodeTemplateVars),
     map(compileToTemplate),
 
     /* To String */
