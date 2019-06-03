@@ -13,7 +13,7 @@ export { withPrependToString } from './withPrependToString';
 export { withPrettier } from './withPrettier';
 export { withWrite } from './withWrite';
 export {
-  enrichWithTemplateVarsStream as enrichWithPathNodeTemplateVarsStream,
+  enrichWithPathNodeTemplateVars,
 } from './enrichment/pathNodeTemplateVars';
 export {
   byTemplateRaw,

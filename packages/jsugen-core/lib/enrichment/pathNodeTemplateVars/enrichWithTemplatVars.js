@@ -1,10 +1,7 @@
 import { compact } from 'lodash-es';
-import { enrichInTemplate, maybeItem } from '../../../utils';
-import {
-  byPathNodesIsArrayLeaf,
-  byPathNodesIsEnumLeaf,
-} from '../../../selectors';
-import { buildArrayNthVars, buildVars } from './buildVars';
+import { enrichInTemplate, maybeItem } from '../../utils';
+import { byPathNodesIsArrayLeaf, byPathNodesIsEnumLeaf } from '../../selectors';
+import { buildArrayNthVars, buildVars } from './internal';
 
 export function enrichWithTemplateVars(memberDefinition) {
   const { pathNodes } = memberDefinition;
