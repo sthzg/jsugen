@@ -1,4 +1,5 @@
-import { byPathNodesEnumValues } from '../../../selectors';
+import { last } from 'lodash-es';
+import { byPathNodeMember, byPathNodesEnumValues } from '../../../selectors';
 import { buildName } from './buildName';
 import { buildObjectPathArray } from './buildObjectPathArray';
 import { buildArgNames } from './buildArgNames';
@@ -10,6 +11,7 @@ export function buildVars(pathNodes, options) {
     enumValues: byPathNodesEnumValues(pathNodes),
     path: buildObjectPathArray(pathNodes, options),
     name: buildName(pathNodes, options),
+    member: byPathNodeMember(last(pathNodes)),
     selectorName: buildName(pathNodes, {
       ...options,
       prefix: PREFIX.BY,

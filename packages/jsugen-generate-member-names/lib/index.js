@@ -1,9 +1,9 @@
-import { concatMap, map, reduce, tap } from 'rxjs/operators';
+import { distinct, map, reduce, tap } from 'rxjs/operators';
 import {
-  addMemberDefinitionsForNonEnumArrayIndexes,
   DEFAULT_FILE_DOCSTRING,
   DEFAULT_PRETTIER_OPTIONS,
   EMPTY_STRING,
+  byMemberDefinitionMemberName,
   enrichWithPathNodeVars,
   toTemplateRawStringReducer,
   withCompileToTemplate,
@@ -12,13 +12,13 @@ import {
   withWrite,
 } from '@sthzg/jsugen-core';
 import { fromJsonSchema } from '@sthzg/jsugen-core/lib/sources/jsonSchema';
-import { template as objectPathConstantTemplate } from './objectPathConst.tpl';
+import { template as memberNamesTemplate } from './memberNames.tpl';
 
-export function generateObjectPathsModule({ schema, out }) {
+export function generateMemberNamesModule({ schema, out }) {
   // ---
   // Configure Transformer Factories.
   // ---
-  const compileToTemplate = withCompileToTemplate(objectPathConstantTemplate);
+  const compileToTemplate = withCompileToTemplate(memberNamesTemplate);
   const prependHeaders = withPrependToString(DEFAULT_FILE_DOCSTRING);
   const prettify = withPrettier(DEFAULT_PRETTIER_OPTIONS);
   const write = withWrite(out);
@@ -29,7 +29,7 @@ export function generateObjectPathsModule({ schema, out }) {
   return fromJsonSchema(schema).pipe(
     /* Templating */
     map(enrichWithPathNodeVars),
-    concatMap(addMemberDefinitionsForNonEnumArrayIndexes),
+    distinct(byMemberDefinitionMemberName),
     map(compileToTemplate),
 
     /* To String */

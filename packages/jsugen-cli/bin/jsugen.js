@@ -4,6 +4,7 @@ import yargs from 'yargs';
 import {
   builder as builderCmd,
   enums as enumsCmd,
+  memberNames as memberNamesCmd,
   paths as pathsCmd,
   selectors as selectorsCmd,
 } from '../commands';
@@ -16,6 +17,12 @@ export default yargs
     'generate a module that exports all object selector path strings with dot notation',
     pathsCmd.builder,
     pathsCmd.handler,
+  )
+  .command(
+    ['generate-member-names [schema]', 'members'],
+    'generate a module that exports all distinct member names defined in the JSON schema',
+    memberNamesCmd.builder,
+    memberNamesCmd.handler,
   )
   .command(
     ['generate-enums [schema]', 'enums'],
