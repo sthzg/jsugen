@@ -27,11 +27,19 @@ export function byPathNodesEnumValues(pathNodes) {
   return get(last(pathNodes), 'enumValues');
 }
 
+export function byPathNodesLastMember(pathNodes) {
+  return byPathNodeMember(last(pathNodes));
+}
+
 // ---
 // Path Node Instance.
 // ---
 export function byPathNodeIsEnum(pathNode) {
   return Boolean(get(pathNode, 'enumValues'));
+}
+
+export function byPathNodeMember(pathNode) {
+  return get(pathNode, 'member');
 }
 
 export function byPathNodeType(pathNode) {

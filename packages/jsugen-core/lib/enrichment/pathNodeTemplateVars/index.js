@@ -1,3 +1,4 @@
 export {
-  enrichWithTemplateVars as enrichWithPathNodeTemplateVars,
-} from './enrichWithTemplatVars';
+  addMemberDefinitionsForNonEnumArrayIndexes,
+} from './addMemberDefinitionsForNonEnumArrayIndexes';
+export { enrichWithPathNodeVars } from './enrichWithTemplatVars';

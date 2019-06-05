@@ -1,15 +1,15 @@
-import { concatMap, filter, map, reduce, tap } from 'rxjs/operators';
+import { filter, map, reduce, tap } from 'rxjs/operators';
 import {
   DEFAULT_FILE_DOCSTRING,
   DEFAULT_PRETTIER_OPTIONS,
   EMPTY_STRING,
-  enrichWithPathNodeTemplateVars,
   byMemberDefinitionIsEnum,
   toTemplateRawStringReducer,
   withCompileToTemplate,
   withPrependToString,
   withPrettier,
   withWrite,
+  enrichWithPathNodeVars,
 } from '@sthzg/jsugen-core';
 import { fromJsonSchema } from '@sthzg/jsugen-core/lib/sources/jsonSchema';
 import { buildTemplateVars } from './buildTemplateVars';
@@ -32,7 +32,7 @@ export function generateEnumsModule({ schema, out }) {
     filter(byMemberDefinitionIsEnum),
 
     /* Templating */
-    concatMap(enrichWithPathNodeTemplateVars),
+    map(enrichWithPathNodeVars),
     map(buildTemplateVars),
     map(compileToTemplate),
 

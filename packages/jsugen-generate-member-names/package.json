@@ -1,40 +1,33 @@
 {
-  "name": "@sthzg/jsugen-cli",
+  "name": "@sthzg/jsugen-generate-member-names",
   "version": "0.10.0",
   "description": "> TODO: description",
   "author": "Stephan Herzog <sthzgvie@gmail.com>",
   "homepage": "https://github.com/sthzg/jsugen#readme",
   "license": "MIT",
-  "main": "bin/esm.js",
+  "main": "lib/index.js",
   "publishConfig": {
     "access": "public"
   },
-  "bin": {
-    "jsugen": "bin/esm.js"
-  },
   "files": [
-    "bin",
-    "commands"
+    "lib"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sthzg/jsugen.git"
-  },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/sthzg/jsugen/issues"
   },
   "dependencies": {
     "@sthzg/jsugen-core": "^0.10.0",
-    "@sthzg/jsugen-generate-builder": "^0.10.0",
-    "@sthzg/jsugen-generate-enums": "^0.10.0",
-    "@sthzg/jsugen-generate-lodash-object-paths": "^0.10.0",
-    "@sthzg/jsugen-generate-member-names": "^0.10.0",
-    "@sthzg/jsugen-generate-selector-functions": "^0.10.0",
-    "esm": "^3.2.22",
-    "yargs": "^13.2.2"
+    "rxjs": "^6.5.1"
+  },
+  "peerDependencies": {
+    "lodash-es": ">=4"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "gitHead": "f7909d029766e0d408f1d5cb9e8411c673d4c4bd"
 }
