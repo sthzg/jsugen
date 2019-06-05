@@ -13,18 +13,21 @@ export { withPrependToString } from './withPrependToString';
 export { withPrettier } from './withPrettier';
 export { withWrite } from './withWrite';
 export {
-  enrichWithPathNodeTemplateVars,
+  enrichWithPathNodeVars,
+  addMemberDefinitionsForNonEnumArrayIndexes,
 } from './enrichment/pathNodeTemplateVars';
 export {
-  byTemplateRaw,
-  byMemberDefinitionIsEnum,
   byIsLeaf,
-  byPathNodesEnumValues,
+  byMemberDefinitionIsEnum,
+  byMemberDefinitionMemberName,
+  byMemberDefinitionPathNodes,
   byPathNodeIsArray,
   byPathNodeIsEnum,
+  byPathNodesEnumValues,
   byPathNodesIsArrayLeaf,
   byPathNodesIsEnumLeaf,
   byPathNodeType,
+  byTemplateRaw,
 } from './selectors';
 export {
   /* array.js */

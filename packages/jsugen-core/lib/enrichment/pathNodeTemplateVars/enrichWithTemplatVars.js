@@ -1,16 +1,8 @@
-import { compact } from 'lodash-es';
-import { enrichInTemplate, maybeItem } from '../../utils';
-import { byPathNodesIsArrayLeaf, byPathNodesIsEnumLeaf } from '../../selectors';
-import { buildArrayNthVars, buildVars } from './internal';
+import { enrichInTemplate } from '../../utils';
+import { buildVars } from './internals';
 
-export function enrichWithTemplateVars(memberDefinition) {
+export function enrichWithPathNodeVars(memberDefinition) {
   const { pathNodes } = memberDefinition;
-  const isNonEnumArray =
-    byPathNodesIsArrayLeaf(pathNodes) && !byPathNodesIsEnumLeaf(pathNodes);
-  const enrichWithVars = vars => enrichInTemplate(memberDefinition, { vars });
 
-  return compact([
-    buildVars(pathNodes),
-    maybeItem(isNonEnumArray, buildArrayNthVars, pathNodes),
-  ]).map(enrichWithVars);
+  return enrichInTemplate(memberDefinition, { vars: buildVars(pathNodes) });
 }

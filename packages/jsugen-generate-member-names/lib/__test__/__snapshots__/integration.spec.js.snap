@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generate-member-names should pass example.contact.json integration test 1`] = `
+"/**
+ * @file This file is auto-generated. Do not modify its contents manually.
+ */
+
+export const ID = 'id';
+export const FIRST_NAME = 'firstName';
+export const LAST_NAME = 'lastName';
+export const TYPE = 'type';
+export const NUMBER = 'number';
+export const PHONE = 'phone';
+"
+`;
+
+exports[`generate-member-names should pass full integration test 1`] = `
+"/**
+ * @file This file is auto-generated. Do not modify its contents manually.
+ */
+
+export const LEVEL_1_MEMBER_1 = 'level1Member1';
+export const LEVEL_1_MEMBER_2 = 'level1Member2';
+export const LEVEL_1_MEMBER_3 = 'level1Member3';
+export const LEVEL_1_MEMBER_4 = 'level1Member4';
+export const LEVEL_1_MEMBER_5 = 'level1Member5';
+export const LEVEL_2_MEMBER_1 = 'level2Member1';
+export const LEVEL_1_MEMBER_6 = 'level1Member6';
+export const DEFINITION_MEMBER_1 = 'definitionMember1';
+export const LEVEL_1_MEMBER_7 = 'level1Member7';
+export const LEVEL_2_MEMBER_2 = 'level2Member2';
+export const LEVEL_2_MEMBER_3 = 'level2Member3';
+export const LEVEL_2_MEMBER_4 = 'level2Member4';
+export const LEVEL_2_MEMBER_5 = 'level2Member5';
+export const LEVEL_3_MEMBER_1 = 'level3Member1';
+export const LEVEL_2_MEMBER_6 = 'level2Member6';
+export const LEVEL_1_MEMBER_8 = 'level1Member8';
+"
+`;

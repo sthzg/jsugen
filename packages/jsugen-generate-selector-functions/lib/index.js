@@ -4,7 +4,8 @@ import {
   DEFAULT_FILE_DOCSTRING,
   DEFAULT_PRETTIER_OPTIONS,
   EMPTY_STRING,
-  enrichWithPathNodeTemplateVars,
+  addMemberDefinitionsForNonEnumArrayIndexes,
+  enrichWithPathNodeVars,
   toTemplateRawStringReducer,
   withCompileToTemplate,
   withPrependToString,
@@ -46,7 +47,8 @@ export function generateSelectorsModule({ schema, out }) {
   // ---
   return fromJsonSchema(schema).pipe(
     /* Templating */
-    concatMap(enrichWithPathNodeTemplateVars),
+    map(enrichWithPathNodeVars),
+    concatMap(addMemberDefinitionsForNonEnumArrayIndexes),
     map(compileToTemplate),
 
     /* To String */
