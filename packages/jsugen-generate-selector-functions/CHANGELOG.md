@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.2](https://github.com/sthzg/jsugen/compare/v0.11.1...v0.11.2) (2019-06-06)
+
+
+### Bug Fixes
+
+* Remove the `Enum` postfix from generated names ([4819c9c](https://github.com/sthzg/jsugen/commit/4819c9c))
+
+
+
+
+
 ## [0.11.1](https://github.com/sthzg/jsugen/compare/v0.11.0...v0.11.1) (2019-06-06)
 
 
