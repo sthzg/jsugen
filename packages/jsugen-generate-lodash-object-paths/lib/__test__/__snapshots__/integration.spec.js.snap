@@ -64,7 +64,7 @@ export const byLastNamePath = () => ['lastName'];
 
 export const byGenderPath = () => ['gender'];
 
-export const byPhoneNthTypeEnumPath = (phoneIndex = 0) => [
+export const byPhoneNthTypePath = (phoneIndex = 0) => [
   'phone',
   phoneIndex,
   'type',
@@ -93,7 +93,7 @@ export const byLevel1Member2Path = () => ['level1Member2'];
 
 export const byLevel1Member3Path = () => ['level1Member3'];
 
-export const byLevel1Member4EnumPath = () => ['level1Member4'];
+export const byLevel1Member4Path = () => ['level1Member4'];
 
 export const byLevel1Member5Path = () => ['level1Member5'];
 
@@ -127,7 +127,7 @@ export const byLevel1Member8Level2Member1Path = () => [
   'level2Member1',
 ];
 
-export const byLevel1Member8Level2Member2EnumPath = () => [
+export const byLevel1Member8Level2Member2Path = () => [
   'level1Member8',
   'level2Member2',
 ];

@@ -77,7 +77,6 @@ export const PREFIX = {
 
 export const POSTFIX = {
   NONE: EMPTY_STRING,
-  ENUM: 'Enum',
   INDEX: 'Index',
   NTH: 'Nth',
   PATH: 'Path',
