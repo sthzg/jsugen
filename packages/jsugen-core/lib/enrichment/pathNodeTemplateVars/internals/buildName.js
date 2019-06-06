@@ -21,14 +21,10 @@ export function buildName(pathNodes, options = {}) {
     [member, ...postfixes].join(UNDERSCORE);
 
   const memberNames = pathNodes.map(pathNode => {
-    const { type, member, enumValues } = pathNode;
+    const { type, member } = pathNode;
 
     switch (type) {
       case JSON_SCHEMA_V4_TYPES_ENUM.ARRAY: {
-        if (enumValues) {
-          return withPostfix(member, POSTFIX.ENUM);
-        }
-
         if (byIsLeaf(pathNode, pathNodes) && includeNth) {
           return withPostfix(member, POSTFIX.NTH);
         }

@@ -23,7 +23,7 @@ export function byGender(property, defaultReturn) {
   return get(property, ['gender'], defaultReturn);
 }
 
-export function byPhoneNthTypeEnum(property, phoneIndex = 0, defaultReturn) {
+export function byPhoneNthType(property, phoneIndex = 0, defaultReturn) {
   return get(property, ['phone', phoneIndex, 'type'], defaultReturn);
 }
 
@@ -60,7 +60,7 @@ export function byLevel1Member3(property, defaultReturn) {
   return get(property, ['level1Member3'], defaultReturn);
 }
 
-export function byLevel1Member4Enum(property, defaultReturn) {
+export function byLevel1Member4(property, defaultReturn) {
   return get(property, ['level1Member4'], defaultReturn);
 }
 
@@ -112,7 +112,7 @@ export function byLevel1Member8Level2Member1(property, defaultReturn) {
   return get(property, ['level1Member8', 'level2Member1'], defaultReturn);
 }
 
-export function byLevel1Member8Level2Member2Enum(property, defaultReturn) {
+export function byLevel1Member8Level2Member2(property, defaultReturn) {
   return get(property, ['level1Member8', 'level2Member2'], defaultReturn);
 }
 

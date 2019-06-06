@@ -12,13 +12,13 @@ export const Gender = {
   UNSPECIFIED: 'unspecified',
 };
 
-export const PhoneTypeEnumValues = [
+export const PhoneTypeValues = [
   'PRIVATE_LANDLINE',
   'PRIVATE_MOBILE',
   'WORK_LANDLINE',
   'WORK_MOBILE',
 ];
-export const PhoneTypeEnum = {
+export const PhoneType = {
   PRIVATE_LANDLINE: 'PRIVATE_LANDLINE',
   PRIVATE_MOBILE: 'PRIVATE_MOBILE',
   WORK_LANDLINE: 'WORK_LANDLINE',
@@ -32,17 +32,17 @@ exports[`generate-enums should pass full integration test 1`] = `
  * @file This file is auto-generated. Do not modify its contents manually.
  */
 
-export const Level1Member4EnumValues = [
+export const Level1Member4Values = [
   'A_SHOULD_BE_SORTED_AS_FIRST',
   'Z_SHOULD_BE_SORTED_AS_LAST',
 ];
-export const Level1Member4Enum = {
+export const Level1Member4 = {
   A_SHOULD_BE_SORTED_AS_FIRST: 'A_SHOULD_BE_SORTED_AS_FIRST',
   Z_SHOULD_BE_SORTED_AS_LAST: 'Z_SHOULD_BE_SORTED_AS_LAST',
 };
 
-export const Level1Member8Level2Member2EnumValues = ['ONE.BAM', 'ONE.BAZ'];
-export const Level1Member8Level2Member2Enum = {
+export const Level1Member8Level2Member2Values = ['ONE.BAM', 'ONE.BAZ'];
+export const Level1Member8Level2Member2 = {
   'ONE.BAM': 'ONE.BAM',
   'ONE.BAZ': 'ONE.BAZ',
 };
