@@ -18,9 +18,9 @@ export function byPathNodesIsArrayLeaf(pathNodes) {
 }
 
 export function byPathNodesIsEnumLeaf(pathNodes) {
-  const { type: leafType, enumValues: leafEnumValues } = last(pathNodes);
+  const { enumValues: leafEnumValues } = last(pathNodes);
 
-  return isEqual(leafType, JSON_SCHEMA_V4_TYPES_ENUM.ARRAY) && leafEnumValues;
+  return Boolean(leafEnumValues);
 }
 
 export function byPathNodesEnumValues(pathNodes) {

@@ -12,6 +12,10 @@
     "lastName": {
       "type": "string"
     },
+    "gender": {
+      "type": "string",
+      "enum": ["male", "female", "unspecified"]
+    },
     "phone": {
       "$ref": "#/definitions/phone"
     }
