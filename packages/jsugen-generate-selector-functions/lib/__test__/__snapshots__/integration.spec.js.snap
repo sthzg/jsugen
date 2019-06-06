@@ -19,6 +19,10 @@ export function byLastName(property, defaultReturn) {
   return get(property, ['lastName'], defaultReturn);
 }
 
+export function byGender(property, defaultReturn) {
+  return get(property, ['gender'], defaultReturn);
+}
+
 export function byPhoneNthTypeEnum(property, phoneIndex = 0, defaultReturn) {
   return get(property, ['phone', phoneIndex, 'type'], defaultReturn);
 }
@@ -153,6 +157,10 @@ export function byLevel1Member8Level2Member6(property, defaultReturn) {
 
 export function byLevel1Member8(property, defaultReturn) {
   return get(property, ['level1Member8'], defaultReturn);
+}
+
+export function byLevel1Member9(property, defaultReturn) {
+  return get(property, ['level1Member9'], defaultReturn);
 }
 "
 `;

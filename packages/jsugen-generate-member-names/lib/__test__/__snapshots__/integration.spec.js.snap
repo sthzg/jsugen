@@ -8,6 +8,7 @@ exports[`generate-member-names should pass example.contact.json integration test
 export const ID = 'id';
 export const FIRST_NAME = 'firstName';
 export const LAST_NAME = 'lastName';
+export const GENDER = 'gender';
 export const TYPE = 'type';
 export const NUMBER = 'number';
 export const PHONE = 'phone';
@@ -35,5 +36,6 @@ export const LEVEL_2_MEMBER_5 = 'level2Member5';
 export const LEVEL_3_MEMBER_1 = 'level3Member1';
 export const LEVEL_2_MEMBER_6 = 'level2Member6';
 export const LEVEL_1_MEMBER_8 = 'level1Member8';
+export const LEVEL_1_MEMBER_9 = 'level1Member9';
 "
 `;
