@@ -68,6 +68,10 @@
           }
         }
       }
+    },
+    "level1Member9": {
+      "type": "string",
+      "enum": ["FOO", "BAR"]
     }
   },
   "definitions": {

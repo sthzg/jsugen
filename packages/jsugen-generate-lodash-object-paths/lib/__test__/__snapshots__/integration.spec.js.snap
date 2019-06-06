@@ -62,6 +62,8 @@ export const byFirstNamePath = () => ['firstName'];
 
 export const byLastNamePath = () => ['lastName'];
 
+export const byGenderPath = () => ['gender'];
+
 export const byPhoneNthTypeEnumPath = (phoneIndex = 0) => [
   'phone',
   phoneIndex,
@@ -163,5 +165,7 @@ export const byLevel1Member8Level2Member6Path = () => [
 ];
 
 export const byLevel1Member8Path = () => ['level1Member8'];
+
+export const byLevel1Member9Path = () => ['level1Member9'];
 "
 `;

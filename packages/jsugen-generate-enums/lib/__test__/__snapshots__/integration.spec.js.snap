@@ -5,6 +5,13 @@ exports[`generate-enums should pass example.contact.json integration test 1`] = 
  * @file This file is auto-generated. Do not modify its contents manually.
  */
 
+export const GenderValues = ['female', 'male', 'unspecified'];
+export const Gender = {
+  FEMALE: 'female',
+  MALE: 'male',
+  UNSPECIFIED: 'unspecified',
+};
+
 export const PhoneTypeEnumValues = [
   'PRIVATE_LANDLINE',
   'PRIVATE_MOBILE',
@@ -38,6 +45,12 @@ export const Level1Member8Level2Member2EnumValues = ['ONE.BAM', 'ONE.BAZ'];
 export const Level1Member8Level2Member2Enum = {
   'ONE.BAM': 'ONE.BAM',
   'ONE.BAZ': 'ONE.BAZ',
+};
+
+export const Level1Member9Values = ['BAR', 'FOO'];
+export const Level1Member9 = {
+  BAR: 'BAR',
+  FOO: 'FOO',
 };
 "
 `;
