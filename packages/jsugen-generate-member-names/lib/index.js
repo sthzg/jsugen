@@ -14,7 +14,7 @@ import {
 import { fromJsonSchema } from '@sthzg/jsugen-core/lib/sources/jsonSchema';
 import { template as memberNamesTemplate } from './memberNames.tpl';
 
-export function generateMemberNamesModule({ schema, out }) {
+export function generate({ schema, out }) {
   // ---
   // Configure Transformer Factories.
   // ---

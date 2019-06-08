@@ -15,7 +15,7 @@ import { fromJsonSchema } from '@sthzg/jsugen-core/lib/sources/jsonSchema';
 import { buildTemplateVars } from './buildTemplateVars';
 import { template as enumModuleTemplate } from './enum.tpl';
 
-export function generateEnumsModule({ schema, out }) {
+export function generate({ schema, out }) {
   // ---
   // Configure Transformer Factories.
   // ---

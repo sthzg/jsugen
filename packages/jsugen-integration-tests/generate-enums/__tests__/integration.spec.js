@@ -1,6 +1,6 @@
-import schema from '@sthzg/jsugen-core/lib/sources/jsonSchema/testResources/example.schema';
-import contactSchema from '@sthzg/jsugen-core/lib/sources/jsonSchema/testResources/example.contact';
-import { generateEnumsModule as generate } from '../index';
+import { generate } from '@sthzg/jsugen-generate-enums';
+import schema from '../../resources/example.schema';
+import contactSchema from '../../resources/example.contact';
 
 describe('generate-enums', () => {
   test('should pass full integration test', done => {

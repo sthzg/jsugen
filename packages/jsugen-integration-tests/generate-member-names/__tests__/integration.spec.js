@@ -1,6 +1,6 @@
-import schema from '@sthzg/jsugen-core/lib/sources/jsonSchema/testResources/example.schema';
-import contactSchema from '@sthzg/jsugen-core/lib/sources/jsonSchema/testResources/example.contact';
-import { generateMemberNamesModule as generate } from '../index';
+import { generate } from '@sthzg/jsugen-generate-member-names';
+import schema from '../../resources/example.schema';
+import contactSchema from '../../resources/example.contact';
 
 describe('generate-member-names', () => {
   test('should pass full integration test', done => {
