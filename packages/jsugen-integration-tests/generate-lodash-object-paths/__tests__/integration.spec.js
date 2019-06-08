@@ -1,7 +1,7 @@
-import schema from '@sthzg/jsugen-core/lib/sources/jsonSchema/testResources/example.schema';
-import contactSchema from '@sthzg/jsugen-core/lib/sources/jsonSchema/testResources/example.contact';
-import arrayOfObjectsSchema from '@sthzg/jsugen-core/lib/sources/jsonSchema/testResources/example.array-of-objects.schema.json';
-import { generateObjectPathsModule as generate } from '../index';
+import { generate } from '@sthzg/jsugen-generate-lodash-object-paths';
+import schema from '../../resources/example.schema';
+import contactSchema from '../../resources/example.contact';
+import arrayOfObjectsSchema from '../../resources/example.array-of-objects.schema.json';
 
 describe('generate-lodash-object-paths', () => {
   test('should pass full integration test', done => {

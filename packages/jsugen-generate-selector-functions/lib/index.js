@@ -30,7 +30,7 @@ import { template as selectorFunctionTemplate } from './selector.tpl';
  *       return get(person, [personIndex, 'address', addressIndex, 'street']);
  *     }
  */
-export function generateSelectorsModule({ schema, out }) {
+export function generate({ schema, out }) {
   // ---
   // Configure Transformer Factories.
   // ---

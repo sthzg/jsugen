@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "name": "@sthzg/jsugen-integration-tests",
+  "version": "0.11.2",
+  "description": "> TODO: description",
+  "author": "Stephan Herzog <sthzgvie@gmail.com>",
+  "homepage": "https://github.com/sthzg/jsugen#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sthzg/jsugen.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/sthzg/jsugen/issues"
+  },
+  "dependencies": {
+    "@sthzg/jsugen-core": "^0.11.2",
+    "@sthzg/jsugen-generate-enums": "^0.11.2",
+    "@sthzg/jsugen-generate-lodash-object-paths": "^0.11.2",
+    "@sthzg/jsugen-generate-member-names": "^0.11.2",
+    "@sthzg/jsugen-generate-selector-functions": "^0.11.2"
+  },
+  "peerDependencies": {
+    "lodash-es": ">=4"
+  },
+  "gitHead": "f7909d029766e0d408f1d5cb9e8411c673d4c4bd"
+}

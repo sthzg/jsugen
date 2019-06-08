@@ -1,6 +1,6 @@
 /* eslint-disable global-require,import/no-dynamic-require */
 import { log, logError } from '@sthzg/jsugen-core/lib/utils';
-import { generateObjectPathsModule } from '@sthzg/jsugen-generate-lodash-object-paths';
+import { generate } from '@sthzg/jsugen-generate-lodash-object-paths';
 import { outOption, schemaOption } from './commonOptions';
 
 // ---
@@ -9,7 +9,7 @@ import { outOption, schemaOption } from './commonOptions';
 export function handler(argv) {
   const { schema: schemaPath, out } = argv;
   const schema = require(schemaPath);
-  generateObjectPathsModule({ schema, out }).subscribe(
+  generate({ schema, out }).subscribe(
     () => log('🎉 All done!'),
     error => {
       logError('An error occurred: ', error);

@@ -14,7 +14,7 @@ import {
 import { fromJsonSchema } from '@sthzg/jsugen-core/lib/sources/jsonSchema';
 import { template as objectPathConstantTemplate } from './objectPathConst.tpl';
 
-export function generateObjectPathsModule({ schema, out }) {
+export function generate({ schema, out }) {
   // ---
   // Configure Transformer Factories.
   // ---
