@@ -55,6 +55,12 @@ export const DEFAULT_FILE_DOCSTRING = `
  */
 `;
 
+export const DRY_RUN_BANNER = `
+********************
+*** Dry run mode ***
+********************
+`;
+
 // ---
 // Semantic Constants.
 // ---
@@ -64,6 +70,10 @@ export const EMPTY_STRING = '';
 export const NEWLINE = '\n';
 export const SPACE = ' ';
 export const UNDERSCORE = '_';
+
+export const ENCODING = {
+  UTF8: 'utf8',
+};
 
 // ---
 // Default Naming.

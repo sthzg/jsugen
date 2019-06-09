@@ -14,14 +14,14 @@ import {
 import { fromJsonSchema } from '@sthzg/jsugen-core/lib/sources/jsonSchema';
 import { template as memberNamesTemplate } from './memberNames.tpl';
 
-export function generate({ schema, out }) {
+export function generate({ schema, writeConfig }) {
   // ---
   // Configure Transformer Factories.
   // ---
   const compileToTemplate = withCompileToTemplate(memberNamesTemplate);
   const prependHeaders = withPrependToString(DEFAULT_FILE_DOCSTRING);
   const prettify = withPrettier(DEFAULT_PRETTIER_OPTIONS);
-  const write = withWrite(out);
+  const write = withWrite(writeConfig);
 
   // ---
   // Observable.

@@ -30,7 +30,7 @@ import { template as selectorFunctionTemplate } from './selector.tpl';
  *       return get(person, [personIndex, 'address', addressIndex, 'street']);
  *     }
  */
-export function generate({ schema, out }) {
+export function generate({ schema, writeConfig }) {
   // ---
   // Configure Transformer Factories.
   // ---
@@ -40,7 +40,7 @@ export function generate({ schema, out }) {
     DEFAULT_GET_IMPORT,
   );
   const prettify = withPrettier(DEFAULT_PRETTIER_OPTIONS);
-  const write = withWrite(out);
+  const write = withWrite(writeConfig);
 
   // ---
   // Observable.

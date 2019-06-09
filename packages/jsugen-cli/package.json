@@ -14,7 +14,8 @@
   },
   "files": [
     "bin",
-    "commands"
+    "commands",
+    "lib"
   ],
   "repository": {
     "type": "git",

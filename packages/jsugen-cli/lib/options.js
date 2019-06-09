@@ -13,3 +13,8 @@ export const outOption = {
   coerce: resolve,
   normalize: true,
 };
+
+export const dryRunOption = {
+  type: 'boolean',
+  description: 'outputs results to stdout rather than writing to a file',
+};

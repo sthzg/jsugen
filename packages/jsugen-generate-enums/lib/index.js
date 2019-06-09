@@ -15,14 +15,14 @@ import { fromJsonSchema } from '@sthzg/jsugen-core/lib/sources/jsonSchema';
 import { buildTemplateVars } from './buildTemplateVars';
 import { template as enumModuleTemplate } from './enum.tpl';
 
-export function generate({ schema, out }) {
+export function generate({ schema, writeConfig }) {
   // ---
   // Configure Transformer Factories.
   // ---
   const compileToTemplate = withCompileToTemplate(enumModuleTemplate);
   const prependHeaders = withPrependToString(DEFAULT_FILE_DOCSTRING);
   const prettify = withPrettier(DEFAULT_PRETTIER_OPTIONS);
-  const write = withWrite(out);
+  const write = withWrite(writeConfig);
 
   // ---
   // Observable.
