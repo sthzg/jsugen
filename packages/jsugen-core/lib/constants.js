@@ -73,6 +73,7 @@ export const PREFIX = {
   BY: 'by',
   DATA: 'data',
   TEMPLATE: 'template',
+  GENERATE_MODULE_NAME: '@sthzg/jsugen-generate-',
 };
 
 export const POSTFIX = {

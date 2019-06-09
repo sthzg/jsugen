@@ -16,6 +16,7 @@ export {
   enrichWithPathNodeVars,
   addMemberDefinitionsForNonEnumArrayIndexes,
 } from './enrichment/pathNodeTemplateVars';
+export { generate } from './main';
 export {
   byIsLeaf,
   byMemberDefinitionIsEnum,

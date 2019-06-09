@@ -1,4 +1,4 @@
-export { fromJsonSchemaWalker } from './input/fromJsonSchemaWalker';
+export { fromJsonSchemaWalker, parseSourceFile } from './input';
 export { fromJsonSchema } from './fromJsonSchema';
 export {
   toMemberDefinitions,

@@ -43,6 +43,7 @@
     "test:watch": "jest --watch",
     "jsugen": "node packages/jsugen-cli/bin/esm.js",
     "release": "lerna publish --conventional-commits --github-release --yes",
+    "prerelease": "lerna publish prerelease --preid=next --pre-dist-tag=next --no-changelog",
     "upgrade": "yarn upgrade && lerna exec -- yarn upgrade"
   }
 }

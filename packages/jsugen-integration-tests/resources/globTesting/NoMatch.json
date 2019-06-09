@@ -1,0 +1,10 @@
+{
+  "description": "No *.schema.json extension to test that globbing does not pick it up",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "notMe": {
+      "type": "string"
+    }
+  }
+}
