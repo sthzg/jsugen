@@ -1,14 +1,20 @@
+import fs from 'fs-extra';
+import path from 'path';
 import { writeFileSync } from 'fs';
 import { log } from './utils';
+import { DRY_RUN_BANNER } from './constants';
 
-const DEFAULT_FILE_OPTIONS = { encoding: 'utf8' };
-
-export function withWrite(filePath) {
+export function withWrite(writeConfig) {
   return content => {
-    if (filePath) {
-      writeFileSync(filePath, content, DEFAULT_FILE_OPTIONS);
-    } else {
+    const { directory, dryRun, encoding, filename } = writeConfig;
+
+    if (dryRun) {
+      log(DRY_RUN_BANNER);
       log(content);
+      return;
     }
+
+    fs.ensureDirSync(directory);
+    writeFileSync(path.join(directory, filename), content, { encoding });
   };
 }
