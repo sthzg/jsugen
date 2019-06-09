@@ -8,6 +8,14 @@ export function byContextDataDefinitionFiles(context) {
   return get(byContextDataDefinition(context), 'files', []);
 }
 
+export function byContextDataDefinitionIgnore(context) {
+  return get(
+    byContextDataDefinition(context),
+    'ignore',
+    '**/node_modules/**/*',
+  );
+}
+
 export function byContextDataDefinitionGenerators(context) {
   return get(byContextDataDefinition(context), 'generators', []);
 }
