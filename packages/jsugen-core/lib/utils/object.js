@@ -1,5 +1,6 @@
 import {
   cloneDeep,
+  get,
   isArray,
   isUndefined,
   mapKeys,
@@ -26,6 +27,26 @@ export function enrichInData(targetObject, keyValueObject) {
 
 export function enrichInTemplate(targetObject, keyValueObject) {
   return enrichIn(targetObject, keyValueObject, PREFIX.TEMPLATE);
+}
+
+export function withEnrichByFlattenOverArray({
+  sourcePath,
+  targetPath,
+  redactSourcePath = true,
+  redactLabel = 'enrichByFlattenOverArray',
+}) {
+  return function enrichByFlattenOverArray(input) {
+    const sources = get(input, sourcePath, []);
+
+    return sources.map(source =>
+      enrichIn(input, {
+        [targetPath]: source,
+        [sourcePath]: redactSourcePath
+          ? `[lifecycle]: consumed in ${redactLabel}`
+          : sources,
+      }),
+    );
+  };
 }
 
 // ---

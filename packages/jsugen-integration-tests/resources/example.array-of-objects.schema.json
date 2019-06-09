@@ -1,0 +1,32 @@
+{
+  "description": "Example schema to test arrays that contain defined object shapes",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "root": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "levelOne": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "foo": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "levelOneWithoutItemsDef": {
+            "type": "array"
+          },
+          "anyMember": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

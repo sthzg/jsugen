@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should glob the expected files and run the configured generators 1`] = `
+"/**
+ * @file This file is auto-generated. Do not modify its contents manually.
+ */
+
+import get from 'lodash-es/get';
+
+export function byHello(property, defaultReturn) {
+  return get(property, ['hello'], defaultReturn);
+}
+"
+`;
+
+exports[`should glob the expected files and run the configured generators 2`] = `
+"/**
+ * @file This file is auto-generated. Do not modify its contents manually.
+ */
+
+export const byHelloPath = () => ['hello'];
+"
+`;
+
+exports[`should glob the expected files and run the configured generators 3`] = `
+"/**
+ * @file This file is auto-generated. Do not modify its contents manually.
+ */
+
+import get from 'lodash-es/get';
+
+export function byWorld(property, defaultReturn) {
+  return get(property, ['world'], defaultReturn);
+}
+"
+`;
+
+exports[`should glob the expected files and run the configured generators 4`] = `
+"/**
+ * @file This file is auto-generated. Do not modify its contents manually.
+ */
+
+export const byWorldPath = () => ['world'];
+"
+`;

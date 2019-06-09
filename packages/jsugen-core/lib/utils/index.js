@@ -5,6 +5,7 @@ export {
   enrichInTemplate,
   mergeConcat,
   mergeSet,
+  withEnrichByFlattenOverArray,
 } from './object';
 export {
   toCamelCase,
