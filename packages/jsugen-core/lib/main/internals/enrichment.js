@@ -6,6 +6,7 @@ import { enrichInData, toUpperFirstCamelCase } from '../../utils';
 import {
   byContextDataDefinitionFiles,
   byContextDataDefinitionGenerators,
+  byContextDataDefinitionIgnore,
   byContextDataDefinitionOutputBaseDirectory,
 } from '../selectors';
 import { EMPTY_STRING, PREFIX } from '../../constants';
@@ -15,7 +16,11 @@ const glob = promisify(originalGlob);
 
 export function enrichDataWithListOfSourceFilePaths(context) {
   const getListOfSourceFilePaths = patterns =>
-    flatten(patterns.map(pattern => glob.sync(pattern)));
+    flatten(
+      patterns.map(pattern =>
+        glob.sync(pattern, { ignore: byContextDataDefinitionIgnore(context) }),
+      ),
+    );
 
   const patterns = byContextDataDefinitionFiles(context);
 

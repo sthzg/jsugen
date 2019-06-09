@@ -9,7 +9,7 @@ const config = {
     {
       name: 'schemas',
       source: 'json-schema',
-      files: ['**/globTesting/*.schema.json'],
+      files: ['**/globTesting/**/*.schema.json'],
       generators: [
         '@sthzg/jsugen-generate-selector-functions',
         '@sthzg/jsugen-generate-lodash-object-paths',
