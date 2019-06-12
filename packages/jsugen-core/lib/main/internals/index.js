@@ -7,5 +7,4 @@ export {
   enrichDataWithOutputPath,
   enrichDataWithGenerateFunctions,
   enrichDataWithListOfSourceFilePaths,
-  enrichDataWithOutputBaseDirectory,
 } from './enrichment';

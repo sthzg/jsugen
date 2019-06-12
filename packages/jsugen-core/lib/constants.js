@@ -93,3 +93,8 @@ export const POSTFIX = {
   PATH: 'Path',
   VALUES: 'Values',
 };
+
+// ---
+// Config Constants.
+// ---
+export const BASEDIR_SOURCE_FILE_TOKEN = '<sourceFile>';

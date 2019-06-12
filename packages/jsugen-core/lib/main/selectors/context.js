@@ -23,3 +23,7 @@ export function byContextDataDefinitionGenerators(context) {
 export function byContextDataDefinitionOutputBaseDirectory(context) {
   return get(byContextDataDefinition(context), 'output.baseDirectory');
 }
+
+export function byContextDataSourceFile(context) {
+  return get(context, 'data.sourceFile');
+}
