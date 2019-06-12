@@ -1,19 +1,22 @@
 import { promisify } from 'util';
-import path from 'path';
 import { camelCase, flatten } from 'lodash-es';
 import originalGlob from 'glob';
-import { enrichInData, toUpperFirstCamelCase } from '../../utils';
+import { enrichInData } from '../../utils';
 import {
   byContextDataDefinitionFiles,
   byContextDataDefinitionGenerators,
   byContextDataDefinitionIgnore,
-  byContextDataDefinitionOutputBaseDirectory,
 } from '../selectors';
-import { EMPTY_STRING, PREFIX } from '../../constants';
+import { DOT, EMPTY_STRING, PREFIX } from '../../constants';
 import { resolveGenerateFunction } from './resolveGenerateFunction';
+import { buildOutputDirectoryPath } from './buildOutputDirectoryPath';
 
 const glob = promisify(originalGlob);
 
+/**
+ * Enriches context with an array of filenames matching the source file pattern.
+ * @param {Context} context
+ */
 export function enrichDataWithListOfSourceFilePaths(context) {
   const getListOfSourceFilePaths = patterns =>
     flatten(
@@ -29,12 +32,10 @@ export function enrichDataWithListOfSourceFilePaths(context) {
   });
 }
 
-export function enrichDataWithOutputBaseDirectory(context) {
-  const baseDirectory = byContextDataDefinitionOutputBaseDirectory(context);
-
-  return enrichInData(context, { baseDirectory });
-}
-
+/**
+ * Enriches context with an array of references to the `generate` functions.
+ * @param {Context} context
+ */
 export function enrichDataWithGenerateFunctions(context) {
   const generatorsConfig = byContextDataDefinitionGenerators(context);
   const generateFunctions = generatorsConfig.map(resolveGenerateFunction);
@@ -42,27 +43,24 @@ export function enrichDataWithGenerateFunctions(context) {
   return enrichInData(context, { generateFunctions });
 }
 
+/**
+ * Enriches context with `outputDirectory` and `outputFileName` information.
+ * See docs at {@see buildOutputDirectoryPath} for more information.
+ *
+ * @param {Context} context
+ */
 export function enrichDataWithOutputPath(context) {
   const {
     data: {
-      baseDirectory,
-      sourceFile,
       generateFunction: { moduleName },
     },
   } = context;
 
-  const withExt = input => `${input}.js`;
-
-  const outputFilename = withExt(
+  const outputDirectory = buildOutputDirectoryPath(context);
+  const outputFilename = [
     camelCase(moduleName.replace(PREFIX.GENERATE_MODULE_NAME, EMPTY_STRING)),
-  );
-
-  // TODO we need a more flexible system (=> think about name clashes)
-  const outputDirectory = path.join(
-    baseDirectory,
-    /* Directory Name */
-    toUpperFirstCamelCase(path.basename(sourceFile, path.extname(sourceFile))),
-  );
+    'js',
+  ].join(DOT);
 
   return enrichInData(context, { outputDirectory, outputFilename });
 }

@@ -21,7 +21,9 @@
     "@sthzg/jsugen-generate-enums": "^0.11.2",
     "@sthzg/jsugen-generate-lodash-object-paths": "^0.11.2",
     "@sthzg/jsugen-generate-member-names": "^0.11.2",
-    "@sthzg/jsugen-generate-selector-functions": "^0.11.2"
+    "@sthzg/jsugen-generate-selector-functions": "^0.11.2",
+    "fs-extra": "^8.0.1",
+    "pkg-dir": "^4.2.0"
   },
   "peerDependencies": {
     "lodash-es": ">=4"
