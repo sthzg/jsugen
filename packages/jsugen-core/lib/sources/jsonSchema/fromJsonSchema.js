@@ -6,7 +6,7 @@ import {
   byChunkStartsWithPropertiesKeyword,
 } from './selectors';
 import { fromJsonSchemaWalker } from './input';
-import { toMemberDefinitionsStream } from './serialization';
+import { toMemberDefinitionsStream } from './normalization';
 
 export function fromJsonSchema(schema) {
   return fromJsonSchemaWalker(schema).pipe(
