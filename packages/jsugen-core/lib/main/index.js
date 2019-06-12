@@ -5,7 +5,6 @@ import { Context } from './models';
 import {
   enrichDataWithGenerateFunctions,
   enrichDataWithListOfSourceFilePaths,
-  enrichDataWithOutputBaseDirectory,
   enrichDataWithOutputPath,
   flattenContextOverDefinitions,
   flattenContextOverGenerators,
@@ -18,7 +17,6 @@ export function generate({ config }) {
     map(Context.liftConfigToContext),
     mergeMap(flattenContextOverDefinitions),
     map(enrichDataWithListOfSourceFilePaths),
-    map(enrichDataWithOutputBaseDirectory),
     map(enrichDataWithGenerateFunctions),
     mergeMap(flattenContextOverSourceFiles),
     mergeMap(flattenContextOverGenerators),

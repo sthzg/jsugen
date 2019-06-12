@@ -4,4 +4,5 @@ export {
   byContextDataDefinitionGenerators,
   byContextDataDefinitionIgnore,
   byContextDataDefinitionOutputBaseDirectory,
+  byContextDataSourceFile,
 } from './context';
