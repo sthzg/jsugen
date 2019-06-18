@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://github.com/sthzg/jsugen/compare/v0.11.2...v0.12.0) (2019-06-18)
+
+
+### Bug Fixes
+
+* Rename generator exports, introduce integ tests package ([5de4b11](https://github.com/sthzg/jsugen/commit/5de4b11))
+
+
+### Features
+
+* Add dryRun flag to prevent file system operations ([b261ef5](https://github.com/sthzg/jsugen/commit/b261ef5))
+
+
+
+
+
 ## [0.11.2](https://github.com/sthzg/jsugen/compare/v0.11.1...v0.11.2) (2019-06-06)
 
 **Note:** Version bump only for package @sthzg/jsugen-cli
