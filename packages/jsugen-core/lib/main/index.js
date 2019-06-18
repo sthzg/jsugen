@@ -1,16 +1,16 @@
 import { from } from 'rxjs';
 import { map, mergeMap } from 'rxjs/operators';
 import { castArray } from 'lodash-es';
-import { Context } from './models';
 import {
+  Context,
   enrichDataWithGenerateFunctions,
   enrichDataWithListOfSourceFilePaths,
   enrichDataWithOutputPath,
   flattenContextOverDefinitions,
   flattenContextOverGenerators,
   flattenContextOverSourceFiles,
+  runGenerator,
 } from './internals';
-import { runGenerator } from '../runGenerator';
 
 export function generate({ config }) {
   return from(castArray(config)).pipe(

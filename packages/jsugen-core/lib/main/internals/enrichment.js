@@ -6,7 +6,7 @@ import {
   byContextDataDefinitionFiles,
   byContextDataDefinitionGenerators,
   byContextDataDefinitionIgnore,
-} from '../selectors';
+} from './selectors';
 import { DOT, EMPTY_STRING, PREFIX } from '../../constants';
 import { resolveGenerateFunction } from './resolveGenerateFunction';
 import { buildOutputDirectoryPath } from './buildOutputDirectoryPath';

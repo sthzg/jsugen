@@ -1,5 +1,5 @@
-import { parseSourceFile } from './sources/jsonSchema/input';
-import { WriteConfig } from './models';
+import { parseSourceFile } from '../../sources/jsonSchema/input';
+import { WriteConfig } from '../../models';
 
 /**
  * TODO source formats and source parsing need to become agnostic:

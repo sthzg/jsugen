@@ -5,7 +5,7 @@ import { BASEDIR_SOURCE_FILE_TOKEN } from '../../constants';
 import {
   byContextDataDefinitionOutputBaseDirectory,
   byContextDataSourceFile,
-} from '../selectors';
+} from './selectors';
 
 /**
  * Returns the output directory path based on the configured settings.
