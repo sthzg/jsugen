@@ -18,3 +18,4 @@ export {
 export { minusOne, plusOne } from './number';
 export { reduceGroupToArray } from './rxjs';
 export { log, logError } from './log';
+export { withPrependToString } from './string';

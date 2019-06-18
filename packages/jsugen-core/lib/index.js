@@ -9,11 +9,8 @@ export {
   POSTFIX,
   PREFIX,
 } from './constants';
-export { toTemplateRawStringReducer } from './toTemplateRawStringReducer';
 export { withCompileToTemplate } from './withCompileToTemplate';
-export { withPrependToString } from './withPrependToString';
-export { withPrettier } from './withPrettier';
-export { withWrite } from './withWrite';
+export { toTemplateRawStringReducer, withPrettier, withWrite } from './output';
 export {
   enrichWithPathNodeVars,
   addMemberDefinitionsForNonEnumArrayIndexes,
@@ -58,4 +55,6 @@ export {
   /* log.js */
   log,
   logError,
+  /* string.js */
+  withPrependToString,
 } from './utils';

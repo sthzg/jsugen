@@ -1,6 +1,6 @@
 import ExtendableError from 'es6-error';
 import { EMPTY_STRING } from '../constants';
-import { ERROR_CODES } from './constants';
+import { INVALID_GENERATOR_MODULE } from './codes';
 
 export class ModuleNotFoundError extends ExtendableError {
   constructor(moduleName) {
@@ -8,6 +8,6 @@ export class ModuleNotFoundError extends ExtendableError {
     super(message);
 
     this.stack = EMPTY_STRING;
-    this.code = ERROR_CODES.INVALID_GENERATOR_MODULE;
+    this.code = INVALID_GENERATOR_MODULE;
   }
 }

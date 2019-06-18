@@ -1,8 +1,8 @@
 import fs from 'fs-extra';
 import path from 'path';
 import { writeFileSync } from 'fs';
-import { log } from './utils';
-import { DRY_RUN_BANNER } from './constants';
+import { log } from '../utils';
+import { DRY_RUN_BANNER } from '../constants';
 
 export function withWrite(writeConfig) {
   return content => {
