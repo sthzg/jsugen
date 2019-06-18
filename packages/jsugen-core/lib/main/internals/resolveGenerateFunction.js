@@ -3,7 +3,7 @@ import {
   GenerateFunctionNotFoundError,
   ModuleNotFoundError,
 } from '../../errors';
-import { GenerateFunction } from '../models';
+import { GenerateFunction } from './models';
 
 export function resolveGenerateFunction(moduleName) {
   const maybeModule = attempt(require, moduleName);

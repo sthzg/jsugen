@@ -8,3 +8,5 @@ export {
   enrichDataWithGenerateFunctions,
   enrichDataWithListOfSourceFilePaths,
 } from './enrichment';
+export { runGenerator } from './runGenerator';
+export { Context, GenerateFunction, Data } from './models';
