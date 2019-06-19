@@ -1,13 +1,13 @@
 import { promisify } from 'util';
-import { camelCase, flatten } from 'lodash-es';
+import { flatten } from 'lodash-es';
 import originalGlob from 'glob';
 import { enrichInData } from '../../utils';
+import { buildOutputFilename } from './buildOutputFilename';
 import {
   byContextDataDefinitionFiles,
   byContextDataDefinitionGenerators,
   byContextDataDefinitionIgnore,
 } from './selectors';
-import { DOT, EMPTY_STRING, PREFIX } from '../../constants';
 import { resolveGenerateFunction } from './resolveGenerateFunction';
 import { buildOutputDirectoryPath } from './buildOutputDirectoryPath';
 
@@ -50,17 +50,8 @@ export function enrichDataWithGenerateFunctions(context) {
  * @param {Context} context
  */
 export function enrichDataWithOutputPath(context) {
-  const {
-    data: {
-      generateFunction: { moduleName },
-    },
-  } = context;
-
   const outputDirectory = buildOutputDirectoryPath(context);
-  const outputFilename = [
-    camelCase(moduleName.replace(PREFIX.GENERATE_MODULE_NAME, EMPTY_STRING)),
-    'js',
-  ].join(DOT);
+  const outputFilename = buildOutputFilename(context);
 
   return enrichInData(context, { outputDirectory, outputFilename });
 }

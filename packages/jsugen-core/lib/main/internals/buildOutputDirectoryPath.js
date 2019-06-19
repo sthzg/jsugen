@@ -1,11 +1,15 @@
 import path from 'path';
-import { last } from 'lodash-es';
+import { endsWith, last } from 'lodash-es';
 import { toUpperFirstCamelCase } from '../../utils';
-import { BASEDIR_SOURCE_FILE_TOKEN } from '../../constants';
-import {
-  byContextDataDefinitionOutputBaseDirectory,
-  byContextDataSourceFile,
-} from './selectors';
+import { BASEDIR_SOURCE_FILE_TOKEN, EMPTY_STRING } from '../../constants';
+
+const WILDCARD = '*.';
+
+const byLastPatternSegment = pattern => last(pattern.split(path.sep));
+const byIncludesWildcard = pattern => pattern.includes(WILDCARD);
+const byEndsWithPlainExtension = pattern => /\.[a-z]*$/i.test(pattern);
+const stripWildcard = pattern => pattern.replace(WILDCARD, EMPTY_STRING);
+const sortByStringLengthDesc = (a, b) => b.length - a.length;
 
 /**
  * Returns the output directory path based on the configured settings.
@@ -19,8 +23,15 @@ import {
  * If no mode token is present the configured path is resolved statically.
  */
 export function buildOutputDirectoryPath(context) {
-  const baseDirectory = byContextDataDefinitionOutputBaseDirectory(context);
-  const sourceFile = byContextDataSourceFile(context);
+  const {
+    data: {
+      definition: {
+        files: filePatterns,
+        output: { baseDirectory },
+      },
+      sourceFile,
+    },
+  } = context;
 
   const isRelativeMode = baseDirectory.includes(BASEDIR_SOURCE_FILE_TOKEN);
 
@@ -30,8 +41,23 @@ export function buildOutputDirectoryPath(context) {
         path.dirname(sourceFile),
         last(baseDirectory.split(BASEDIR_SOURCE_FILE_TOKEN)),
       );
+
+  const sortedFilenamePatterns = filePatterns
+    .map(byLastPatternSegment)
+    .filter(byEndsWithPlainExtension)
+    .filter(byIncludesWildcard)
+    .map(stripWildcard)
+    .sort(sortByStringLengthDesc);
+
+  const filename = path.basename(sourceFile);
+  const match = sortedFilenamePatterns.find(pattern =>
+    endsWith(filename, pattern),
+  );
+
   const modelDirectory = toUpperFirstCamelCase(
-    path.basename(sourceFile, path.extname(sourceFile)),
+    match
+      ? filename.replace(`.${match}`, EMPTY_STRING)
+      : path.basename(sourceFile, path.extname(sourceFile)),
   );
 
   return path.join(directory, modelDirectory);

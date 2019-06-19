@@ -70,8 +70,8 @@ describe('main: static output directory', () => {
 
     generate({ config }).subscribe({
       complete() {
-        expect(existsInOut('HelloSchema/selectorFunctions.js')).toBe(true);
-        expect(existsInOut('WorldSchema/selectorFunctions.js')).toBe(true);
+        expect(existsInOut('Hello/selectorFunctions.js')).toBe(true);
+        expect(existsInOut('World/selectorFunctions.js')).toBe(true);
 
         done();
       },
@@ -103,14 +103,10 @@ describe('main: colocated writes', () => {
     generate({ config }).subscribe({
       complete() {
         expect(
-          existsInOut(
-            'relative-to-source-file/HelloSchema/selectorFunctions.js',
-          ),
+          existsInOut('relative-to-source-file/Hello/selectorFunctions.js'),
         ).toBe(true);
         expect(
-          existsInOut(
-            'relative-to-source-file/WorldSchema/selectorFunctions.js',
-          ),
+          existsInOut('relative-to-source-file/World/selectorFunctions.js'),
         ).toBe(true);
 
         done();
