@@ -1,7 +1,7 @@
 import fs from 'fs-extra';
 import { generate } from '@sthzg/jsugen-core';
 import path from 'path';
-import { byOutDirectory } from '../../testUtils/helpers';
+import { byOutDirectory, withSnapshotCheck } from '../../testUtils/helpers';
 
 /**
  * Set to `true` to to keep the generated files in `OUT_DIR`.
@@ -39,12 +39,9 @@ describe('main: dry run', () => {
   };
 
   test('should glob the expected files and run the configured generators', done => {
-    expect.assertions(4);
+    expect.assertions(1);
 
-    generate({ config }).subscribe(output => {
-      expect(output).toMatchSnapshot();
-      done();
-    });
+    generate({ config }).subscribe(withSnapshotCheck(done));
   });
 });
 

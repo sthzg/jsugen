@@ -1,0 +1,4 @@
+{
+  // Comments and non-stringified keys are allowed in JSON5
+  foo: 'bar',
+}

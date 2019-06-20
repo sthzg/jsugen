@@ -1,6 +1,6 @@
 import path from 'path';
 import { log, logError, WriteConfig } from '@sthzg/jsugen-core';
-import { parseSourceFile } from '@sthzg/jsugen-core/lib/sources/jsonSchema';
+import { parseSource } from '@sthzg/jsugen-sources';
 import { dryRunOption, outOption, schemaOption } from './options';
 
 // ---
@@ -27,11 +27,11 @@ function byFilename(argv) {
 // ---
 // Runner.
 // ---
-export function runCommand({ argv, generate }) {
+export async function runCommand({ argv, generate }) {
   const { schema: schemaPath } = argv;
 
   generate({
-    schema: parseSourceFile(schemaPath),
+    schema: await parseSource(schemaPath),
     writeConfig: new WriteConfig({
       dryRun: byIsDryRun(argv),
       directory: byDirname(argv),

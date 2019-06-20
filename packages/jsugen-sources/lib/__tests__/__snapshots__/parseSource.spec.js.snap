@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parseSource() should convert .js files 1`] = `
+Object {
+  "hello": [Function],
+}
+`;
+
+exports[`parseSource() should convert .json files 1`] = `
+Object {
+  "hello": "world",
+}
+`;
+
+exports[`parseSource() should convert .json5 files 1`] = `
+Object {
+  "foo": "bar",
+}
+`;
