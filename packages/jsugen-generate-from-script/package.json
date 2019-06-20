@@ -1,33 +1,34 @@
 {
-  "private": true,
-  "name": "@sthzg/jsugen-integration-tests",
+  "name": "@sthzg/jsugen-generate-from-script",
   "version": "0.13.0",
   "description": "> TODO: description",
   "author": "Stephan Herzog <sthzgvie@gmail.com>",
   "homepage": "https://github.com/sthzg/jsugen#readme",
   "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sthzg/jsugen.git"
-  },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/sthzg/jsugen/issues"
   },
   "dependencies": {
     "@sthzg/jsugen-core": "^0.13.0",
-    "@sthzg/jsugen-generate-enums": "^0.13.0",
-    "@sthzg/jsugen-generate-from-script": "^0.13.0",
-    "@sthzg/jsugen-generate-lodash-object-paths": "^0.13.0",
-    "@sthzg/jsugen-generate-member-names": "^0.13.0",
-    "@sthzg/jsugen-generate-selector-functions": "^0.13.0",
-    "fs-extra": "^8.0.1",
-    "pkg-dir": "^4.2.0"
+    "@sthzg/jsugen-sources": "^0.13.0",
+    "rxjs": "^6.5.1"
   },
   "peerDependencies": {
     "lodash-es": ">=4"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "gitHead": "f7909d029766e0d408f1d5cb9e8411c673d4c4bd"
 }

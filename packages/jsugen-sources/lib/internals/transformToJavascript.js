@@ -1,9 +1,8 @@
-import get from 'lodash-es/get';
+import fs from 'fs';
+import path from 'path';
 import webpack from 'webpack';
-import { EMPTY_STRING } from '@sthzg/jsugen-core';
+import { ENCODING } from '@sthzg/jsugen-core';
 import { buildWebpackConfig } from './buildWebpackConfig';
-
-const FIRST_MODULE_SOURCE_PATH = ['modules', 0, 'source'];
 
 /**
  * Compiles `sourceFile` to the Javascript module format.
@@ -19,13 +18,15 @@ export async function transformToJavascript(sourceFile) {
         reject(error);
       }
 
-      const source = get(
-        stats.toJson(),
-        FIRST_MODULE_SOURCE_PATH,
-        EMPTY_STRING,
-      );
-
-      resolve(source);
+      resolve(readTransformedFile(stats));
     });
   });
+}
+
+function readTransformedFile(stats) {
+  const { assetsByChunkName, outputPath } = stats.toJson();
+  const [filename] = Object.values(assetsByChunkName);
+  const location = path.join(outputPath, filename);
+
+  return fs.readFileSync(location, { encoding: ENCODING.UTF8 });
 }
