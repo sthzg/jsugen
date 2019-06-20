@@ -1,39 +1,42 @@
 {
-  "name": "@sthzg/jsugen-core",
+  "name": "@sthzg/jsugen-sources",
   "version": "0.13.0",
   "description": "> TODO: description",
   "author": "Stephan Herzog <sthzgvie@gmail.com>",
   "homepage": "https://github.com/sthzg/jsugen#readme",
   "license": "MIT",
   "main": "lib/index.js",
+  "module": "lib/index.js",
   "publishConfig": {
     "access": "public"
   },
-  "directories": {
-    "lib": "lib"
-  },
+  "files": [
+    "lib"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sthzg/jsugen.git"
-  },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/sthzg/jsugen/issues"
   },
   "dependencies": {
-    "@cloudflare/json-schema-walker": "^0.1.1",
-    "@sthzg/jsugen-sources": "^0.13.0",
-    "es6-error": "^4.1.1",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@sthzg/jsugen-core": "^0.13.0",
+    "babel-loader": "^8.0.6",
     "fs-extra": "^8.0.1",
-    "glob": "^7.1.4",
-    "json-schema-ref-parser": "^6.1.0",
-    "prettier": "^1.17.0",
-    "rxjs": "^6.5.1"
+    "json5-loader": "^3.0.0",
+    "require-from-string": "^2.0.2",
+    "rxjs": "^6.5.1",
+    "webpack": "^4.35.0"
   },
   "peerDependencies": {
+    "@babel/core": ">=8",
     "lodash-es": ">=4"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "gitHead": "f7909d029766e0d408f1d5cb9e8411c673d4c4bd"
 }

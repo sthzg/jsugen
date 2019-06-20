@@ -6,10 +6,17 @@ import snakeCase from 'lodash-es/snakeCase';
 import { UNDERSCORE } from '../constants';
 
 /**
- * Joins truthy tokens by EMPTY_STRING.
+ * Joins tokens by `joinChar` (default to truthy tokens by UNDERSCORE).
+ *
+ * @param tokens - array of strings to concatenate
+ * @param joinChar - character to join by, defaults to UNDERSCORE
+ * @param predicate - predicate fn to filter by, defaults to truthy values
  */
-export function concat(tokens) {
-  return tokens.filter(Boolean).join(UNDERSCORE);
+export function concat(
+  tokens,
+  { joinChar = UNDERSCORE, predicate = Boolean } = {},
+) {
+  return tokens.filter(predicate).join(joinChar);
 }
 
 /**

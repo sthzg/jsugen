@@ -1,11 +1,12 @@
 import { from } from 'rxjs';
-import { map, mergeMap } from 'rxjs/operators';
+import { concatMap, map, mergeMap } from 'rxjs/operators';
 import { castArray } from 'lodash-es';
 import {
   Context,
   enrichDataWithGenerateFunctions,
   enrichDataWithListOfSourceFilePaths,
   enrichDataWithOutputPath,
+  enrichDataWithParsedSource,
   flattenContextOverDefinitions,
   flattenContextOverGenerators,
   flattenContextOverSourceFiles,
@@ -21,6 +22,7 @@ export function generate({ config }) {
     mergeMap(flattenContextOverSourceFiles),
     mergeMap(flattenContextOverGenerators),
     map(enrichDataWithOutputPath),
+    concatMap(enrichDataWithParsedSource),
     mergeMap(runGenerator),
   );
 }
