@@ -1,5 +1,5 @@
 import { from } from 'rxjs';
-import { parseSource } from '@sthzg/jsugen-sources';
+import { parseSource } from '../../parsing';
 
 export function fromSourceFile(sourceFile) {
   return from(parseSource(sourceFile));

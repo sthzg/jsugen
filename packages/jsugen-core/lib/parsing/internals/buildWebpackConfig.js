@@ -1,6 +1,6 @@
 import os from 'os';
 import path from 'path';
-import { UNDERSCORE } from '@sthzg/jsugen-core/lib/constants';
+import { UNDERSCORE } from '../../constants';
 
 /**
  * Builds a Webpack configuration to compile `sourceFile` into a JS module.

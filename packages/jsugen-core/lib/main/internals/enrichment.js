@@ -1,7 +1,7 @@
 import { promisify } from 'util';
 import { flatten } from 'lodash-es';
 import originalGlob from 'glob';
-import { parseSource } from '@sthzg/jsugen-sources';
+import { parseSource } from '../../parsing';
 import { enrichInData } from '../../utils';
 import { buildOutputFilename } from './buildOutputFilename';
 import {

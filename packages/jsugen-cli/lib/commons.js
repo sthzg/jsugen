@@ -1,6 +1,5 @@
 import path from 'path';
-import { log, logError, WriteConfig } from '@sthzg/jsugen-core';
-import { parseSource } from '@sthzg/jsugen-sources';
+import { log, logError, parseSource, WriteConfig } from '@sthzg/jsugen-core';
 import { dryRunOption, outOption, schemaOption } from './options';
 
 // ---

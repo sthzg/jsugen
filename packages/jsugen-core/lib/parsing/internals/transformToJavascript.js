@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import webpack from 'webpack';
-import { ENCODING } from '@sthzg/jsugen-core';
+import { ENCODING } from '../../constants';
 import { buildWebpackConfig } from './buildWebpackConfig';
 
 /**

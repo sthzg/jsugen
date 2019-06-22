@@ -34,7 +34,6 @@
     "@sthzg/jsugen-generate-lodash-object-paths": "^0.13.0",
     "@sthzg/jsugen-generate-member-names": "^0.13.0",
     "@sthzg/jsugen-generate-selector-functions": "^0.13.0",
-    "@sthzg/jsugen-sources": "^0.13.0",
     "esm": "^3.2.22",
     "yargs": "^13.2.2"
   }
