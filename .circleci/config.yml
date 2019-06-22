@@ -56,12 +56,9 @@ jobs:
           command: |
             git config user.email "shtzgvie@gmail.com"
             git config user.name "CircleCI"
-      ###
-      # Disabled temporarily due to release problems to NPM.
-      ###
-      # - run:
-      #     name: Publish package
-      #     command: yarn release
+      - run:
+          name: Publish package
+          command: yarn release
 
 workflows:
   version: 2
