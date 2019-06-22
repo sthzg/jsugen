@@ -11,7 +11,7 @@
     "@babel/preset-env": "^7.4.4",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^4.2.0",
+    "eslint-config-prettier": "^5.0.0",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-mocha": "^5.3.0",
     "eslint-plugin-prettier": "^3.0.1",
@@ -44,6 +44,7 @@
     "jsugen": "node packages/jsugen-cli/bin/esm.js",
     "release": "lerna publish --conventional-commits --github-release --yes",
     "prerel": "lerna publish prerelease --preid=next --pre-dist-tag=next --no-changelog",
-    "upgrade": "yarn upgrade && lerna exec -- yarn upgrade"
+    "upgrade": "yarn upgrade",
+    "upgrade:interactive": "yarn upgrade-interactive --latest"
   }
 }
