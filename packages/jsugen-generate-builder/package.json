@@ -1,6 +1,6 @@
 {
   "name": "@sthzg/jsugen-generate-builder",
-  "version": "0.13.0",
+  "version": "0.14.0",
   "description": "Generate object setter utils",
   "author": "Stephan Herzog <sthzgvie@gmail.com>",
   "homepage": "https://github.com/sthzg/jsugen#readme",
@@ -17,7 +17,7 @@
     "url": "git+https://github.com/sthzg/jsugen.git"
   },
   "dependencies": {
-    "@sthzg/jsugen-core": "^0.13.0"
+    "@sthzg/jsugen-core": "^0.14.0"
   },
   "peerDependencies": {
     "lodash-es": ">=4"
