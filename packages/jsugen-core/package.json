@@ -34,6 +34,5 @@
   },
   "peerDependencies": {
     "lodash-es": ">=4"
-  },
-  "gitHead": "f7909d029766e0d408f1d5cb9e8411c673d4c4bd"
+  }
 }
