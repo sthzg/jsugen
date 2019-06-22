@@ -42,7 +42,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "jsugen": "node packages/jsugen-cli/bin/esm.js",
-    "release": "lerna publish --conventional-commits --github-release --yes",
+    "release": "lerna publish --conventional-commits --create-release=github --yes",
     "prerel": "lerna publish prerelease --preid=next --pre-dist-tag=next --no-changelog",
     "upgrade": "yarn upgrade",
     "upgrade:interactive": "yarn upgrade-interactive --latest"
