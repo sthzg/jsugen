@@ -1,4 +1,5 @@
 import requireFromString from 'require-from-string';
+import { ParseSourceError } from '../errors';
 import { transformToJavascript } from './internals';
 
 /**
@@ -13,7 +14,11 @@ import { transformToJavascript } from './internals';
  * @param sourceFile absolute path to source file
  */
 export async function parseSource(sourceFile) {
-  const source = await transformToJavascript(sourceFile);
+  try {
+    const source = await transformToJavascript(sourceFile);
 
-  return requireFromString(source);
+    return requireFromString(source);
+  } catch (error) {
+    throw new ParseSourceError(sourceFile, error);
+  }
 }

@@ -1,8 +1,6 @@
-import fs from 'fs';
-import path from 'path';
 import webpack from 'webpack';
-import { ENCODING } from '../../constants';
 import { buildWebpackConfig } from './buildWebpackConfig';
+import { readFileFromStats } from './readFileFromStats';
 
 /**
  * Compiles `sourceFile` to the Javascript module format.
@@ -15,18 +13,14 @@ export async function transformToJavascript(sourceFile) {
   return new Promise((resolve, reject) => {
     webpack(config, (error, stats) => {
       if (error) {
-        reject(error);
+        return reject(error);
       }
 
-      resolve(readTransformedFile(stats));
+      if (stats.hasErrors()) {
+        return reject(stats.toJson().errors);
+      }
+
+      return resolve(readFileFromStats(stats));
     });
   });
-}
-
-function readTransformedFile(stats) {
-  const { assetsByChunkName, outputPath } = stats.toJson();
-  const [filename] = Object.values(assetsByChunkName);
-  const location = path.join(outputPath, filename);
-
-  return fs.readFileSync(location, { encoding: ENCODING.UTF8 });
 }
