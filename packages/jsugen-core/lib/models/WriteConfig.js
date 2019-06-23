@@ -6,6 +6,7 @@ export class WriteConfig {
     encoding = ENCODING.UTF8,
     directory,
     filename,
+    silent = false,
   }) {
     /**
      * Path to the output directory.
@@ -26,5 +27,10 @@ export class WriteConfig {
      * If true all modules will be written to stdout.
      */
     this.dryRun = dryRun;
+
+    /**
+     * Skips logging to console if true.
+     */
+    this.silent = silent;
   }
 }

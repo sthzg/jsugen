@@ -24,6 +24,7 @@ afterEach(() => {
 describe('main: dry run', () => {
   const config = {
     dryRun: true,
+    silent: true,
     definitions: [
       {
         files: ['**/globTesting/**/*.schema.json'],
@@ -51,6 +52,7 @@ describe('main: dry run', () => {
 describe('main: static output directory', () => {
   const config = {
     dryRun: false,
+    silent: true,
     definitions: [
       {
         files: ['**/globTesting/**/*.schema.json'],
@@ -82,6 +84,7 @@ describe('main: static output directory', () => {
 describe('main: colocated writes', () => {
   const config = {
     dryRun: false,
+    silent: true,
     definitions: [
       {
         files: ['**/colocatedOutput/**/*.schema.json'],
