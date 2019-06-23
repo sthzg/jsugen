@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.1](https://github.com/sthzg/jsugen/compare/v0.14.0...v0.14.1) (2019-06-23)
+
+
+### Bug Fixes
+
+* Add `silent` flag and log written files to stdout ([6d838b2](https://github.com/sthzg/jsugen/commit/6d838b2))
+* **core:** Fix resolution of transient loader modules ([a012e62](https://github.com/sthzg/jsugen/commit/a012e62))
+* **core:** Throw error if parsing the source fails ([8760687](https://github.com/sthzg/jsugen/commit/8760687))
+
+
+
+
+
 # [0.14.0](https://github.com/sthzg/jsugen/compare/v0.13.0...v0.14.0) (2019-06-22)
 
 ### Bug Fixes
