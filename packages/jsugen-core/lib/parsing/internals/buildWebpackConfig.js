@@ -44,6 +44,12 @@ export function buildWebpackConfig(sourceFile, options = {}) {
         },
       ],
     },
+    resolveLoader: {
+      modules: [
+        './node_modules/@sthzg/jsugen-core/node_modules',
+        'node_modules',
+      ],
+    },
   };
 }
 
