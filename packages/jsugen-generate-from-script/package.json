@@ -1,6 +1,6 @@
 {
   "name": "@sthzg/jsugen-generate-from-script",
-  "version": "0.14.1",
+  "version": "0.14.2",
   "description": "> TODO: description",
   "author": "Stephan Herzog <sthzgvie@gmail.com>",
   "homepage": "https://github.com/sthzg/jsugen#readme",
@@ -20,7 +20,7 @@
     "url": "https://github.com/sthzg/jsugen/issues"
   },
   "dependencies": {
-    "@sthzg/jsugen-core": "^0.14.1",
+    "@sthzg/jsugen-core": "^0.14.2",
     "rxjs": "^6.5.1"
   },
   "peerDependencies": {

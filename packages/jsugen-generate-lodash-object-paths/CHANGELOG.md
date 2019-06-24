@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.2](https://github.com/sthzg/jsugen/compare/v0.14.1...v0.14.2) (2019-06-24)
+
+
+### Bug Fixes
+
+* Refactor generator input arg to `sourceFile` ([8e8c534](https://github.com/sthzg/jsugen/commit/8e8c534))
+
+
+
+
+
 ## [0.14.1](https://github.com/sthzg/jsugen/compare/v0.14.0...v0.14.1) (2019-06-23)
 
 **Note:** Version bump only for package @sthzg/jsugen-generate-lodash-object-paths
