@@ -20,10 +20,23 @@ export const DryRunWriteConfig = new WriteConfig({
   silent: true,
 });
 
-/**
- * Abosolute file path to integration test resources.
- */
+// ---
+// Paths.
+// ---
+
 export const TEST_RESOURCES_DIR = path.resolve(__dirname, '../resources');
+export const EXAMPLE_SCHEMA_PATH = path.join(
+  TEST_RESOURCES_DIR,
+  'example.schema.json',
+);
+export const CONTACT_SCHEMA_PATH = path.join(
+  TEST_RESOURCES_DIR,
+  'example.contact.json',
+);
+export const ARRAY_OF_OBJECTS_SCHEMA_PATH = path.join(
+  TEST_RESOURCES_DIR,
+  'example.array-of-objects.schema.json',
+);
 
 // ---
 // Utils.

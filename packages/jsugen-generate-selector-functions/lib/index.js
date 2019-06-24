@@ -12,6 +12,7 @@ import {
   withPrettier,
   withWrite,
 } from '@sthzg/jsugen-core';
+import { fromSourceFile } from '@sthzg/jsugen-core/lib/sources/sourceFile';
 import { fromJsonSchema } from '@sthzg/jsugen-core/lib/sources/jsonSchema';
 import { template as selectorFunctionTemplate } from './selector.tpl';
 
@@ -30,7 +31,7 @@ import { template as selectorFunctionTemplate } from './selector.tpl';
  *       return get(person, [personIndex, 'address', addressIndex, 'street']);
  *     }
  */
-export function generate({ schema, writeConfig }) {
+export function generate({ sourceFile, writeConfig }) {
   // ---
   // Configure Transformer Factories.
   // ---
@@ -45,7 +46,9 @@ export function generate({ schema, writeConfig }) {
   // ---
   // Observable.
   // ---
-  return fromJsonSchema(schema).pipe(
+  return fromSourceFile(sourceFile).pipe(
+    concatMap(fromJsonSchema),
+
     /* Templating */
     map(enrichWithPathNodeVars),
     concatMap(addMemberDefinitionsForNonEnumArrayIndexes),

@@ -1,4 +1,4 @@
-import { filter, map, reduce, tap } from 'rxjs/operators';
+import { concatMap, filter, map, reduce, tap } from 'rxjs/operators';
 import {
   DEFAULT_FILE_DOCSTRING,
   DEFAULT_PRETTIER_OPTIONS,
@@ -12,10 +12,11 @@ import {
   enrichWithPathNodeVars,
 } from '@sthzg/jsugen-core';
 import { fromJsonSchema } from '@sthzg/jsugen-core/lib/sources/jsonSchema';
+import { fromSourceFile } from '@sthzg/jsugen-core/lib/sources/sourceFile';
 import { buildTemplateVars } from './buildTemplateVars';
 import { template as enumModuleTemplate } from './enum.tpl';
 
-export function generate({ schema, writeConfig }) {
+export function generate({ sourceFile, writeConfig }) {
   // ---
   // Configure Transformer Factories.
   // ---
@@ -27,7 +28,9 @@ export function generate({ schema, writeConfig }) {
   // ---
   // Observable.
   // ---
-  return fromJsonSchema(schema).pipe(
+  return fromSourceFile(sourceFile).pipe(
+    concatMap(fromJsonSchema),
+
     /* Filtering */
     filter(byMemberDefinitionIsEnum),
 

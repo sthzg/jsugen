@@ -1,4 +1,4 @@
-import { distinct, map, reduce, tap } from 'rxjs/operators';
+import { concatMap, distinct, map, reduce, tap } from 'rxjs/operators';
 import {
   DEFAULT_FILE_DOCSTRING,
   DEFAULT_PRETTIER_OPTIONS,
@@ -11,10 +11,11 @@ import {
   withPrettier,
   withWrite,
 } from '@sthzg/jsugen-core';
+import { fromSourceFile } from '@sthzg/jsugen-core/lib/sources/sourceFile';
 import { fromJsonSchema } from '@sthzg/jsugen-core/lib/sources/jsonSchema';
 import { template as memberNamesTemplate } from './memberNames.tpl';
 
-export function generate({ schema, writeConfig }) {
+export function generate({ sourceFile, writeConfig }) {
   // ---
   // Configure Transformer Factories.
   // ---
@@ -26,7 +27,9 @@ export function generate({ schema, writeConfig }) {
   // ---
   // Observable.
   // ---
-  return fromJsonSchema(schema).pipe(
+  return fromSourceFile(sourceFile).pipe(
+    concatMap(fromJsonSchema),
+
     /* Templating */
     map(enrichWithPathNodeVars),
     distinct(byMemberDefinitionMemberName),

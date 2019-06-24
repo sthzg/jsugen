@@ -4,7 +4,6 @@ export class Data {
     this.definition = undefined;
     this.generateFunctions = undefined;
     this.generateFunction = undefined;
-    this.parsedSource = undefined;
     this.sourceFile = undefined;
     this.sourceFiles = undefined;
     this.outputDirectory = undefined;

@@ -1,6 +1,6 @@
 import path from 'path';
-import { log, logError, parseSource, WriteConfig } from '@sthzg/jsugen-core';
-import { dryRunOption, outOption, schemaOption } from './options';
+import { log, logError, WriteConfig } from '@sthzg/jsugen-core';
+import { dryRunOption, outOption, srcOption } from './options';
 
 // ---
 // Selectors.
@@ -27,10 +27,10 @@ function byFilename(argv) {
 // Runner.
 // ---
 export async function runCommand({ argv, generate }) {
-  const { schema: schemaPath } = argv;
+  const { src: sourceFile } = argv;
 
   generate({
-    schema: await parseSource(schemaPath),
+    sourceFile,
     writeConfig: new WriteConfig({
       dryRun: byIsDryRun(argv),
       directory: byDirname(argv),
@@ -54,6 +54,6 @@ export function getDefaultOptions(yargs) {
   return yargs.options({
     dryRun: dryRunOption,
     out: outOption,
-    schema: schemaOption,
+    src: srcOption,
   });
 }

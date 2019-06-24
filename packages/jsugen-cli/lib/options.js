@@ -1,6 +1,6 @@
 import { resolve } from 'path';
 
-export const schemaOption = {
+export const srcOption = {
   type: 'string',
   describe: 'path to json schema file to generate utils from',
   coerce: resolve,

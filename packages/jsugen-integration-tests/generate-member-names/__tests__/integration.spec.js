@@ -1,24 +1,30 @@
 import { generate } from '@sthzg/jsugen-generate-member-names';
-import schema from '../../resources/example.schema';
-import contactSchema from '../../resources/example.contact';
-import { DryRunWriteConfig as writeConfig } from '../../testUtils/helpers';
+import {
+  CONTACT_SCHEMA_PATH,
+  EXAMPLE_SCHEMA_PATH,
+  DryRunWriteConfig as writeConfig,
+} from '../../testUtils/helpers';
 
 describe('generate-member-names', () => {
   test('should pass full integration test', done => {
     expect.assertions(1);
 
-    generate({ schema, writeConfig }).subscribe(output => {
-      expect(output).toMatchSnapshot();
-      done();
-    });
+    generate({ sourceFile: EXAMPLE_SCHEMA_PATH, writeConfig }).subscribe(
+      output => {
+        expect(output).toMatchSnapshot();
+        done();
+      },
+    );
   });
 
   test('should pass example.contact.json integration test', done => {
     expect.assertions(1);
 
-    generate({ schema: contactSchema, writeConfig }).subscribe(output => {
-      expect(output).toMatchSnapshot();
-      done();
-    });
+    generate({ sourceFile: CONTACT_SCHEMA_PATH, writeConfig }).subscribe(
+      output => {
+        expect(output).toMatchSnapshot();
+        done();
+      },
+    );
   });
 });

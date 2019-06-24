@@ -1,3 +1,4 @@
+import { fromSourceFile } from '@sthzg/jsugen-core/lib/sources/sourceFile';
 import { concatMap, map, reduce, tap } from 'rxjs/operators';
 import {
   addMemberDefinitionsForNonEnumArrayIndexes,
@@ -14,7 +15,7 @@ import {
 import { fromJsonSchema } from '@sthzg/jsugen-core/lib/sources/jsonSchema';
 import { template as objectPathConstantTemplate } from './objectPathConst.tpl';
 
-export function generate({ schema, writeConfig }) {
+export function generate({ sourceFile, writeConfig }) {
   // ---
   // Configure Transformer Factories.
   // ---
@@ -26,7 +27,9 @@ export function generate({ schema, writeConfig }) {
   // ---
   // Observable.
   // ---
-  return fromJsonSchema(schema).pipe(
+  return fromSourceFile(sourceFile).pipe(
+    concatMap(fromJsonSchema),
+
     /* Templating */
     map(enrichWithPathNodeVars),
     concatMap(addMemberDefinitionsForNonEnumArrayIndexes),

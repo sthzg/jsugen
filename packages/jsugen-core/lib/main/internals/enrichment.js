@@ -1,7 +1,6 @@
 import { promisify } from 'util';
 import { flatten } from 'lodash-es';
 import originalGlob from 'glob';
-import { parseSource } from '../../parsing';
 import { enrichInData } from '../../utils';
 import { buildOutputFilename } from './buildOutputFilename';
 import {
@@ -58,14 +57,4 @@ export function enrichDataWithOutputPath(context) {
   const outputFilename = buildOutputFilename(context);
 
   return enrichInData(context, { outputDirectory, outputFilename });
-}
-
-export async function enrichDataWithParsedSource(context) {
-  const {
-    data: { sourceFile },
-  } = context;
-
-  const parsedSource = await parseSource(sourceFile);
-
-  return enrichInData(context, { parsedSource });
 }

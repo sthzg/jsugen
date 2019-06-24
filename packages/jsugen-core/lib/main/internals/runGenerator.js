@@ -5,7 +5,7 @@ export function runGenerator(context) {
     config: { dryRun, silent },
     data: {
       generateFunction: { generateFunction },
-      parsedSource: schema,
+      sourceFile,
       outputDirectory,
       outputFilename,
     },
@@ -18,5 +18,5 @@ export function runGenerator(context) {
     silent,
   });
 
-  return generateFunction({ schema, writeConfig });
+  return generateFunction({ sourceFile, writeConfig });
 }
