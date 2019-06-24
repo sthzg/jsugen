@@ -81,7 +81,14 @@ function byBabelLoaderConfig(options) {
     ? { query: { extends: babelConfigPath } }
     : {
         options: {
-          plugins: ['@babel/plugin-transform-modules-commonjs'],
+          plugins: [
+            '@babel/plugin-proposal-class-properties',
+            '@babel/plugin-proposal-export-namespace-from',
+            '@babel/plugin-syntax-dynamic-import',
+            '@babel/plugin-syntax-export-default-from',
+            '@babel/plugin-syntax-import-meta',
+            '@babel/plugin-transform-modules-commonjs',
+          ],
           presets: [
             [
               '@babel/preset-env',
