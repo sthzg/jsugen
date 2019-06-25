@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@sthzg/jsugen-integration-tests",
-  "version": "0.14.2",
+  "version": "0.14.3",
   "description": "> TODO: description",
   "author": "Stephan Herzog <sthzgvie@gmail.com>",
   "homepage": "https://github.com/sthzg/jsugen#readme",
@@ -17,12 +17,12 @@
     "url": "https://github.com/sthzg/jsugen/issues"
   },
   "dependencies": {
-    "@sthzg/jsugen-core": "^0.14.2",
-    "@sthzg/jsugen-generate-enums": "^0.14.2",
-    "@sthzg/jsugen-generate-from-script": "^0.14.2",
-    "@sthzg/jsugen-generate-lodash-object-paths": "^0.14.2",
-    "@sthzg/jsugen-generate-member-names": "^0.14.2",
-    "@sthzg/jsugen-generate-selector-functions": "^0.14.2",
+    "@sthzg/jsugen-core": "^0.14.3",
+    "@sthzg/jsugen-generate-enums": "^0.14.3",
+    "@sthzg/jsugen-generate-from-script": "^0.14.3",
+    "@sthzg/jsugen-generate-lodash-object-paths": "^0.14.3",
+    "@sthzg/jsugen-generate-member-names": "^0.14.3",
+    "@sthzg/jsugen-generate-selector-functions": "^0.14.3",
     "fs-extra": "^8.0.1",
     "pkg-dir": "^4.2.0"
   },

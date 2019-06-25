@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.3](https://github.com/sthzg/jsugen/compare/v0.14.2...v0.14.3) (2019-06-25)
+
+
+### Bug Fixes
+
+* **main:** Add common babel plugins to defaults ([02d4c8a](https://github.com/sthzg/jsugen/commit/02d4c8a))
+
+
+
+
+
 ## [0.14.2](https://github.com/sthzg/jsugen/compare/v0.14.1...v0.14.2) (2019-06-24)
 
 
