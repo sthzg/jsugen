@@ -34,17 +34,19 @@ exports[`generate-enums should pass full integration test 1`] = `
 
 export const Level1Member4Values = [
   'A_SHOULD_BE_SORTED_AS_FIRST',
+  'ShouldSeparateCamelCase',
   'Z_SHOULD_BE_SORTED_AS_LAST',
 ];
 export const Level1Member4 = {
   A_SHOULD_BE_SORTED_AS_FIRST: 'A_SHOULD_BE_SORTED_AS_FIRST',
+  SHOULD_SEPARATE_CAMEL_CASE: 'ShouldSeparateCamelCase',
   Z_SHOULD_BE_SORTED_AS_LAST: 'Z_SHOULD_BE_SORTED_AS_LAST',
 };
 
 export const Level1Member8Level2Member2Values = ['ONE.BAM', 'ONE.BAZ'];
 export const Level1Member8Level2Member2 = {
-  'ONE.BAM': 'ONE.BAM',
-  'ONE.BAZ': 'ONE.BAZ',
+  ONE_BAM: 'ONE.BAM',
+  ONE_BAZ: 'ONE.BAZ',
 };
 
 export const Level1Member9Values = ['BAR', 'FOO'];
