@@ -16,7 +16,11 @@
     "level1Member4": {
       "type": "array",
       "items": {
-        "enum": ["Z_SHOULD_BE_SORTED_AS_LAST", "A_SHOULD_BE_SORTED_AS_FIRST"]
+        "enum": [
+          "Z_SHOULD_BE_SORTED_AS_LAST",
+          "A_SHOULD_BE_SORTED_AS_FIRST",
+          "ShouldSeparateCamelCase"
+        ]
       }
     },
     "level1Member5": {
