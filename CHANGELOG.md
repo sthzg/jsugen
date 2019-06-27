@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://github.com/sthzg/jsugen/compare/v0.14.4...v0.15.0) (2019-06-27)
+
+
+### Bug Fixes
+
+* Do not write empty module files ([9bb47f7](https://github.com/sthzg/jsugen/commit/9bb47f7))
+
+
+### Features
+
+* **cli:** Enable config-based `main` generator through CLI ([4b99a92](https://github.com/sthzg/jsugen/commit/4b99a92))
+
+
+
+
+
 ## [0.14.4](https://github.com/sthzg/jsugen/compare/v0.14.3...v0.14.4) (2019-06-27)
 
 
