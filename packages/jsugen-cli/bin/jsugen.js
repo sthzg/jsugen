@@ -4,6 +4,7 @@ import yargs from 'yargs';
 import {
   builder as builderCmd,
   enums as enumsCmd,
+  main as mainCmd,
   memberNames as memberNamesCmd,
   paths as pathsCmd,
   selectors as selectorsCmd,
@@ -12,6 +13,12 @@ import {
 // eslint-disable-next-line import/no-default-export
 export default yargs
   .usage('$0 <cmd> [args]')
+  .command(
+    '$0',
+    'generate code based on config in <cwd>/.jsugen.config.js',
+    mainCmd.builder,
+    mainCmd.handler,
+  )
   .command(
     ['generate-object-paths [src]', 'paths'],
     'generate a module that exports all object selector path strings with dot notation',
