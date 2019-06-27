@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`generate-enums should not create the module if it has no transformed content 1`] = `"NO_CONTENT"`;
+
 exports[`generate-enums should pass example.contact.json integration test 1`] = `
 "/**
  * @file This file is auto-generated. Do not modify its contents manually.

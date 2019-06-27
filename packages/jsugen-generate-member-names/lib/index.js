@@ -1,4 +1,4 @@
-import { concatMap, distinct, map, reduce, tap } from 'rxjs/operators';
+import { concatMap, distinct, map, reduce } from 'rxjs/operators';
 import {
   DEFAULT_FILE_DOCSTRING,
   DEFAULT_PRETTIER_OPTIONS,
@@ -7,8 +7,6 @@ import {
   enrichWithPathNodeVars,
   toTemplateRawStringReducer,
   withCompileToTemplate,
-  withPrependToString,
-  withPrettier,
   withWrite,
 } from '@sthzg/jsugen-core';
 import { fromSourceFile } from '@sthzg/jsugen-core/lib/sources/sourceFile';
@@ -20,9 +18,12 @@ export function generate({ sourceFile, writeConfig }) {
   // Configure Transformer Factories.
   // ---
   const compileToTemplate = withCompileToTemplate(memberNamesTemplate);
-  const prependHeaders = withPrependToString(DEFAULT_FILE_DOCSTRING);
-  const prettify = withPrettier(DEFAULT_PRETTIER_OPTIONS);
-  const write = withWrite(writeConfig);
+  const write = withWrite({
+    writeConfig,
+    prettierConfig: DEFAULT_PRETTIER_OPTIONS,
+    headers: DEFAULT_FILE_DOCSTRING,
+    id: 'generate-member-names',
+  });
 
   // ---
   // Observable.
@@ -35,12 +36,8 @@ export function generate({ sourceFile, writeConfig }) {
     distinct(byMemberDefinitionMemberName),
     map(compileToTemplate),
 
-    /* To String */
-    reduce(toTemplateRawStringReducer, EMPTY_STRING),
-    map(prependHeaders),
-    map(prettify),
-
     /* Output */
-    tap(write),
+    reduce(toTemplateRawStringReducer, EMPTY_STRING),
+    concatMap(write),
   );
 }
