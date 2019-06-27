@@ -1,4 +1,4 @@
-import { concatMap, filter, map, reduce, tap } from 'rxjs/operators';
+import { concatMap, filter, map, reduce } from 'rxjs/operators';
 import {
   DEFAULT_FILE_DOCSTRING,
   DEFAULT_PRETTIER_OPTIONS,
@@ -6,8 +6,6 @@ import {
   byMemberDefinitionIsEnum,
   toTemplateRawStringReducer,
   withCompileToTemplate,
-  withPrependToString,
-  withPrettier,
   withWrite,
   enrichWithPathNodeVars,
 } from '@sthzg/jsugen-core';
@@ -21,9 +19,12 @@ export function generate({ sourceFile, writeConfig }) {
   // Configure Transformer Factories.
   // ---
   const compileToTemplate = withCompileToTemplate(enumModuleTemplate);
-  const prependHeaders = withPrependToString(DEFAULT_FILE_DOCSTRING);
-  const prettify = withPrettier(DEFAULT_PRETTIER_OPTIONS);
-  const write = withWrite(writeConfig);
+  const write = withWrite({
+    writeConfig,
+    prettierConfig: DEFAULT_PRETTIER_OPTIONS,
+    headers: DEFAULT_FILE_DOCSTRING,
+    id: 'generate-enums',
+  });
 
   // ---
   // Observable.
@@ -39,12 +40,8 @@ export function generate({ sourceFile, writeConfig }) {
     map(buildTemplateVars),
     map(compileToTemplate),
 
-    /* To String */
-    reduce(toTemplateRawStringReducer, EMPTY_STRING),
-    map(prependHeaders),
-    map(prettify),
-
     /* Output */
-    tap(write),
+    reduce(toTemplateRawStringReducer, EMPTY_STRING),
+    concatMap(write),
   );
 }

@@ -9,5 +9,5 @@ export function template({
 }) {
   const constName = toUpperSnakeCase(member);
 
-  return `export const ${constName} = ${stringify(member)}`;
+  return `export const ${constName} = ${stringify(member)};`;
 }
