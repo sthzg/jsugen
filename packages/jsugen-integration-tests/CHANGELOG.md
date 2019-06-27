@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.4](https://github.com/sthzg/jsugen/compare/v0.14.3...v0.14.4) (2019-06-27)
+
+
+### Bug Fixes
+
+* **generate-enums:** separate camel-cased keys correctly ([be5c986](https://github.com/sthzg/jsugen/commit/be5c986))
+
+
+
+
+
 ## [0.14.3](https://github.com/sthzg/jsugen/compare/v0.14.2...v0.14.3) (2019-06-25)
 
 **Note:** Version bump only for package @sthzg/jsugen-integration-tests
