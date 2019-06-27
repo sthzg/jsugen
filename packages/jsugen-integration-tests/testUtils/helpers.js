@@ -37,6 +37,10 @@ export const ARRAY_OF_OBJECTS_SCHEMA_PATH = path.join(
   TEST_RESOURCES_DIR,
   'example.array-of-objects.schema.json',
 );
+export const EMPTY_SCHEMA_PATH = path.join(
+  TEST_RESOURCES_DIR,
+  'empty.schema.json',
+);
 
 // ---
 // Utils.

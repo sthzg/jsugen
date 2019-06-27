@@ -1,4 +1,4 @@
-import { concatMap, map, reduce, tap } from 'rxjs/operators';
+import { concatMap, map, reduce } from 'rxjs/operators';
 import {
   DEFAULT_GET_IMPORT,
   DEFAULT_FILE_DOCSTRING,
@@ -8,8 +8,6 @@ import {
   enrichWithPathNodeVars,
   toTemplateRawStringReducer,
   withCompileToTemplate,
-  withPrependToString,
-  withPrettier,
   withWrite,
 } from '@sthzg/jsugen-core';
 import { fromSourceFile } from '@sthzg/jsugen-core/lib/sources/sourceFile';
@@ -36,12 +34,12 @@ export function generate({ sourceFile, writeConfig }) {
   // Configure Transformer Factories.
   // ---
   const compileToTemplate = withCompileToTemplate(selectorFunctionTemplate);
-  const prependHeaders = withPrependToString(
-    DEFAULT_FILE_DOCSTRING,
-    DEFAULT_GET_IMPORT,
-  );
-  const prettify = withPrettier(DEFAULT_PRETTIER_OPTIONS);
-  const write = withWrite(writeConfig);
+  const write = withWrite({
+    writeConfig,
+    prettierConfig: DEFAULT_PRETTIER_OPTIONS,
+    headers: [DEFAULT_FILE_DOCSTRING, DEFAULT_GET_IMPORT],
+    id: 'generate-selector-functions',
+  });
 
   // ---
   // Observable.
@@ -54,12 +52,8 @@ export function generate({ sourceFile, writeConfig }) {
     concatMap(addMemberDefinitionsForNonEnumArrayIndexes),
     map(compileToTemplate),
 
-    /* To String */
-    reduce(toTemplateRawStringReducer, EMPTY_STRING),
-    map(prependHeaders),
-    map(prettify),
-
     /* Output */
-    tap(write),
+    reduce(toTemplateRawStringReducer, EMPTY_STRING),
+    concatMap(write),
   );
 }
