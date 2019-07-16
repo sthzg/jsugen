@@ -1,6 +1,6 @@
 {
   "name": "@sthzg/jsugen-generate-member-names",
-  "version": "0.15.1-next.0",
+  "version": "0.15.0",
   "description": "> TODO: description",
   "author": "Stephan Herzog <sthzgvie@gmail.com>",
   "homepage": "https://github.com/sthzg/jsugen#readme",
@@ -20,8 +20,8 @@
     "url": "https://github.com/sthzg/jsugen/issues"
   },
   "dependencies": {
-    "@sthzg/jsugen-core": "^0.15.1-next.0",
-    "rxjs": "^6.5.1"
+    "@sthzg/jsugen-core": "^0.15.0",
+    "rxjs": "^6.5.3"
   },
   "peerDependencies": {
     "lodash-es": ">=4"
