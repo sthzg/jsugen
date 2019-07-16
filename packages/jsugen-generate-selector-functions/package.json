@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@sthzg/jsugen-core": "^0.15.0",
-    "rxjs": "^6.5.1"
+    "rxjs": "^6.5.3"
   },
   "peerDependencies": {
     "lodash-es": ">=4"
