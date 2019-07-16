@@ -15,6 +15,7 @@ import { withPrettier } from './withPrettier';
  * @param writeConfig
  * @param prettierConfig
  * @param headers
+ * @param id
  * @return {function(*=): Observable<any>}
  */
 export function withWrite({ writeConfig, prettierConfig, headers, id }) {
@@ -36,17 +37,17 @@ export function withWrite({ writeConfig, prettierConfig, headers, id }) {
 function fromContent(content, { writeConfig, prettierConfig, headers }) {
   const { dryRun } = writeConfig;
 
-  const handleDryRun = () => {
+  const handleDryRun = output => {
     logIfNotSilent(writeConfig, DRY_RUN_BANNER);
-    logIfNotSilent(writeConfig, content);
+    logIfNotSilent(writeConfig, output);
   };
 
-  const handleFileWrite = () => {
+  const handleFileWrite = output => {
     const { directory, encoding, filename } = writeConfig;
 
     const location = path.join(directory, filename);
     fs.ensureDirSync(directory);
-    fs.writeFileSync(location, content, { encoding });
+    fs.writeFileSync(location, output, { encoding });
 
     logIfNotSilent(writeConfig, `✎ … wrote ${location}`);
   };
