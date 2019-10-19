@@ -36,7 +36,7 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/core@^7.4.5", "@babel/core@^7.6.4":
+"@babel/core@^7.6.4":
   version "7.6.4"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.6.4.tgz#6ebd9fe00925f6c3e177bb726a188b5f578088ff"
   integrity sha512-Rm0HGw101GY8FTzpWSyRbki/jzq+/PkNQJ+nSulrdY6gFGOsNseCqD6KHRYe2E+EdzuBdr2pxCp6s4Uk6eJ+XQ==
@@ -290,7 +290,7 @@
     "@babel/helper-remap-async-to-generator" "^7.1.0"
     "@babel/plugin-syntax-async-generators" "^7.2.0"
 
-"@babel/plugin-proposal-class-properties@^7.4.4", "@babel/plugin-proposal-class-properties@^7.5.5":
+"@babel/plugin-proposal-class-properties@^7.5.5":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-class-properties/-/plugin-proposal-class-properties-7.5.5.tgz#a974cfae1e37c3110e71f3c6a2e48b8e71958cd4"
   integrity sha512-AF79FsnWFxjlaosgdi421vmYG6/jg79bVD0dpD44QdgobzHKuLZ6S3vl8la9qIeSwGi8i1fS0O1mfuDAAdo1/A==
@@ -306,7 +306,7 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-syntax-dynamic-import" "^7.2.0"
 
-"@babel/plugin-proposal-export-namespace-from@^7.2.0", "@babel/plugin-proposal-export-namespace-from@^7.5.2":
+"@babel/plugin-proposal-export-namespace-from@^7.5.2":
   version "7.5.2"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-export-namespace-from/-/plugin-proposal-export-namespace-from-7.5.2.tgz#ccd5ed05b06d700688ff1db01a9dd27155e0d2a0"
   integrity sha512-TKUdOL07anjZEbR1iSxb5WFh810KyObdd29XLFLGo1IDsSuGrjH3ouWSbAxHNmrVKzr9X71UYl2dQ7oGGcRp0g==
@@ -649,7 +649,7 @@
     "@babel/helper-regex" "^7.4.4"
     regexpu-core "^4.6.0"
 
-"@babel/preset-env@^7.4.5", "@babel/preset-env@^7.6.3":
+"@babel/preset-env@^7.6.3":
   version "7.6.3"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.6.3.tgz#9e1bf05a2e2d687036d24c40e4639dc46cef2271"
   integrity sha512-CWQkn7EVnwzlOdR5NOm2+pfgSNEZmvGjOhlCHBDq0J8/EStr+G+FvPEiz9B56dR6MoiUFjXhfE4hjLoAKKJtIQ==
@@ -1808,37 +1808,6 @@
   integrity sha512-MI4Xx6LHs4Webyvi6EbspgyAb4D2Q2VtnCQ1blOJcoLS6mVa8lNN2rkIy1CVxfTUpoyIbCTkXES1rLXztFD1lg==
   dependencies:
     any-observable "^0.3.0"
-
-"@sthzg/jsugen-core@^0.15.0":
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/@sthzg/jsugen-core/-/jsugen-core-0.15.0.tgz#f1555e05d91e5e3b65b26532bd0f1a0f4a5981ff"
-  integrity sha512-eumyQGQGltn0LvTJYmkmo1kDjhzgCx1pOZcZrL7F9aLOuTPbY8Fp6qJyogOKEuxmaFU8JqEXwTpdvEPk9Ixv1w==
-  dependencies:
-    "@babel/core" "^7.4.5"
-    "@babel/plugin-proposal-class-properties" "^7.4.4"
-    "@babel/plugin-proposal-export-namespace-from" "^7.2.0"
-    "@babel/plugin-syntax-dynamic-import" "^7.2.0"
-    "@babel/plugin-syntax-export-default-from" "^7.2.0"
-    "@babel/plugin-syntax-import-meta" "^7.2.0"
-    "@babel/preset-env" "^7.4.5"
-    "@cloudflare/json-schema-walker" "^0.1.1"
-    babel-loader "^8.0.6"
-    es6-error "^4.1.1"
-    fs-extra "^8.0.1"
-    glob "^7.1.4"
-    json-schema-ref-parser "^7.1.0"
-    json5-loader "^3.0.0"
-    prettier "^1.17.0"
-    require-from-string "^2.0.2"
-    rxjs "^6.5.1"
-    webpack "^4.35.0"
-
-"@sthzg/jsugen-generate-builder@^0.15.0":
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/@sthzg/jsugen-generate-builder/-/jsugen-generate-builder-0.15.0.tgz#5dc6e0f1a1eba40425ec415170e4ab7331813cdd"
-  integrity sha512-LeKHLz6Y9U+KZz9T9HzACot4lHEwmIoo9q5WA6EbgE1S4hCaytaag10K+TW9idmkN4T+6sGIRq1+374HmGl9fg==
-  dependencies:
-    "@sthzg/jsugen-core" "^0.15.0"
 
 "@types/babel__core@^7.1.0":
   version "7.1.2"
@@ -4311,7 +4280,7 @@ from2@^2.1.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
 
-fs-extra@^8.0.1, fs-extra@^8.1.0:
+fs-extra@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
   integrity sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==
@@ -5784,7 +5753,7 @@ json-parse-better-errors@^1.0.0, json-parse-better-errors@^1.0.1, json-parse-bet
   resolved "https://registry.yarnpkg.com/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz#bb867cfb3450e69107c131d1c514bab3dc8bcaa9"
   integrity sha512-mrqyZKfX5EhL7hvqcV6WG1yYjnjeuYDzDhhcAAUrq8Po85NBQBJP+ZDUT75qZQ98IkUoBqdkExkukOU7Ts2wrw==
 
-json-schema-ref-parser@^7.1.0, json-schema-ref-parser@^7.1.1:
+json-schema-ref-parser@^7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/json-schema-ref-parser/-/json-schema-ref-parser-7.1.1.tgz#16896f5af14560233e24bd0c6ed581f6a94fb315"
   integrity sha512-5DGfOTuTAMFzjNw56kwEQ9YqjCvRPHRbEmPkPSNPuK4DR4TmLQrZ1k0UdO8EJ9DKjOPqtyBjtlSnvzAC6kwUsg==
@@ -6472,9 +6441,9 @@ mississippi@^3.0.0:
     through2 "^2.0.0"
 
 mixin-deep@^1.2.0:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/mixin-deep/-/mixin-deep-1.3.1.tgz#a49e7268dce1a0d9698e45326c5626df3543d0fe"
-  integrity sha512-8ZItLHeEgaqEvd5lYBXfm4EZSFCX29Jb9K+lAHhDKzReKBQKj3R+7NOF6tjqYi9t4oI8VUfaWITJQm86wnXGNQ==
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/mixin-deep/-/mixin-deep-1.3.2.tgz#1120b43dc359a785dce65b55b82e257ccf479566"
+  integrity sha512-WRoDn//mXBiJ1H40rqa3vH0toePwSsGb45iInWlTySa+Uu4k3tYUSxa2v1KqAiLtvlrSzaExqS1gtk96A9zvEA==
   dependencies:
     for-in "^1.0.2"
     is-extendable "^1.0.1"
@@ -8018,7 +7987,7 @@ rxjs@^6.3.3, rxjs@^6.4.0:
   dependencies:
     tslib "^1.9.0"
 
-rxjs@^6.5.1, rxjs@^6.5.3:
+rxjs@^6.5.3:
   version "6.5.3"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.3.tgz#510e26317f4db91a7eb1de77d9dd9ba0a4899a3a"
   integrity sha512-wuYsAYYFdWTAnAaPoKGNhfpWwKZbJW+HgAJ+mImp+Epl7BG8oNWBCTyRM8gba9k4lk8BgWdoYm21Mo/RYhhbgA==
@@ -9154,7 +9123,7 @@ webpack-sources@^1.4.0, webpack-sources@^1.4.1:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack@^4.35.0, webpack@^4.41.2:
+webpack@^4.41.2:
   version "4.41.2"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.41.2.tgz#c34ec76daa3a8468c9b61a50336d8e3303dce74e"
   integrity sha512-Zhw69edTGfbz9/8JJoyRQ/pq8FYUoY0diOXqW0T6yhgdhCv6wr0hra5DwwWexNRns2Z2+gsnrNcbe9hbGBgk/A==
