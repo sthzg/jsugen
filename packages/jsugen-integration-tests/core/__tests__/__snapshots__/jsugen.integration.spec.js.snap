@@ -69,3 +69,74 @@ export function byWorld(property, defaultReturn) {
 export const byWorldPath = () => ['world'];
 "
 `;
+
+exports[`main: dry run should respect the moduleFormat: cjs setting: expect the code to be transpiled 1`] = `
+"'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true,
+});
+exports.byHello = byHello;
+
+var _get = _interopRequireDefault(require('lodash-es/get'));
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+/**
+ * @file This file is auto-generated. Do not modify its contents manually.
+ */
+function byHello(property, defaultReturn) {
+  return (0, _get.default)(property, ['hello'], defaultReturn);
+}
+
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true,
+});
+exports.byHelloPath = void 0;
+
+/**
+ * @file This file is auto-generated. Do not modify its contents manually.
+ */
+const byHelloPath = () => ['hello'];
+
+exports.byHelloPath = byHelloPath;
+
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true,
+});
+exports.byWorld = byWorld;
+
+var _get = _interopRequireDefault(require('lodash-es/get'));
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+/**
+ * @file This file is auto-generated. Do not modify its contents manually.
+ */
+function byWorld(property, defaultReturn) {
+  return (0, _get.default)(property, ['world'], defaultReturn);
+}
+
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true,
+});
+exports.byWorldPath = void 0;
+
+/**
+ * @file This file is auto-generated. Do not modify its contents manually.
+ */
+const byWorldPath = () => ['world'];
+
+exports.byWorldPath = byWorldPath;
+"
+`;

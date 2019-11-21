@@ -1,5 +1,5 @@
 import fs from 'fs-extra';
-import { generate } from '@sthzg/jsugen-core';
+import { generate, ModuleFormat } from '@sthzg/jsugen-core';
 import path from 'path';
 import { byOutDirectory, withSnapshotCheck } from '../../testUtils/helpers';
 
@@ -43,6 +43,14 @@ describe('main: dry run', () => {
     expect.assertions(1);
 
     generate({ config }).subscribe(withSnapshotCheck(done));
+  });
+
+  test('should respect the moduleFormat: cjs setting', done => {
+    expect.assertions(1);
+
+    generate({
+      config: { ...config, moduleFormat: ModuleFormat.CJS },
+    }).subscribe(withSnapshotCheck(done, 'expect the code to be transpiled'));
   });
 
   test('should respect the config.imports.lodashGet setting', done => {

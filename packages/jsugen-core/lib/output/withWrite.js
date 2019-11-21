@@ -6,6 +6,7 @@ import { castArray, isEmpty } from 'lodash-es';
 import { DRY_RUN_BANNER } from '../constants';
 import { logIf } from '../utils/log';
 import { withPrependToString } from '../utils';
+import { withApplyModuleFormat } from './withApplyModuleFormat';
 import { withPrettier } from './withPrettier';
 
 /**
@@ -53,11 +54,13 @@ function fromContent(content, { writeConfig, prettierConfig, headers }) {
   };
 
   const prependHeaders = withPrependToString(...castArray(headers));
+  const applyModuleFormat = withApplyModuleFormat(writeConfig);
   const prettify = withPrettier(prettierConfig);
   const write = dryRun ? handleDryRun : handleFileWrite;
 
   return from([content]).pipe(
     map(prependHeaders),
+    map(applyModuleFormat),
     map(prettify),
     tap(write),
   );

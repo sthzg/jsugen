@@ -28,6 +28,8 @@ import { template as selectorFunctionTemplate } from './selector.tpl';
  *     ) {
  *       return get(person, [personIndex, 'address', addressIndex, 'street']);
  *     }
+ *
+ * TODO unify config (e.g. config: { writeConfig, ...otherConfigs })
  */
 export function generate({ sourceFile, writeConfig, config }) {
   // ---

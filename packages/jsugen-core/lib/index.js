@@ -9,6 +9,7 @@ export {
   POSTFIX,
   PREFIX,
 } from './constants';
+export { ModuleFormat } from './enums';
 export { withCompileToTemplate } from './withCompileToTemplate';
 export { toTemplateRawStringReducer, withPrettier, withWrite } from './output';
 export {

@@ -3,7 +3,7 @@ import { WriteConfig } from '../../models';
 export function runGenerator(context) {
   const {
     config,
-    config: { dryRun, silent },
+    config: { dryRun, silent, moduleFormat },
     data: {
       generateFunction: { generateFunction },
       sourceFile,
@@ -13,9 +13,10 @@ export function runGenerator(context) {
   } = context;
 
   const writeConfig = new WriteConfig({
-    dryRun,
     directory: outputDirectory,
     filename: outputFilename,
+    dryRun,
+    moduleFormat,
     silent,
   });
 
