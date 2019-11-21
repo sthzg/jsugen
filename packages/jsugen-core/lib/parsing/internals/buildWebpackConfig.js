@@ -1,3 +1,4 @@
+import fs from 'fs';
 import os from 'os';
 import path from 'path';
 import { UNDERSCORE } from '../../constants';
@@ -11,6 +12,29 @@ import { UNDERSCORE } from '../../constants';
 export function buildWebpackConfig(sourceFile, options = {}) {
   const entryKey = byEntryKey(sourceFile);
   const babelLoaderConfig = byBabelLoaderConfig(options);
+
+  /**
+   * Returns array of paths to existing parent node_modules directories. This
+   * ensures that the Webpack loaders can be resolved when the CLI is installed
+   * globally or ran through NPX.
+   *
+   * TODO: are there nicer ways to achieve this?
+   */
+  const ensureResolverLookupOnGlobalInstall = (lookupDir, hits = []) => {
+    const isRoot = path.parse(lookupDir).root === lookupDir;
+    const maybeHit = path.join(lookupDir, 'node_modules');
+
+    if (fs.existsSync(maybeHit)) {
+      hits.push(maybeHit);
+    }
+
+    return isRoot
+      ? hits
+      : ensureResolverLookupOnGlobalInstall(
+          path.dirname(lookupDir, '..'),
+          hits,
+        );
+  };
 
   return {
     mode: 'production',
@@ -46,6 +70,7 @@ export function buildWebpackConfig(sourceFile, options = {}) {
     },
     resolveLoader: {
       modules: [
+        ...ensureResolverLookupOnGlobalInstall(__dirname),
         './node_modules/@sthzg/jsugen-core/node_modules',
         'node_modules',
       ],
