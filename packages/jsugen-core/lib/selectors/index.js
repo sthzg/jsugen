@@ -1,4 +1,4 @@
-export { byTemplateRaw } from './template';
+export { byLodashGetImport, byTemplateRaw } from './template';
 export {
   byMemberDefinitionId,
   byMemberDefinitionIsEnum,

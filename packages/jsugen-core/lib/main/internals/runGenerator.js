@@ -2,6 +2,7 @@ import { WriteConfig } from '../../models';
 
 export function runGenerator(context) {
   const {
+    config,
     config: { dryRun, silent },
     data: {
       generateFunction: { generateFunction },
@@ -18,5 +19,5 @@ export function runGenerator(context) {
     silent,
   });
 
-  return generateFunction({ sourceFile, writeConfig });
+  return generateFunction({ sourceFile, writeConfig, config });
 }

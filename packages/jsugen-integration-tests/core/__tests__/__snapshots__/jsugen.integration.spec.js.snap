@@ -34,3 +34,38 @@ export function byWorld(property, defaultReturn) {
 export const byWorldPath = () => ['world'];
 "
 `;
+
+exports[`main: dry run should respect the config.imports.lodashGet setting: expect the customized import statement 1`] = `
+"/**
+ * @file This file is auto-generated. Do not modify its contents manually.
+ */
+
+import { get } from 'lodash';
+
+export function byHello(property, defaultReturn) {
+  return get(property, ['hello'], defaultReturn);
+}
+
+/**
+ * @file This file is auto-generated. Do not modify its contents manually.
+ */
+
+export const byHelloPath = () => ['hello'];
+
+/**
+ * @file This file is auto-generated. Do not modify its contents manually.
+ */
+
+import { get } from 'lodash';
+
+export function byWorld(property, defaultReturn) {
+  return get(property, ['world'], defaultReturn);
+}
+
+/**
+ * @file This file is auto-generated. Do not modify its contents manually.
+ */
+
+export const byWorldPath = () => ['world'];
+"
+`;

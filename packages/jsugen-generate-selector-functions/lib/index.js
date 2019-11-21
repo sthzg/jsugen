@@ -1,6 +1,6 @@
+import { byLodashGetImport } from '@sthzg/jsugen-core/lib/selectors';
 import { concatMap, map, reduce } from 'rxjs/operators';
 import {
-  DEFAULT_GET_IMPORT,
   DEFAULT_FILE_DOCSTRING,
   DEFAULT_PRETTIER_OPTIONS,
   EMPTY_STRING,
@@ -29,7 +29,7 @@ import { template as selectorFunctionTemplate } from './selector.tpl';
  *       return get(person, [personIndex, 'address', addressIndex, 'street']);
  *     }
  */
-export function generate({ sourceFile, writeConfig }) {
+export function generate({ sourceFile, writeConfig, config }) {
   // ---
   // Configure Transformer Factories.
   // ---
@@ -37,7 +37,7 @@ export function generate({ sourceFile, writeConfig }) {
   const write = withWrite({
     writeConfig,
     prettierConfig: DEFAULT_PRETTIER_OPTIONS,
-    headers: [DEFAULT_FILE_DOCSTRING, DEFAULT_GET_IMPORT],
+    headers: [DEFAULT_FILE_DOCSTRING, byLodashGetImport(config)],
     id: 'generate-selector-functions',
   });
 

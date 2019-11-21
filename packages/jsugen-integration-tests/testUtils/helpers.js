@@ -50,7 +50,7 @@ export function byOutDirectory(target) {
   return path.resolve(pkgDir.sync(__filename), OUT_DIR_NAME, target);
 }
 
-export function withSnapshotCheck(done) {
+export function withSnapshotCheck(done, annotation) {
   const chunks = [];
 
   return {
@@ -59,7 +59,7 @@ export function withSnapshotCheck(done) {
     },
     complete() {
       const content = chunks.join(NEWLINE);
-      expect(content).toMatchSnapshot();
+      expect(content).toMatchSnapshot(annotation);
       done();
     },
   };

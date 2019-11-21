@@ -44,6 +44,19 @@ describe('main: dry run', () => {
 
     generate({ config }).subscribe(withSnapshotCheck(done));
   });
+
+  test('should respect the config.imports.lodashGet setting', done => {
+    expect.assertions(1);
+
+    generate({
+      config: {
+        ...config,
+        imports: { lodashGet: `import { get } from 'lodash';` },
+      },
+    }).subscribe(
+      withSnapshotCheck(done, 'expect the customized import statement'),
+    );
+  });
 });
 
 // ---

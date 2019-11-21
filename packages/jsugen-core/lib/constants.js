@@ -40,8 +40,8 @@ export const DEFAULT_PRETTIER_OPTIONS = {
 };
 
 /**
- * Default import for a lodash-like get function.
- * TODO: make configurable through option in package.json (yargs feature).
+ * Default import for a lodash compatible get function.
+ * config.imports.lodashGet = 'import { get } from 'lodash';'
  */
 export const DEFAULT_GET_IMPORT = `import get from 'lodash-es/get';`;
 
