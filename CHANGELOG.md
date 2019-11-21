@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.2](https://github.com/sthzg/jsugen/compare/v0.15.1...v0.15.2) (2019-11-21)
+
+
+### Bug Fixes
+
+* **cli:** Add shebang to cli entrypoint ([0738985](https://github.com/sthzg/jsugen/commit/0738985))
+
+
+
+
+
 ## [0.15.1](https://github.com/sthzg/jsugen/compare/v0.15.1-next.1...v0.15.1) (2019-10-19)
 
 
