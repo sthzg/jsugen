@@ -37,12 +37,10 @@
     "glob": "^7.1.4",
     "json-schema-ref-parser": "^7.1.1",
     "json5-loader": "^3.0.0",
+    "lodash-es": "^4.17.15",
     "prettier": "^1.17.0",
     "require-from-string": "^2.0.2",
     "rxjs": "^6.5.3",
     "webpack": "^4.41.2"
-  },
-  "peerDependencies": {
-    "lodash-es": ">=4"
   }
 }
