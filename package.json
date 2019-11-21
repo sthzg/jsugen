@@ -30,7 +30,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && lint-staged && npm run test"
+      "pre-commit": "pretty-quick --staged && lint-staged && yarn test"
     }
   },
   "scripts": {
