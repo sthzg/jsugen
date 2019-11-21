@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.3](https://github.com/sthzg/jsugen/compare/v0.15.2...v0.15.3) (2019-11-21)
+
+
+### Bug Fixes
+
+* **cli:** Ensure loaders can be resolved on global installs ([b879626](https://github.com/sthzg/jsugen/commit/b879626))
+
+
+
+
+
 ## [0.15.2](https://github.com/sthzg/jsugen/compare/v0.15.1...v0.15.2) (2019-11-21)
 
 
