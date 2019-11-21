@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.16.0](https://github.com/sthzg/jsugen/compare/v0.15.3...v0.16.0) (2019-11-21)
+
+
+### Bug Fixes
+
+* Move lodash-es from peerDependency to dependency ([724016d](https://github.com/sthzg/jsugen/commit/724016d))
+
+
+### Features
+
+* **config:** Support configuration for lodash.get import ([3afa665](https://github.com/sthzg/jsugen/commit/3afa665))
+* **config:** Support generation as common js ([9db74e4](https://github.com/sthzg/jsugen/commit/9db74e4))
+
+
+
+
+
 ## [0.15.3](https://github.com/sthzg/jsugen/compare/v0.15.2...v0.15.3) (2019-11-21)
 
 **Note:** Version bump only for package @sthzg/jsugen-integration-tests

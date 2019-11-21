@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.16.0](https://github.com/sthzg/jsugen/compare/v0.15.3...v0.16.0) (2019-11-21)
+
+**Note:** Version bump only for package @sthzg/jsugen-cli
+
+
+
+
+
 ## [0.15.3](https://github.com/sthzg/jsugen/compare/v0.15.2...v0.15.3) (2019-11-21)
 
 **Note:** Version bump only for package @sthzg/jsugen-cli
