@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 import { get } from 'lodash-es';
 import * as babel from '@babel/core';
 import { ModuleFormat } from '../enums';
@@ -8,9 +9,9 @@ import { ModuleFormat } from '../enums';
  */
 const BABEL_CONFIG = {
   plugins: [
-    '@babel/plugin-proposal-export-namespace-from',
-    '@babel/plugin-syntax-export-default-from',
-    '@babel/plugin-transform-modules-commonjs',
+    require('@babel/plugin-proposal-export-namespace-from'),
+    require('@babel/plugin-syntax-export-default-from'),
+    require('@babel/plugin-transform-modules-commonjs'),
   ],
 };
 
