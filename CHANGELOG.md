@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.16.2](https://github.com/sthzg/jsugen/compare/v0.16.1...v0.16.2) (2019-11-25)
+
+
+### Bug Fixes
+
+* **core:** Use require-based plugin config for inline-babel ([00fbb95](https://github.com/sthzg/jsugen/commit/00fbb95))
+
+
+
+
+
 ## [0.16.1](https://github.com/sthzg/jsugen/compare/v0.16.0...v0.16.1) (2019-11-25)
 
 
