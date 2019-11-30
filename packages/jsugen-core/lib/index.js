@@ -15,7 +15,7 @@ export {
 } from './enrichment/pathNodeTemplateVars';
 export { generate } from './main';
 export { WriteConfig } from './models';
-export { parseSource } from './parsing';
+export { parseSource } from './sources/parsing';
 export {
   byIsLeaf,
   byMemberDefinitionIsEnum,

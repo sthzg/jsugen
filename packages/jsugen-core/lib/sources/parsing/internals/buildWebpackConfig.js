@@ -1,7 +1,7 @@
 import fs from 'fs';
 import os from 'os';
 import path from 'path';
-import { UNDERSCORE } from '../../constants';
+import { UNDERSCORE } from '../../../constants';
 
 /**
  * Builds a Webpack configuration to compile `sourceFile` into a JS module.

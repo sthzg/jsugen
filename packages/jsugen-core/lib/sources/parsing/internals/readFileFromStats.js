@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { Encoding } from '../../enums';
+import { Encoding } from '../../../enums';
 
 export function readFileFromStats(stats) {
   const { assetsByChunkName, outputPath } = stats.toJson();

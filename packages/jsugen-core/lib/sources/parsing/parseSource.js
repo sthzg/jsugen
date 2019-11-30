@@ -1,5 +1,5 @@
 import requireFromString from 'require-from-string';
-import { ParseSourceError } from '../errors';
+import { ParseSourceError } from '../../errors';
 import { transformToJavascript } from './internals';
 
 /**
