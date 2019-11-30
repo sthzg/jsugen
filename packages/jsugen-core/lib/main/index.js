@@ -12,6 +12,9 @@ import {
   runGenerator,
 } from './internals';
 
+/**
+ * @param config - instance of .jsugen.config.js
+ */
 export function generate({ config }) {
   return from(castArray(config)).pipe(
     map(Context.liftConfigToContext),

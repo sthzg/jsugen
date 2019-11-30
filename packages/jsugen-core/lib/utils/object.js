@@ -30,6 +30,21 @@ export function enrichInTemplate(targetObject, keyValueObject) {
   return enrichIn(targetObject, keyValueObject, Prefix.TEMPLATE);
 }
 
+/**
+ * Flattens an input object over an array at `sourcePath`, e.g:
+ *
+ * In:  [{ a: 1, sourcePath: [1, 2, 3] }]
+ * Out: [{ a: 1, targetPath: 1 }, { a: 1, targetPath: 2 }, { a: 1, targetPath: 3 }]
+ *
+ * It is used to flatten the .jsugen.config.js object over each `definition` entry which allows
+ * the data pipeline to execute the generators one by one while having access to all config values.
+ *
+ * @param sourcePath -  object path to `input` member that should be flattened over
+ * @param targetPath - object path where flattened item will be set to
+ * @param redactSourcePath - bool indicating whether to keep original value at source path
+ * @param redactLabel - debug label to add at `sourcePath` if `redactSourcePath` is true
+ * @return {function(*=): *}
+ */
 export function withEnrichByFlattenOverArray({
   sourcePath,
   targetPath,
