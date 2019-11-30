@@ -1,11 +1,10 @@
-import { ENCODING } from '../constants';
-import { ModuleFormat } from '../enums';
+import { Encoding, ModuleFormat } from '../enums';
 
 export class WriteConfig {
   constructor({
     dryRun = false,
     silent = false,
-    encoding = ENCODING.UTF8,
+    encoding = Encoding.UTF8,
     moduleFormat = ModuleFormat.ESM,
     directory,
     filename,

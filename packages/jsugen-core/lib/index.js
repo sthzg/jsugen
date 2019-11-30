@@ -5,11 +5,8 @@ export {
   DEFAULT_PRETTIER_OPTIONS,
   DRY_RUN_BANNER,
   EMPTY_STRING,
-  ENCODING,
-  POSTFIX,
-  PREFIX,
 } from './constants';
-export { ModuleFormat } from './enums';
+export { Encoding, Postfix, Prefix, ModuleFormat } from './enums';
 export { withCompileToTemplate } from './withCompileToTemplate';
 export { toTemplateRawStringReducer, withPrettier, withWrite } from './output';
 export {

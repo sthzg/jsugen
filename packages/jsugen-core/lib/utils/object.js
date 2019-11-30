@@ -8,7 +8,8 @@ import {
   mergeWith,
   set,
 } from 'lodash-es';
-import { DOT, PREFIX } from '../constants';
+import { DOT } from '../constants';
+import { Prefix } from '../enums';
 
 // ---
 // Enrichment Utils.
@@ -22,11 +23,11 @@ export function enrichIn(targetObject, keyValueObject, prefix) {
 }
 
 export function enrichInData(targetObject, keyValueObject) {
-  return enrichIn(targetObject, keyValueObject, PREFIX.DATA);
+  return enrichIn(targetObject, keyValueObject, Prefix.DATA);
 }
 
 export function enrichInTemplate(targetObject, keyValueObject) {
-  return enrichIn(targetObject, keyValueObject, PREFIX.TEMPLATE);
+  return enrichIn(targetObject, keyValueObject, Prefix.TEMPLATE);
 }
 
 export function withEnrichByFlattenOverArray({

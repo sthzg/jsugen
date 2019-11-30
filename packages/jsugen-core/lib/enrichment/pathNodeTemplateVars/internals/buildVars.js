@@ -3,7 +3,7 @@ import { byPathNodeMember, byPathNodesEnumValues } from '../../../selectors';
 import { buildName } from './buildName';
 import { buildObjectPathArray } from './buildObjectPathArray';
 import { buildArgNames } from './buildArgNames';
-import { PREFIX } from '../../../constants';
+import { Prefix } from '../../../enums';
 
 export function buildVars(pathNodes, options) {
   return {
@@ -14,7 +14,7 @@ export function buildVars(pathNodes, options) {
     member: byPathNodeMember(last(pathNodes)),
     selectorName: buildName(pathNodes, {
       ...options,
-      prefix: PREFIX.BY,
+      prefix: Prefix.BY,
     }),
   };
 }

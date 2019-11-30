@@ -1,5 +1,6 @@
 import { camelCase } from 'lodash-es';
-import { DOT, EMPTY_STRING, PREFIX } from '../../constants';
+import { DOT, EMPTY_STRING } from '../../constants';
+import { Prefix } from '../../enums';
 
 export function buildOutputFilename(context) {
   const {
@@ -9,7 +10,7 @@ export function buildOutputFilename(context) {
   } = context;
 
   return [
-    camelCase(moduleName.replace(PREFIX.GENERATE_MODULE_NAME, EMPTY_STRING)),
+    camelCase(moduleName.replace(Prefix.GENERATE_MODULE_NAME, EMPTY_STRING)),
     'js',
   ].join(DOT);
 }

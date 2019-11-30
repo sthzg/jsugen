@@ -1,10 +1,6 @@
 import { toCamelCase } from '../../../utils';
-import {
-  JSON_SCHEMA_V4_TYPES_ENUM,
-  POSTFIX,
-  PREFIX,
-  UNDERSCORE,
-} from '../../../constants';
+import { UNDERSCORE } from '../../../constants';
+import { JsonSchemaV4Types, Postfix, Prefix } from '../../../enums';
 import { byIsLeaf } from '../../../selectors';
 
 /**
@@ -13,8 +9,8 @@ import { byIsLeaf } from '../../../selectors';
 export function buildName(pathNodes, options = {}) {
   const {
     includeNth = false,
-    prefix = PREFIX.NONE,
-    postfix = POSTFIX.NONE,
+    prefix = Prefix.NONE,
+    postfix = Postfix.NONE,
   } = options;
 
   const withPostfix = (member, ...postfixes) =>
@@ -24,16 +20,16 @@ export function buildName(pathNodes, options = {}) {
     const { type, member } = pathNode;
 
     switch (type) {
-      case JSON_SCHEMA_V4_TYPES_ENUM.ARRAY: {
+      case JsonSchemaV4Types.ARRAY: {
         if (byIsLeaf(pathNode, pathNodes) && includeNth) {
-          return withPostfix(member, POSTFIX.NTH);
+          return withPostfix(member, Postfix.NTH);
         }
 
         if (!byIsLeaf(pathNode, pathNodes)) {
-          return withPostfix(member, POSTFIX.NTH);
+          return withPostfix(member, Postfix.NTH);
         }
 
-        return withPostfix(member, POSTFIX.NONE);
+        return withPostfix(member, Postfix.NONE);
       }
 
       default: {

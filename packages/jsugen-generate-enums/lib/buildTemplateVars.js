@@ -1,7 +1,7 @@
 import { replace, sortBy } from 'lodash-es';
 import {
   EMPTY_STRING,
-  POSTFIX,
+  Postfix,
   arrayToEnum,
   enrichInTemplate,
   toUpperFirstCamelCase,
@@ -14,10 +14,10 @@ export function buildTemplateVars(memberDefinition) {
     },
   } = memberDefinition;
 
-  const removeNth = input => replace(input, POSTFIX.NTH, EMPTY_STRING);
+  const removeNth = input => replace(input, Postfix.NTH, EMPTY_STRING);
 
   const sortedEnumValues = sortBy(enumValues);
-  const valueName = removeNth(toUpperFirstCamelCase(name, POSTFIX.VALUES));
+  const valueName = removeNth(toUpperFirstCamelCase(name, Postfix.VALUES));
   const enumName = removeNth(toUpperFirstCamelCase(name));
 
   const vars = {
