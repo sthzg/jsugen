@@ -1,5 +1,5 @@
 import { get, isEqual, last } from 'lodash-es';
-import { JsonSchemaV4Types } from '../enums';
+import { JsonSchemaTypes } from '../enums';
 
 // ---
 // Mixed.
@@ -14,7 +14,7 @@ export function byIsLeaf(pathNode, pathNodes) {
 export function byPathNodesIsArrayLeaf(pathNodes) {
   const { type: leafType } = last(pathNodes);
 
-  return isEqual(leafType, JsonSchemaV4Types.ARRAY);
+  return isEqual(leafType, JsonSchemaTypes.ARRAY);
 }
 
 export function byPathNodesIsEnumLeaf(pathNodes) {
@@ -47,5 +47,5 @@ export function byPathNodeType(pathNode) {
 }
 
 export function byPathNodeIsArray(pathNode) {
-  return isEqual(byPathNodeType(pathNode), JsonSchemaV4Types.ARRAY);
+  return isEqual(byPathNodeType(pathNode), JsonSchemaTypes.ARRAY);
 }

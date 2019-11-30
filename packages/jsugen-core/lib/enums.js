@@ -10,12 +10,10 @@ export const ModuleFormat = {
 };
 
 /**
- * Enum of all the specified types in the Json schema V4 specification:
+ * Enum of all the specified types in the Json schema specification:
  * https://tools.ietf.org/html/draft-zyp-json-schema-03#section-5.1
- *
- * TODO: do we need to distinguish the JSON schema version? i.e. should this be JsonSchemaTypes instead?
  */
-export const JsonSchemaV4Types = {
+export const JsonSchemaTypes = {
   STRING: 'string',
   NUMBER: 'number',
   INTEGER: 'integer',

@@ -1,6 +1,6 @@
 import { toCamelCase } from '../../../utils';
 import { UNDERSCORE } from '../../../constants';
-import { JsonSchemaV4Types, Postfix, Prefix } from '../../../enums';
+import { JsonSchemaTypes, Postfix, Prefix } from '../../../enums';
 import { byIsLeaf } from '../../../selectors';
 
 /**
@@ -20,7 +20,7 @@ export function buildName(pathNodes, options = {}) {
     const { type, member } = pathNode;
 
     switch (type) {
-      case JsonSchemaV4Types.ARRAY: {
+      case JsonSchemaTypes.ARRAY: {
         if (byIsLeaf(pathNode, pathNodes) && includeNth) {
           return withPostfix(member, Postfix.NTH);
         }
