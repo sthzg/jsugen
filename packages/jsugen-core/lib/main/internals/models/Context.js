@@ -1,3 +1,6 @@
+import { castArray } from 'lodash-es';
+import { from } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { Data } from './Data';
 
 /**
@@ -5,10 +8,14 @@ import { Data } from './Data';
  * of the `Context` object which it enriches and restructures as required.
  */
 export class Context {
-  static liftConfigToContext(config) {
-    return new Context(config);
+  static fromConfig(config) {
+    return from(castArray(config)).pipe(map(() => new Context(config)));
   }
 
+  /**
+   *
+   * @param {Config} config
+   */
   constructor(config) {
     this.config = config;
     this.data = new Data();

@@ -1,6 +1,4 @@
-import { from } from 'rxjs';
 import { concatMap, map } from 'rxjs/operators';
-import { castArray } from 'lodash-es';
 import {
   Context,
   enrichDataWithGenerateFunctions,
@@ -13,11 +11,12 @@ import {
 } from './internals';
 
 /**
+ * Main generator that runs all generators configured in `config`.
+ *
  * @param config - instance of .jsugen.config.js
  */
 export function generate({ config }) {
-  return from(castArray(config)).pipe(
-    map(Context.liftConfigToContext),
+  return Context.fromConfig(config).pipe(
     concatMap(flattenContextOverDefinitions),
     map(enrichDataWithListOfSourceFilePaths),
     map(enrichDataWithGenerateFunctions),
