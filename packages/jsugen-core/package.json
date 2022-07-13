@@ -42,6 +42,6 @@
     "prettier": "^1.17.0",
     "require-from-string": "^2.0.2",
     "rxjs": "^6.5.3",
-    "webpack": "^4.41.2"
+    "webpack": "^5.73.0"
   }
 }
