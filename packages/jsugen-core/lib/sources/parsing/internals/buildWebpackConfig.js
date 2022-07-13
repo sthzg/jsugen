@@ -44,7 +44,7 @@ export function buildWebpackConfig(sourceFile, options = {}) {
       [entryKey]: sourceFile,
     },
     output: {
-      filename: '[name].[hash].js',
+      filename: '[name].[fullhash].js',
       libraryTarget: 'commonjs2',
       path: path.join(os.tmpdir(), 'jsugen/sources'),
     },
