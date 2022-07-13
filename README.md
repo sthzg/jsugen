@@ -1,7 +1,6 @@
 # `Work-in-progress: jsugen`
 
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
-[![circleci](https://circleci.com/gh/sthzg/jsugen/tree/develop.svg?style=svg)](https://circleci.com/gh/sthzg/jsugen)
 
 > Javascript code generation utils.
 
