@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.1](https://github.com/sthzg/jsugen/compare/v0.17.0...v0.17.1) (2022-07-14)
+
+### Bug Fixes
+
+- release commit [#2](https://github.com/sthzg/jsugen/issues/2) ([e29bde5](https://github.com/sthzg/jsugen/commit/e29bde5))
+
 # [0.17.0](https://github.com/sthzg/jsugen/compare/v0.16.2...v0.17.0) (2022-07-14)
 
 ### Bug Fixes
