@@ -1,5 +1,5 @@
 /* eslint-disable global-require */
-import { get } from 'lodash-es';
+import get from 'lodash-es/get';
 import * as babel from '@babel/core';
 import { ModuleFormat } from '../enums';
 

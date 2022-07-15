@@ -1,13 +1,11 @@
-import {
-  cloneDeep,
-  get,
-  isArray,
-  isUndefined,
-  mapKeys,
-  merge,
-  mergeWith,
-  set,
-} from 'lodash-es';
+import cloneDeep from 'lodash-es/cloneDeep';
+import get from 'lodash-es/get';
+import isArray from 'lodash-es/isArray';
+import isUndefined from 'lodash-es/isUndefined';
+import mapKeys from 'lodash-es/mapKeys';
+import merge from 'lodash-es/merge';
+import mergeWith from 'lodash-es/mergeWith';
+import set from 'lodash-es/set';
 import { DOT } from '../constants';
 import { Prefix } from '../enums';
 
@@ -76,6 +74,7 @@ export function mergeSet(targetObject, keyValueObject) {
       .map(([path, value]) => set({}, path, value)),
   );
 }
+
 export function mergeConcat(targetObject, ...sources) {
   const customizer = (objValue, srcValue) =>
     isArray(objValue) ? objValue.concat(srcValue) : undefined;

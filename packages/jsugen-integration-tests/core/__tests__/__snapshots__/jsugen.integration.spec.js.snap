@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`main: dry run should glob the expected files and run the configured generators 1`] = `
+exports[`main: dry run should glob the expected files and run the configured generators: any 1`] = `
 "/**
  * @file This file is auto-generated. Do not modify its contents manually.
  */

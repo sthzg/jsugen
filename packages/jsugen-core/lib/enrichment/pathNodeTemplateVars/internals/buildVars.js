@@ -1,4 +1,4 @@
-import { last } from 'lodash-es';
+import last from 'lodash-es/last';
 import { byPathNodeMember, byPathNodesEnumValues } from '../../../selectors';
 import { buildName } from './buildName';
 import { buildObjectPathArray } from './buildObjectPathArray';

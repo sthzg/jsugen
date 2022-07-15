@@ -1,4 +1,6 @@
-import { attempt, isError, isFunction } from 'lodash-es';
+import attempt from 'lodash-es/attempt';
+import isError from 'lodash-es/isError';
+import isFunction from 'lodash-es/isFunction';
 import {
   GenerateFunctionNotFoundError,
   ModuleNotFoundError,

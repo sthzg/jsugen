@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@sthzg/jsugen-core": "^0.17.1",
-    "lodash-es": "4.17.15",
+    "lodash-es": "^4.17.21",
     "rxjs": "^6.5.3"
   },
   "scripts": {

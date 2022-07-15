@@ -1,6 +1,5 @@
-import { promisify } from 'util';
-import { flatten } from 'lodash-es';
-import originalGlob from 'glob';
+import flatten from 'lodash-es/flatten';
+import glob from 'glob';
 import { enrichInData } from '../../utils';
 import { buildOutputFilename } from './buildOutputFilename';
 import {
@@ -10,8 +9,6 @@ import {
 } from './selectors';
 import { resolveGenerateFunction } from './resolveGenerateFunction';
 import { buildOutputDirectoryPath } from './buildOutputDirectoryPath';
-
-const glob = promisify(originalGlob);
 
 /**
  * Enriches context with an array of filenames matching the source file pattern.

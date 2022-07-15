@@ -1,4 +1,4 @@
-import { castArray } from 'lodash-es';
+import castArray from 'lodash-es/castArray';
 import { from } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Data } from './Data';
