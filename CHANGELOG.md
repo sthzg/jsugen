@@ -3,139 +3,99 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [0.16.2](https://github.com/sthzg/jsugen/compare/v0.16.1...v0.16.2) (2019-11-25)
-
+## [0.17.1](https://github.com/sthzg/jsugen/compare/v0.17.0...v0.17.1) (2022-07-14)
 
 ### Bug Fixes
 
-* **core:** Use require-based plugin config for inline-babel ([00fbb95](https://github.com/sthzg/jsugen/commit/00fbb95))
+- release commit [#1](https://github.com/sthzg/jsugen/issues/1) ([4d79da8](https://github.com/sthzg/jsugen/commit/4d79da8))
+- release commit [#2](https://github.com/sthzg/jsugen/issues/2) ([e29bde5](https://github.com/sthzg/jsugen/commit/e29bde5))
 
+# [0.17.0](https://github.com/sthzg/jsugen/compare/v0.16.2...v0.17.0) (2022-07-14)
 
+### Bug Fixes
 
+- pin lodash-es to 4.17.15 ([d68225f](https://github.com/sthzg/jsugen/commit/d68225f))
 
+### Features
+
+- update internal Webpack dependency to Webpack5 ([28e9a27](https://github.com/sthzg/jsugen/commit/28e9a27))
+
+## [0.16.2](https://github.com/sthzg/jsugen/compare/v0.16.1...v0.16.2) (2019-11-25)
+
+### Bug Fixes
+
+- **core:** Use require-based plugin config for inline-babel ([00fbb95](https://github.com/sthzg/jsugen/commit/00fbb95))
 
 ## [0.16.1](https://github.com/sthzg/jsugen/compare/v0.16.0...v0.16.1) (2019-11-25)
 
-
 ### Bug Fixes
 
-* **core:** Provide minimal babel config to ensure transpilation ([ec3bbac](https://github.com/sthzg/jsugen/commit/ec3bbac))
-
-
-
-
+- **core:** Provide minimal babel config to ensure transpilation ([ec3bbac](https://github.com/sthzg/jsugen/commit/ec3bbac))
 
 # [0.16.0](https://github.com/sthzg/jsugen/compare/v0.15.3...v0.16.0) (2019-11-21)
 
-
 ### Bug Fixes
 
-* Move lodash-es from peerDependency to dependency ([724016d](https://github.com/sthzg/jsugen/commit/724016d))
-
+- Move lodash-es from peerDependency to dependency ([724016d](https://github.com/sthzg/jsugen/commit/724016d))
 
 ### Features
 
-* **config:** Support configuration for lodash.get import ([3afa665](https://github.com/sthzg/jsugen/commit/3afa665))
-* **config:** Support generation as common js ([9db74e4](https://github.com/sthzg/jsugen/commit/9db74e4))
-
-
-
-
+- **config:** Support configuration for lodash.get import ([3afa665](https://github.com/sthzg/jsugen/commit/3afa665))
+- **config:** Support generation as common js ([9db74e4](https://github.com/sthzg/jsugen/commit/9db74e4))
 
 ## [0.15.3](https://github.com/sthzg/jsugen/compare/v0.15.2...v0.15.3) (2019-11-21)
 
-
 ### Bug Fixes
 
-* **cli:** Ensure loaders can be resolved on global installs ([b879626](https://github.com/sthzg/jsugen/commit/b879626))
-
-
-
-
+- **cli:** Ensure loaders can be resolved on global installs ([b879626](https://github.com/sthzg/jsugen/commit/b879626))
 
 ## [0.15.2](https://github.com/sthzg/jsugen/compare/v0.15.1...v0.15.2) (2019-11-21)
 
-
 ### Bug Fixes
 
-* **cli:** Add shebang to cli entrypoint ([0738985](https://github.com/sthzg/jsugen/commit/0738985))
-
-
-
-
+- **cli:** Add shebang to cli entrypoint ([0738985](https://github.com/sthzg/jsugen/commit/0738985))
 
 ## [0.15.1](https://github.com/sthzg/jsugen/compare/v0.15.1-next.1...v0.15.1) (2019-10-19)
 
-
 ### Bug Fixes
 
-* **build:** Add update yarn.lock in root ([a5ac854](https://github.com/sthzg/jsugen/commit/a5ac854))
-
-
-
-
+- **build:** Add update yarn.lock in root ([a5ac854](https://github.com/sthzg/jsugen/commit/a5ac854))
 
 # [0.15.0](https://github.com/sthzg/jsugen/compare/v0.14.4...v0.15.0) (2019-06-27)
 
-
 ### Bug Fixes
 
-* Do not write empty module files ([9bb47f7](https://github.com/sthzg/jsugen/commit/9bb47f7))
-
+- Do not write empty module files ([9bb47f7](https://github.com/sthzg/jsugen/commit/9bb47f7))
 
 ### Features
 
-* **cli:** Enable config-based `main` generator through CLI ([4b99a92](https://github.com/sthzg/jsugen/commit/4b99a92))
-
-
-
-
+- **cli:** Enable config-based `main` generator through CLI ([4b99a92](https://github.com/sthzg/jsugen/commit/4b99a92))
 
 ## [0.14.4](https://github.com/sthzg/jsugen/compare/v0.14.3...v0.14.4) (2019-06-27)
 
-
 ### Bug Fixes
 
-* **generate-enums:** separate camel-cased keys correctly ([be5c986](https://github.com/sthzg/jsugen/commit/be5c986))
-
-
-
-
+- **generate-enums:** separate camel-cased keys correctly ([be5c986](https://github.com/sthzg/jsugen/commit/be5c986))
 
 ## [0.14.3](https://github.com/sthzg/jsugen/compare/v0.14.2...v0.14.3) (2019-06-25)
 
-
 ### Bug Fixes
 
-* **main:** Add common babel plugins to defaults ([02d4c8a](https://github.com/sthzg/jsugen/commit/02d4c8a))
-
-
-
-
+- **main:** Add common babel plugins to defaults ([02d4c8a](https://github.com/sthzg/jsugen/commit/02d4c8a))
 
 ## [0.14.2](https://github.com/sthzg/jsugen/compare/v0.14.1...v0.14.2) (2019-06-24)
 
-
 ### Bug Fixes
 
-* Refactor generator input arg to `sourceFile` ([8e8c534](https://github.com/sthzg/jsugen/commit/8e8c534))
-
-
-
-
+- Refactor generator input arg to `sourceFile` ([8e8c534](https://github.com/sthzg/jsugen/commit/8e8c534))
 
 ## [0.14.1](https://github.com/sthzg/jsugen/compare/v0.14.0...v0.14.1) (2019-06-23)
 
-
 ### Bug Fixes
 
-* Add `silent` flag and log written files to stdout ([6d838b2](https://github.com/sthzg/jsugen/commit/6d838b2))
-* **core:** Fix resolution of transient loader modules ([a012e62](https://github.com/sthzg/jsugen/commit/a012e62))
-* **core:** Throw error if parsing the source fails ([8760687](https://github.com/sthzg/jsugen/commit/8760687))
-
-
-
-
+- Add `silent` flag and log written files to stdout ([6d838b2](https://github.com/sthzg/jsugen/commit/6d838b2))
+- **core:** Fix resolution of transient loader modules ([a012e62](https://github.com/sthzg/jsugen/commit/a012e62))
+- **core:** Throw error if parsing the source fails ([8760687](https://github.com/sthzg/jsugen/commit/8760687))
 
 # [0.14.0](https://github.com/sthzg/jsugen/compare/v0.13.0...v0.14.0) (2019-06-22)
 

@@ -1,4 +1,5 @@
-import { replace, sortBy } from 'lodash-es';
+import replace from 'lodash-es/replace';
+import sortBy from 'lodash-es/sortBy';
 import {
   EMPTY_STRING,
   Postfix,

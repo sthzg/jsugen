@@ -1,6 +1,6 @@
 {
   "name": "@sthzg/jsugen-generate-lodash-object-paths",
-  "version": "0.16.3-next.2",
+  "version": "0.17.1",
   "description": "> TODO: description",
   "author": "Stephan Herzog <sthzgvie@gmail.com>",
   "homepage": "https://github.com/sthzg/jsugen#readme",
@@ -26,8 +26,8 @@
     "url": "https://github.com/sthzg/jsugen/issues"
   },
   "dependencies": {
-    "@sthzg/jsugen-core": "^0.16.3-next.2",
-    "lodash-es": "4.17.15",
+    "@sthzg/jsugen-core": "^0.17.1",
+    "lodash-es": "^4.17.21",
     "rxjs": "^6.5.3"
   }
 }

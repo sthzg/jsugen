@@ -42,7 +42,7 @@ describe('main: dry run', () => {
   test('should glob the expected files and run the configured generators', done => {
     expect.assertions(1);
 
-    generate({ config }).subscribe(withSnapshotCheck(done));
+    generate({ config }).subscribe(withSnapshotCheck(done, 'any'));
   });
 
   test('should respect the moduleFormat: cjs setting', done => {

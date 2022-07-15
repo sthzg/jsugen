@@ -1,4 +1,4 @@
-import { castArray } from 'lodash-es';
+import castArray from 'lodash-es/castArray';
 
 export async function executeMain(module) {
   const { main } = module;
