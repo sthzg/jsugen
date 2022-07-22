@@ -21,7 +21,7 @@
     "jest-watch-typeahead": "^2.0.0",
     "lerna": "^3.18.1",
     "lint-staged": "^9.4.2",
-    "lodash-es": "^4.17.21",
+    "lodash": "^4.17.21",
     "prettier": "^1.17.0",
     "pretty-quick": "^2.0.0"
   },

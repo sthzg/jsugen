@@ -1,6 +1,6 @@
 import path from 'path';
-import endsWith from 'lodash-es/endsWith';
-import last from 'lodash-es/last';
+import endsWith from 'lodash/endsWith';
+import last from 'lodash/last';
 import { toUpperFirstCamelCase } from '../../utils';
 import { BASEDIR_SOURCE_FILE_TOKEN, EMPTY_STRING } from '../../constants';
 

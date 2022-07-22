@@ -1,4 +1,4 @@
-import flatten from 'lodash-es/flatten';
+import flatten from 'lodash/flatten';
 import glob from 'glob';
 import { enrichInData } from '../../utils';
 import { buildOutputFilename } from './buildOutputFilename';

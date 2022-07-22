@@ -1,4 +1,4 @@
-import get from 'lodash-es/get';
+import get from 'lodash/get';
 
 export function byContextDataDefinition(context) {
   return get(context, 'data.definition');

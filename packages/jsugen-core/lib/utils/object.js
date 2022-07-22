@@ -1,11 +1,11 @@
-import cloneDeep from 'lodash-es/cloneDeep';
-import get from 'lodash-es/get';
-import isArray from 'lodash-es/isArray';
-import isUndefined from 'lodash-es/isUndefined';
-import mapKeys from 'lodash-es/mapKeys';
-import merge from 'lodash-es/merge';
-import mergeWith from 'lodash-es/mergeWith';
-import set from 'lodash-es/set';
+import cloneDeep from 'lodash/cloneDeep';
+import get from 'lodash/get';
+import isArray from 'lodash/isArray';
+import isUndefined from 'lodash/isUndefined';
+import mapKeys from 'lodash/mapKeys';
+import merge from 'lodash/merge';
+import mergeWith from 'lodash/mergeWith';
+import set from 'lodash/set';
 import { DOT } from '../constants';
 import { Prefix } from '../enums';
 

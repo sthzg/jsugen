@@ -1,4 +1,4 @@
-import constant from 'lodash-es/constant';
+import constant from 'lodash/constant';
 import { byIsLeaf, byPathNodeIsArray } from '../../../selectors';
 import { buildArgName } from './buildArgName';
 

@@ -1,6 +1,6 @@
 import { from, Observable } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
-import isPlainObject from 'lodash-es/isPlainObject';
+import isPlainObject from 'lodash/isPlainObject';
 import RefParser from 'json-schema-ref-parser';
 import { schemaWalk, vocabularies } from '@cloudflare/json-schema-walker';
 

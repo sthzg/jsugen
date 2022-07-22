@@ -1,5 +1,5 @@
-import isEmpty from 'lodash-es/isEmpty';
-import isEqual from 'lodash-es/isEqual';
+import isEmpty from 'lodash/isEmpty';
+import isEqual from 'lodash/isEqual';
 import { PathNode } from '../../../../models';
 import {
   byChunkMemberName,

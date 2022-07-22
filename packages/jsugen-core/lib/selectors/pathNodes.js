@@ -1,6 +1,6 @@
-import get from 'lodash-es/get';
-import isEqual from 'lodash-es/isEqual';
-import last from 'lodash-es/last';
+import get from 'lodash/get';
+import isEqual from 'lodash/isEqual';
+import last from 'lodash/last';
 import { JsonSchemaTypes } from '../enums';
 
 // ---

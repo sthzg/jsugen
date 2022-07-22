@@ -24,7 +24,7 @@
     "@sthzg/jsugen-generate-member-names": "^0.17.2-next.0",
     "@sthzg/jsugen-generate-selector-functions": "^0.17.2-next.0",
     "fs-extra": "^8.1.0",
-    "lodash-es": "^4.17.21",
+    "lodash": "^4.17.21",
     "pkg-dir": "^4.2.0"
   }
 }

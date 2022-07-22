@@ -26,8 +26,8 @@
     "url": "https://github.com/sthzg/jsugen/issues"
   },
   "dependencies": {
-    "@sthzg/jsugen-core": "^0.17.2-next.0",
-    "lodash-es": "^4.17.21",
+    "@sthzg/jsugen-core": "^0.17.1",
+    "lodash": "^4.17.21",
     "rxjs": "^6.5.3"
   }
 }
