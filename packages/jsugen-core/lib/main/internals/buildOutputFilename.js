@@ -1,4 +1,4 @@
-import { camelCase } from 'lodash-es';
+import camelCase from 'lodash/camelCase';
 import { DOT, EMPTY_STRING } from '../../constants';
 import { Prefix } from '../../enums';
 

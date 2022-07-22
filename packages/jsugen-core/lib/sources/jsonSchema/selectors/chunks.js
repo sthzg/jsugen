@@ -1,5 +1,6 @@
-import first from 'lodash-es/first';
-import { get, last } from 'lodash-es';
+import first from 'lodash/first';
+import get from 'lodash/get';
+import last from 'lodash/last';
 import { minusOne } from '../../../utils';
 
 export function byChunksIsIntermediaryArrayType(chunks, index) {
